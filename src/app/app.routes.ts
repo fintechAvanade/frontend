@@ -4,6 +4,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { ClienteHomeComponent } from './components/cliente-home/cliente-home.component';
+import { EsquecisenhaComponent } from './pages/esquecisenha/esquecisenha.component';
+
 
 export const routes: Routes = [
     {path: '/', component: LandingPageComponent},
