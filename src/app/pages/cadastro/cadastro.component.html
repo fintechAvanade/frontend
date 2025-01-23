@@ -1,1 +1,36 @@
-<p>cadastro works!</p>
+<div class="w-full flex">
+    <div class="flex-1">
+        <img ngSrc="./assets/frame1.png" priority width="250" height="200" alt="" class="mx-auto w-[65%] m-2">
+        <img ngSrc="./assets/frame3.png" alt="" priority width="250" height="200" class="mx-auto w-[65%] m-2">
+    </div>
+    <main class="flex-1 text-center flex-col">
+        <i *ngIf="exibirSecao == 1; else seta" class="ph ph-x-circle" (click)="navegarParaLogin()"></i>
+        <ng-template #seta>
+            <i class="ph ph-arrow-circle-left" (click)="voltar()"></i>
+        </ng-template>
+        <h1 class="text-4xl font-bold text-gray-800">Criar conta</h1>
+        <div class="flex flex-col items-center justify-between m-[100px] h-[500px]" *ngIf="exibirSecao == 1">
+            <div>
+                <p>Nome completo</p>
+                <input type="text">
+                <p>CPF</p>
+                <input type="text">
+                <p>Telefone</p>
+                <input type="text">
+                <p>E-mail</p>
+                <input type="text">
+                <p>Usuario</p>
+                <input type="text"><br>
+            </div>
+            <button class="" (click)="avancar()">Continuar</button>
+        </div>
+        <div class="flex flex-col items-center justify-between h-[500px]" *ngIf="exibirSecao == 2">
+            aloooooooo<br>
+            <button class="" (click)="avancar()">Continuar</button>
+        </div>
+        <div action="flex flex-col items-center justify-center h-[500px]" *ngIf="exibirSecao == 3">
+            
+            <button class="">Finalizar</button>
+        </div>
+    </main>
+</div>

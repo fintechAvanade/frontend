@@ -34,7 +34,7 @@ export const routes: Routes = [
             { path: 'deposito', component: DepositoComponent },
             { path: 'editarUsuario', component: EditarUsuarioComponent },
             { path: 'extrato', component: ExtratoComponent },
-            { path: 'extrato', component: InvestimentosComponent },
+            { path: 'investimentos', component: InvestimentosComponent },
             { path: 'boleto', component: PagamentoBoletosComponent },
             { path: 'pix', component: PixComponent },
             { path: 'saque', component: SaqueComponent },
