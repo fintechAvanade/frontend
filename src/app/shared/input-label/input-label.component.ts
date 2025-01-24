@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-input-label',
@@ -6,6 +8,9 @@ import { Component } from '@angular/core';
   templateUrl: './input-label.component.html',
   styleUrl: './input-label.component.css'
 })
-export class InputLabelComponent {
-
+export class CustomInputComponent {
+  @Input() placeholderText: string = '';  // Valor padrão caso não seja passado
+  @Input() width: string = '';       // Largura padrão
+  @Input() height: string = '';       // Altura padrão
 }
+
