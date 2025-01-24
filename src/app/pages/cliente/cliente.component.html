@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<div class="cliente_container">
+    <app-navbar></app-navbar>
+    <div class="content">
+        <router-outlet></router-outlet>
+
+        <div class="top-bar">
+            <div class="perfil">
+                <i class="ph-bold ph-user-circle"></i>
+                <p>{{usuario.nomeUsuario}}</p>
+            </div>
+        </div>
+    </div>
+</div>

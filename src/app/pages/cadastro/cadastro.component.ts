@@ -42,6 +42,9 @@ export class CadastroComponent {
   incluir(usuario: CriacaoUsuario): void {
     this.usuarioService.postUsuarioApi(usuario)
       .subscribe({
+        next: () => {
+
+        },
         complete: () => {
           this.router.navigate(['/cliente'])
         },
