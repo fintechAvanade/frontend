@@ -1,3 +1,88 @@
-.container{
+.cadastro_container_imagens{
     display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
+
+.teste{
+    display: flex;
+    justify-content: space-around;
+    flex: 1.5;
+}
+
+.cadastro_imagem1, .cadastro_imagem2 {
+    padding: 10px;
+    width: 100%;
+}
+
+.cadastro_container_usuario{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 600px;
+}
+
+.cadastro_criar_titulo{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.cadastro_icone_voltar{
+    display: flex;
+    justify-content: end;
+    margin: 20px 40px 0 40px;
+    font-size: 30px;
+}
+
+.cadastro_conjunto_input{
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+}
+
+.cadastro_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.cadastro_input p{
+    color: var(--fintech_black);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.cadastro_input input{
+    border-radius: 8px;
+    border: 1px solid var(--fintech_gray);
+    background: var(--fintech_white, #FFF);
+    color: var(--fintech_gray);
+    padding: 5px 0;
+    padding-left: 20px;
+    outline: none;
+}
+
+.cadastro_cabecalho_input{
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.cadastro_inputs_flex{
+    display: flex;
+    margin: -25px 0;
+    width: 50%;
+}
+
