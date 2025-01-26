@@ -1,2 +1,13 @@
-<p>admin works!</p>
-<router-outlet></router-outlet>
+<div class="admin_container">
+    <app-admin-navbar></app-admin-navbar>
+    <div class="content">
+        <router-outlet></router-outlet>
+
+        <div class="top-bar">
+            <div class="perfil">
+                <i class="ph-bold ph-user-circle"></i>
+                <p>{{usuario.nomeUsuario}}</p>
+            </div>
+        </div>
+    </div>
+</div>

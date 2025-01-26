@@ -21,8 +21,8 @@
     height: max-content;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 600px;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 .cadastro_criar_titulo{
@@ -84,5 +84,6 @@
     display: flex;
     margin: -25px 0;
     width: 50%;
+    justify-content: space-between;
 }
 

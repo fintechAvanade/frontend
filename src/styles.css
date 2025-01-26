@@ -18,3 +18,9 @@
   --fintech_black: #151515;
   --fintech_gray: #9E9E9E;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
