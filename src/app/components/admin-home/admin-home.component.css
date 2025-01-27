@@ -1,0 +1,154 @@
+
+
+.admin-home_container{
+    margin: 40px 0 0 60px;
+}
+
+.admin-home_header{
+    margin-bottom: 35px;
+}
+
+.admin-home_header h1{
+    color: var(--fintech_black, #151515);
+/* Titulos-H3-40-Bold */
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 54px */
+    margin-bottom: 10px;
+}
+
+.admin-home_header p{
+    color: var(--fintech_gray);
+/* Body-text-18-bold */
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.admin-home_content{
+    display: flex;
+}
+
+.admin-home_busca-contas h1{
+    color: var(--fintech_black, #151515);
+
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 43.2px */
+}
+
+.admin-home_busca-contas p{
+    font-size: 12px;
+}
+
+table{
+    font-size: 12px;
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px solid black;
+    border-collapse: separate; /* Evita que as bordas se sobreponham */
+    border-radius: 10px;
+    border-spacing: 0;
+}
+
+th, td{
+    text-align: center;
+    border-bottom: solid 1px black;
+    padding: 12px 35px;
+}
+
+table tr:last-child td {
+    border: none;
+}
+  
+.admin-home_acoes{
+    margin: 0 0 0 60px;
+}
+
+.admin-home_acoes h1{
+    color: var(--fintech_black, #151515);
+    font-family: Montserrat;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 43.2px */
+}
+
+.admin-home_botoes{
+    display: flex;
+}
+
+.admin-home_botao{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 20px;
+    font-size: 10px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.acoes{
+    background-color: var(--primary-color);
+    font-size: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.acoes:hover{
+    cursor: pointer;
+    background-color: #1cecab;
+}
+
+.admin-home_select{
+    padding: 5px 15px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    margin: 5px 0 40px 0;
+    border-radius: 7px;
+    outline: none;
+    font-size: 13px;
+}
+
+option{
+    font-size: 12px;
+}
+
+.admin-home_busca-contas h1{
+    margin-bottom: 20px;
+}
+
+input{
+    margin: 0 12px;
+    padding: 2px 15px;
+    border: 1px solid var(--fintech_gray);
+    border-radius: 7px;
+    background-color: transparent;
+    outline: none;
+}
+
+.pesquisar{
+    background-color: var(--primary-color);
+    padding: 6px;
+    border-radius: 7px;
+}
+
+td p{
+    width: 90px;
+    padding: 2px 0;
+    border-radius: 7px;
+}
+
+.admin-home_ativo{
+    background-color: #1cecab;
+}
+
+.admin-home_inativo{
+    background-color: #f36c6c;
+}

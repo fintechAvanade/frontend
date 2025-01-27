@@ -4,11 +4,20 @@
     justify-content: space-between;
     height: 100vh;
     margin: 0 20px;
+    width: 230px;
+    font-size: 13px;
+}
+
+
+.navbar_itens_primarios{
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar_imagem{
-    margin: 20px 40px 0 40px;
-    width: 170px;
+    margin: 20px 40px 0 0px;
+    width: 150px;
+    align-self: center;
 }
 
 .navbar_itens{
@@ -37,7 +46,7 @@
 
 .navbar_dropdown_itens{
     background-color: rgb(233, 231, 231, 0.3);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
     border-radius: 7px;
     margin: 20px 0 0 30px;

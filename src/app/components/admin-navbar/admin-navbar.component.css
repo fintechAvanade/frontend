@@ -4,11 +4,19 @@
     justify-content: space-between;
     height: 100vh;
     margin: 0 20px;
+    width: 200px;
+    font-size: 13px;
+}
+
+.navbar_itens_primarios{
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar_imagem{
-    margin: 20px 40px 0 40px;
-    width: 170px;
+    margin: 20px 40px 0 0;
+    width: 130px;
+    align-self: center;
 }
 
 .navbar_itens{
@@ -28,31 +36,6 @@
 .navbar_item_hover:hover{
     background-color:#e5fdf5;
     border-left: 2px solid var(--primary-color);
-}
-
-.seta{
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-.navbar_dropdown_itens{
-    background-color: rgb(233, 231, 231, 0.3);
-    font-size: 12px;
-    font-weight: 700;
-    border-radius: 7px;
-    margin: 20px 0 0 30px;
-}
-
-.navbar_dropdown_item{
-    cursor: pointer;
-    padding: 10px 0 10px 30px;
-}
-
-.navbar_transacoes_dropdown{
-    display: flex;
-    align-items: center;
-    margin: 0px 0;
-    cursor: pointer;
 }
 
 .navbar_itens_finais{
