@@ -1,7 +1,7 @@
 
 
 .admin-home_container{
-    margin: 40px 0 0 60px;
+    margin: 40px 0 0 40px;
 }
 
 .admin-home_header{
@@ -11,7 +11,6 @@
 .admin-home_header h1{
     color: var(--fintech_black, #151515);
 /* Titulos-H3-40-Bold */
-    font-family: Montserrat;
     font-size: 25px;
     font-style: normal;
     font-weight: 700;
@@ -22,7 +21,6 @@
 .admin-home_header p{
     color: var(--fintech_gray);
 /* Body-text-18-bold */
-    font-family: Inter;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
@@ -34,8 +32,6 @@
 
 .admin-home_busca-contas h1{
     color: var(--fintech_black, #151515);
-
-    font-family: Montserrat;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
@@ -72,7 +68,6 @@ table tr:last-child td {
 
 .admin-home_acoes h1{
     color: var(--fintech_black, #151515);
-    font-family: Montserrat;
     font-size: 26px;
     font-style: normal;
     font-weight: 700;
