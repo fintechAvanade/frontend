@@ -13,8 +13,7 @@ export class CriacaoUsuario {
     estado: string;
     numero: number;
     complemento?: string;
-
-    //dadwa
+    
     constructor(){
         this.nome = '';
         this.cpf= '';

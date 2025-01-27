@@ -1,6 +1,17 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { provideRouter } from '@angular/router';
+import { importProvidersFrom } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app/app.component';
+import { routes } from './app/app.routes';
+import { AuthService } from './app/services/auth.service';
+import { JWTInterceptor } from './app/services/interceptor.service';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(routes),
+    importProvidersFrom(HttpClientModule), // Importa o módulo HTTP
+    { provide: HTTP_INTERCEPTORS, useClass: JWTInterceptor, multi: true },
+    AuthService, // Registra o AuthService como provider global
+  ],
+});
