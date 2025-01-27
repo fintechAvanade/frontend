@@ -1,0 +1,133 @@
+.deposito_header {
+    color: var(--black); 
+    font-family: 'Montserrat', sans-serif; /* Fonte definida com fallback */
+    font-size: 40px; 
+    font-style: normal;
+    font-weight: 700; 
+    line-height: 135%; 
+}
+.deposito_body{
+    color: var(--blac);
+
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 135%; 
+}
+
+.botao_5reais button,
+.botao_10reais button,
+.botao_50reais button,
+.botao_100reais button  {
+    width: 150px; /* Largura do botão */
+    height: 65px; /* Altura do botão */
+    flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
+    background-color: var(--gray); /* Cor de fundo usando variável */
+    color: var(--black); /* Cor do texto */
+    font-family: 'Montserrat'; /* Fonte */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte (negrito) */
+    border: none; /* Remove bordas padrão */
+    border-radius: 8px; /* Arredondamento */
+    cursor: pointer; /* Cursor para clique */
+    text-align: center; /* Centraliza o texto */
+    line-height: 65px; /* Centraliza verticalmente o texto */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animação */
+  }
+  
+  /* Hover (quando o mouse está sobre o botão) */
+  .botao_5reais button:hover
+  .botao_10reais button,
+  .botao_50reais button,
+  .botao_100reais button  {
+    background-color: var( #C0C0C0); /* Fundo mais escuro no hover */
+    transform: scale(1.05); /* Aumenta levemente o botão */
+  }
+
+  .input_valor {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 650px;
+    margin: 16px 0;
+  }
+  .input_valor input {
+    width: 100%;
+    max-width: 638.182px;
+    height: 65px;
+    padding: 0 16px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    background-color: (#F2F2F2);
+    border: 2px solid var(#D9D9D9);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .botao_depositar {
+    width: 638.182px; 
+    height: 65px; 
+    flex-shrink: 0; 
+    background-color: var(--primary-color); /* Cor de fundo utilizando a variável */
+    border: none; 
+    border-radius: 8px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito de transição */
+  }
+  
+  .botao_depositar button {
+    color: var(--black); 
+    font-family: Montserrat; 
+    font-size: 24px; 
+    font-style: normal; 
+    font-weight: 700; 
+    line-height: 135%; 
+    background-color: transparent; /* Botão sem fundo, pois a cor de fundo está no container */
+    border: none; /* Sem borda no botão */
+    cursor: pointer; /* Alterando o cursor para indicar que o botão é clicável */
+  }
+  
+  .botao_depositar button:hover {
+    background-color: var(#40D0A2); /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o botão ao passar o mouse */
+  }
+
+  .botao_depositar {
+    width: 638.182px; 
+    height: 65px; 
+    flex-shrink: 0; /* Impede que o botão encolha */
+    background-color: var(--primary-color); 
+    border: none; 
+    border-radius: 8px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer; /* Torna o botão clicável */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+  }
+  
+  .botao_depositar button {
+    color: var(--black); 
+    font-family: Montserrat;
+    font-size: 24px; 
+    font-style: normal; 
+    font-weight: 700; 
+    line-height: 135%; 
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+  }
+  
+  .botao_depositar button:hover {
+    background-color: var( #40D0A2); 
+    transform: scale(1.05); /* Aumenta o botão ao passar o mouse */
+  }
+  
+

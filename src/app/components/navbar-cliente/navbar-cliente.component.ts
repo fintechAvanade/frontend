@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar-cliente',
+  selector: '',
   imports: [RouterLink],
   templateUrl: './navbar-cliente.component.html',
   styleUrl: './navbar-cliente.component.css'
