@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';  
+// import { SaldoService } from './saldo.service';  
+// // Falta Importar o serviço que criamos para o Saldo.
 
 @Component({
   selector: 'app-deposito',
@@ -8,11 +10,19 @@ import { Router } from '@angular/router';
   templateUrl: './deposito.component.html',
   styleUrls: ['./deposito.component.css']  
 })
-export class DepositoComponent {
+export class DepositoComponent implements OnInit{
   // Variável que armazena o valor do depósito
   valorInput: number = 0;
 
+
+
   constructor(private router: Router) {}
+
+  ngOnInit(): void {
+  }
+  saldo: number = 0;
+
+
 
   // Método para adicionar valores ao depósito
   adicionarValor(valor: number): void {

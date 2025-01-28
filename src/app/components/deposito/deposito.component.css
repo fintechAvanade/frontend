@@ -1,3 +1,13 @@
+.deposito_container {
+  position: relative; /* Mantém o fluxo do layout */
+  margin-left: 100px; /* Adiciona o deslocamento de 100px da navbar */
+  width: 1520px; 
+  height: 1080px; 
+  flex-shrink: 0; /* Garante que não encolha */
+  background-color:#F8F8F8; 
+}
+
+
 .deposito_header {
     color: var(--black); 
     font-family: 'Montserrat', sans-serif; /* Fonte definida com fallback */
@@ -9,19 +19,13 @@
 .deposito_body{
     color: var(--blac);
 
-font-family: Montserrat;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 135%; 
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; 
 }
 
-.botao_5reais button,
-.botao_10reais button,
-.botao_50reais button,
-.botao_100reais button  {
-
-  }
   
   /* Hover (quando o mouse está sobre o botão) */
   .botao_5reais button:hover
