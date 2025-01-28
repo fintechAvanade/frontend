@@ -1,1 +1,18 @@
-<p>admin-gestao-contas works!</p>
+<div class="admin-gestao_container">
+    <h1>Gerenciar Contas</h1>
+
+    <div class="admin-gestao_busca-contas">
+        <p>Opções de pesquisa</p>
+        <div class="admin-gestao_pesquisa">
+            <select #lista class="admin-gestao_select" (change)="pegarVariavelBusca(lista.value)">
+                <option value=""></option>
+                <option value="nome">Nome do cliente</option>
+                <option value="cpf">CPF</option>
+                <option value="numeroConta">Numero da conta</option>
+            </select>
+            <input type="text" placeholder="Pesquisar">
+            <i class="ph ph-magnifying-glass pesquisar"></i>
+        </div>
+    </div>
+
+</div>

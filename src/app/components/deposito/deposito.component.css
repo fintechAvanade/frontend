@@ -20,20 +20,7 @@ line-height: 135%;
 .botao_10reais button,
 .botao_50reais button,
 .botao_100reais button  {
-    width: 150px; /* Largura do botão */
-    height: 65px; /* Altura do botão */
-    flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
-    background-color: var(--gray); /* Cor de fundo usando variável */
-    color: var(--black); /* Cor do texto */
-    font-family: 'Montserrat'; /* Fonte */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: 700; /* Peso da fonte (negrito) */
-    border: none; /* Remove bordas padrão */
-    border-radius: 8px; /* Arredondamento */
-    cursor: pointer; /* Cursor para clique */
-    text-align: center; /* Centraliza o texto */
-    line-height: 65px; /* Centraliza verticalmente o texto */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Animação */
+
   }
   
   /* Hover (quando o mouse está sobre o botão) */
@@ -82,6 +69,30 @@ line-height: 135%;
     transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito de transição */
   }
   
+  .deposito_botoes{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+
+  }
+
+  .botao{
+    width: 150px; /* Largura do botão */
+    height: 65px; /* Altura do botão */
+    flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
+    background-color: var(--gray); /* Cor de fundo usando variável */
+    color: var(--black); /* Cor do texto */
+    font-family: 'Montserrat'; /* Fonte */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte (negrito) */
+    border: none; /* Remove bordas padrão */
+    border-radius: 8px; /* Arredondamento */
+    cursor: pointer; /* Cursor para clique */
+    text-align: center; /* Centraliza o texto */
+    line-height: 65px; /* Centraliza verticalmente o texto */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animação */
+  }
+  
   .botao_depositar button {
     color: var(--black); 
     font-family: Montserrat; 
@@ -100,7 +111,7 @@ line-height: 135%;
   }
 
   .botao_depositar {
-    width: 638.182px; 
+    width: 70%; 
     height: 65px; 
     flex-shrink: 0; /* Impede que o botão encolha */
     background-color: var(--primary-color); 

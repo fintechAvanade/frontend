@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AdminGestaoContasComponent {
 
+
+  variavelBusca!: string;
+
+  pegarVariavelBusca(item: string): void{
+    this.variavelBusca = item
+  }
 }

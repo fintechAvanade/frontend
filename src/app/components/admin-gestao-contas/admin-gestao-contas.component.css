@@ -1,0 +1,13 @@
+.admin-gestao_container{
+    margin: 40px 0 0 40px;
+}
+
+.admin-gestao_container h1{
+    color: var(--fintech_black, #151515);
+    /* Titulos-H3-40-Bold */
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 54px */
+    margin-bottom: 10px;
+}
