@@ -1,3 +1,14 @@
+.deposito_container {
+  position: relative; /* Mantém o fluxo do layout */
+  margin-left: 100px; /* Adiciona o deslocamento de 100px da navbar */
+  width: 1520px; 
+  height: 1080px; 
+  flex-shrink: 0; /* Garante que não encolha */
+  background-color:#F8F8F8; 
+
+}
+
+
 .deposito_header {
     color: var(--black); 
     font-family: 'Montserrat', sans-serif; /* Fonte definida com fallback */
@@ -20,16 +31,16 @@ line-height: 135%;
 .botao_10reais button,
 .botao_50reais button,
 .botao_100reais button  {
-    width: 150px; /* Largura do botão */
-    height: 65px; /* Altura do botão */
+    width: 150px; 
+    height: 65px; 
     flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
-    background-color: var(--gray); /* Cor de fundo usando variável */
-    color: var(--black); /* Cor do texto */
-    font-family: 'Montserrat'; /* Fonte */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: 700; /* Peso da fonte (negrito) */
-    border: none; /* Remove bordas padrão */
-    border-radius: 8px; /* Arredondamento */
+    background-color: var(--gray); 
+    color: var(--black); 
+    font-family: 'Montserrat'; 
+    font-size: 16px; 
+    font-weight: 700; 
+    border: none; 
+    border-radius: 8px; 
     cursor: pointer; /* Cursor para clique */
     text-align: center; /* Centraliza o texto */
     line-height: 65px; /* Centraliza verticalmente o texto */
