@@ -23,7 +23,7 @@
 
 .pix_content h2{
     color: var(--fintech_black, #151515);
-    font-size: 22px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 135%; /* 54px */
@@ -64,6 +64,7 @@
     width: fit-content;
     align-items: center;
     padding: 7px 40px;
+    cursor: pointer;
 }
 
 .pix_registrar-chaves p{

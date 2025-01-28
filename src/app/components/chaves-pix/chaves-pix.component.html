@@ -13,17 +13,19 @@
             <h2>Chaves cadastradas</h2>
             <p class="quantidade-chaves">{{chaves.length}} de 5 chaves</p>
         </div>
-        <div class="info-chave" *ngFor="let c of chaves">
-            <div class="icone">
-                <i class="ph-bold ph-key"></i>
+        <div class="chaves_overflow">
+            <div class="info-chave" *ngFor="let c of chaves">
+                <div class="icone">
+                    <i class="ph-bold ph-key"></i>
+                </div>
+                <div class="chave-pix_tipo-valor">
+                    <p class="tipo-chave">{{c.tipoChavePix}}</p>
+                    <p class="valor-chave">{{c.chave}}</p>
+                </div>
+                <button class="btn-icon">
+                    <i class="ph-bold ph-trash-simple"></i>
+                </button>
             </div>
-            <div>
-                <p class="tipo-chave">{{c.tipoChavePix}}</p>
-                <p class="valor-chave">{{c.chave}}</p>
-            </div>
-            <button class="btn-icon">
-                <i class="ph-bold ph-trash-simple"></i>
-            </button>
         </div>
     </div>
 </div>

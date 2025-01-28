@@ -11,7 +11,7 @@ export class CriacaoUsuario {
     bairro: string;
     logradouro: string;
     estado: string;
-    numero: number;
+    numero: number | null;
     complemento?: string;
 
     //dadwa
@@ -28,7 +28,7 @@ export class CriacaoUsuario {
         this.bairro = '';
         this.logradouro = '';
         this.estado = '';
-        this.numero = 0;
+        this.numero = null;
     }
 }
     
