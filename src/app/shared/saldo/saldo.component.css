@@ -1,0 +1,22 @@
+container_saldo {
+    width: 245px;
+    height: 187.5px;
+    flex-shrink: 0; /* Evita que o container encolha em layouts flex */
+    background: var(--black); /* Fundo com variável de cor */
+    border-radius: 20px; /* Bordas arredondadas */
+    display: flex; /* Para alinhar o conteúdo */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+  }
+  
+  .header_saldo h1 {
+    color: var(--gray); /* Corrigida a variável para "var(--gray)" */
+    font-family: 'Montserrat', sans-serif; /* Fonte utilizada */
+    font-size: 24px; /* Tamanho da fonte */
+    font-style: normal; /* Estilo da fonte (normal) */
+    font-weight: 700; /* Peso da fonte (negrito) */
+    line-height: 135%; /* Altura da linha proporcional ao tamanho da fonte */
+    margin: 0; /* Remove margens padrão do subtítulo */
+    padding: 0; /* Remove espaçamento interno, se houver */
+  }

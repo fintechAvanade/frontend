@@ -1,16 +1,16 @@
-<app-navbar-cliente class="navbar"></app-navbar-cliente> <!-- Navbar fixa -->
 
 <div class="deposito_container">
     <header class="deposito_header">
         <h1>Depósito</h1>
+        <p>NULLbank: depósitos rápidos, sem taxas, sem complicação.</p>
     </header>
     <!--Saldo-->
     <section class="saldo_contend">
-        <!--preciso colocar o componente que contem o saldo.-->
+       <app-saldo></app-saldo>
     </section>
     <!--Corpo do deposito-->
     <div class="deposito_body"> 
-        <p>Valor do Depósito</p>
+        <p>Valor do Depósito:</p>
     <!--botoes do valor pré-definido-->
     </div>
         <div class="deposito_botoes">
@@ -34,7 +34,7 @@
         <input 
             id="valor-deposito" 
             type="number" 
-            placeholder="Digite o valor" 
+            placeholder="Digite o valor (R$)" 
             [(ngModel)]="valorInput" 
         />
     </div>
