@@ -1,6 +1,6 @@
 .container_saldo {
-    width: 140px;
-    height: 140px; /* Agora é quadrado */
+    width: 190px;
+    height: 140px; 
     flex-shrink: 0; /* Evita que o container encolha em layouts flex */
     background: var(--fintech_black, #151515); /* Fundo preto, usando uma variável CSS */
     border-radius: 20px; /* Bordas arredondadas */
