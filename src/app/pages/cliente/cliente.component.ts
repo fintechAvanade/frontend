@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-//import { NavbarClienteComponent } from '../../components/navbar-cliente/navbar-cliente.component';
-// comentei pois está dando erro por não está sendo utilizado (Mari)
+import { NavbarClienteComponent } from '../../components/navbar-cliente/navbar-cliente.component';
 import { Usuario } from '../../classes/responses/usuario';
 import { UsuariosService } from '../../services/usuarios.service';
 
 @Component({
   selector: 'app-cliente',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavbarClienteComponent],
   templateUrl: './cliente.component.html',
   styleUrl: './cliente.component.css'
 })

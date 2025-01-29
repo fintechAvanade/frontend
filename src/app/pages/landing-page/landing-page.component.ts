@@ -34,7 +34,6 @@ export class LandingPageComponent implements OnInit {
   openAccount() {
     if (this.accountForm.valid) {
       console.log(`CPF informado: ${this.accountForm.value.cpf}`);
-      // Adicione lógica para abrir conta aqui, como chamar um serviço de API
     } else {
       console.log('Por favor, informe um CPF válido.');
     }
