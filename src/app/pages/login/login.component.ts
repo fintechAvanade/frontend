@@ -22,7 +22,7 @@ export class LoginComponent {
     });
   }
 
-  onSubmit() {
+  login() {
     if (this.loginForm.valid) {
       const { agencia, conta, senha } = this.loginForm.value;
 
@@ -30,6 +30,7 @@ export class LoginComponent {
         next: (response: { accessToken: string; expiresIn: number }) => {
           this.authService.setToken(response.accessToken);
           console.log('Login bem-sucedido!');
+          this.router.navigate(['/cliente/chavesPix']);
         },
         error: (error: any) => {
           console.error('Erro no login:', error);
