@@ -1,10 +1,13 @@
+.saldo_contend{
+  margin-top: 15px;
+}
+
+
 .deposito_container {
   position: relative; /* Mantém o fluxo do layout */
   flex-shrink: 0; /* Garante que não encolha */
   margin: 40px;
 }
-
-
 .deposito_header {
     color: var(--black); 
     font-family: 'Montserrat' sans-serif ; 
@@ -32,7 +35,7 @@
     font-weight: 700;
     line-height: 135%; 
     margin-left: 10px;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
   .botao_depositar {
@@ -66,7 +69,7 @@
       font-size: 16px; /* Tamanho da fonte */
       font-weight: 700; /* Peso da fonte (negrito) */
       border: none; /* Remove bordas padrão */
-      border-radius: 8px; /* Bordas arredondadas */
+      border-radius: 20px; /* Bordas arredondadas */
       cursor: pointer; /* Cursor de clique */
       text-align: center; /* Centraliza o texto */
       line-height: 65px; /* Centraliza verticalmente o texto */
@@ -124,7 +127,7 @@
     color: var(--black);
     background-color: #F2F2F2;
     border: 1px solid;
-    border-radius: 8px;
+    border-radius: 20px;
     border-color: var(--secondary-color);
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
