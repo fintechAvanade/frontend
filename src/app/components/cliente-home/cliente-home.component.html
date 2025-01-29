@@ -1,1 +1,47 @@
-<p>cliente-home works!</p>
+<!-- app.component.html -->
+<div class="container">
+
+    <main>
+      <section class="balance-section">
+        <div class="balance">
+          <h2>Saldo</h2>
+          <p>R$ 0,00</p>
+        </div>
+        <div class="card">
+          <p class="card-number">4242 4562 7710 3507</p>
+          <p class="card-holder">Nome do titular</p>
+          <p class="card-info">02/30 CVC 230</p>
+        </div>
+      </section>
+  
+      <section class="transactions">
+        <h2>Transações</h2>
+        <div class="transaction-buttons">
+          <button>Depositar</button>
+          <button>Sacar</button>
+          <button>Transferir</button>
+          <button>Área pix</button>
+          <button>Pagar</button>
+        </div>
+      </section>
+    </main>
+  
+    <!-- Extract Section -->
+    <div class="tabela">
+        <div class="tabela-cabecalho">
+            <h2>Chaves cadastradas</h2>
+            <p class="quantidade-chaves"></p>
+        </div>
+        <div class="info-chave">
+            <div class="icone">
+                <i class="ph-bold ph-key"></i>
+            </div>
+            <div>
+                <p class="tipo-chave"></p>
+                <p class="valor-chave"></p>
+            </div>
+            <button class="btn-icon">
+                <i class="ph-bold ph-trash-simple"></i>
+            </button>
+        </div>
+  </div>
