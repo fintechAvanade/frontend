@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -83,6 +84,8 @@ body {
     margin-top: 10px;
 }
 
+
+
 .cta {
     background-color: #50F1BE;
     padding: 10px;
@@ -120,35 +123,30 @@ body {
     text-align: center;
 }
 
-.benefits, .student-benefits, .accounts, .instructions {
+.benefits, .student-benefits, .accounts {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-}
-
-.benefit-item, .account-item, .instruction-item {
-    background-color: white;
+    justify-content: space-around;
+  }
+  
+  .benefit-item, .student-benefit-item, .account-item {
+    flex: 1 1 30%;
+    margin: 15px;
+    text-align: center;
+    background-color: #fef4f4;
     padding: 20px;
-    margin: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 200px;
-    text-align: left;
-}
-
-.benefit-item i, .account-item i, .instruction-item i {
-    font-size: 24px;
-    color: #50F1BE;
-}
-
-.benefit-item h3, .account-item h3, .instruction-item h3 {
-    font-size: 20px;
-    margin: 10px 0 5px;
-}
-
-.benefit-item p, .account-item p, .instruction-item p {
-    font-size: 16px;
-}
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .benefit-item h3, .student-benefit-item h3, .account-item h3 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+  
+  .benefit-item p, .student-benefit-item p, .account-item p {
+    font-size: 18px;
+    color: #555;
 
 .popup {
     position: fixed;
