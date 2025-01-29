@@ -43,6 +43,9 @@
     font-weight: 700;
 }
 
+.pix_botao:hover {
+    transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
 .acoes{
     background-color: var(--primary-color);
     font-size: 40px;
@@ -59,13 +62,22 @@
 
 .pix_registrar-chaves{
     display: flex;
-    border: 1px solid var(--fintech_black);
+    border: 1px ;
     border-radius: 20px;
     width: fit-content;
     align-items: center;
     padding: 7px 40px;
     cursor: pointer;
+    background-color: var(--secondary-color);
+    font-weight: 700;
+    transition: 0.3s;
 }
+.pix_registrar-chaves:hover {
+        transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+    }
+
+
+
 
 .pix_registrar-chaves p{
     margin: 0 15px;

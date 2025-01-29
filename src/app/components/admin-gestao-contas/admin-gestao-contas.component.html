@@ -1,1 +1,57 @@
-<p>admin-gestao-contas works!</p>
+<div class="admin-gestao_container">
+    <h1>Gerenciar Contas</h1>
+
+    <div class="admin-gestao_busca-contas">
+        <p>Opções de pesquisa</p>
+        <div class="admin-gestao_pesquisa">
+            <select #lista class="admin-gestao_select" (change)="pegarVariavelBusca(lista.value)">
+                <option value=""></option>
+                <option value="nome">Nome do cliente</option>
+                <option value="cpf">CPF</option>
+                <option value="numeroConta">Numero da conta</option>
+            </select>
+            <input type="text" placeholder="Pesquisar">
+            <i class="ph ph-magnifying-glass pesquisar"></i>
+        </div>
+    </div>
+    <div class="admin-gestao_tabela" >
+        <table>
+            <thead>
+                <tr>
+                    <th>Agencia</th>
+                    <th>Conta</th>
+                    <th>Nome Cliente</th>
+                    <th>Ultima Movimentacao</th>
+                    <th>Ultimo acesso</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of listaClientes | slice:0:10">
+                    <td>{{c.agencia}}</td>
+                    <td>{{c.numeroConta}}</td>
+                    <td>{{c.nome}}</td>
+                    <td>{{c.ultimaMovimentacao | date:'dd/MM/yyyy HH:mm'}}</td>
+                    <td>{{c.ultimoAcesso | date:'dd/MM/yyyy HH:mm'}}</td>
+                    <td>
+                        <p [ngClass]=" c.ativo ? 'admin-gestao_ativo' : 'admin-gestao_inativo'">
+                            {{ c.ativo ? 'Ativo' : 'Inativo' }}
+                        </p>
+                    </td>
+                    <td><i class="ph ph-pencil-simple-line lapis"></i>  <i class="ph ph-trash-simple lixo"></i></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="admin-gestao_paginacao">
+            <div>
+                <input type="text">
+                
+            </div>
+            <div>
+                <i class="ph ph-caret-left"></i>
+                <i class="ph ph-caret-right"></i>
+            </div>
+        </div>
+
+</div>
