@@ -16,7 +16,7 @@
 .admin-gestao_select{
     padding: 5px 15px;
     background-color: transparent;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--fintech_gray);
     margin: 5px 0 20px 0;
     border-radius: 7px;
     outline: none;

@@ -1,6 +1,7 @@
   import { Component, OnInit } from '@angular/core';
   import { FormsModule } from '@angular/forms';
   import { Router } from '@angular/router'; 
+import { SaldoComponent } from '../../shared/saldo/saldo.component';
   
 
 
@@ -9,7 +10,7 @@
 
   @Component({
     selector: 'app-deposito',
-    imports: [FormsModule],
+    imports: [FormsModule, SaldoComponent],
     templateUrl: './deposito.component.html',
     styleUrls: ['./deposito.component.css']  
   })
@@ -17,15 +18,12 @@
     // Variável que armazena o valor do depósito
     valorInput: number = 0;
 
-
-
     constructor(private router: Router) {}
 
     ngOnInit(): void {
+
     }
     saldo: number = 0;
-
-
 
     // Método para adicionar valores ao depósito
     adicionarValor(valor: number): void {
@@ -33,7 +31,6 @@
       this.valorInput += valor; 
     }
       
-
     // Método para confirmar o depósito
     confirmarDeposito(): void {
       if (this.valorInput > 0) {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContaService } from '../../services/conta.service';
 // tem que fazer o service
 
 @Component({
@@ -10,12 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class SaldoComponent implements OnInit {
   saldo: number = 0; 
 
-  constructor(private saldoService: SaldoService) { }
+  constructor(private contaService: ContaService) { }
   
   ngOnInit(): void {
-    this.saldoService.getSaldo().subscribe(saldo => {
-      this.saldo = saldo;
-    });
+    this.contaService.getSaldoApi(1)
+      .subscribe(saldo => this.saldo = saldo.valor);
   }
 }
 
