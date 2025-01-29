@@ -1,7 +1,7 @@
 <div class="w-full flex">
     <div class="cadastro_container_imagens">
-        <img ngSrc="./assets/frame1.png" priority width="250" height="200" alt="" class="cadastro_imagem1">
-        <img ngSrc="./assets/frame3.png" priority width="250" height="200" alt="" class="cadastro_imagem2">
+        <img ngSrc="./assets/frame1.png" width="10" height="10" alt="imagem 1" class="cadastro_imagem1">
+        <img ngSrc="./assets/frame3.png" width="10" height="10" alt="imagem 2" class="cadastro_imagem2">
     </div>
     <main class="teste flex-1 text-center flex-col">
         <div class="cadastro_icone_voltar">
@@ -11,9 +11,10 @@
             </ng-template>
         </div>
 
-        <h1 class="cadastro_criar_titulo">Criar conta</h1>
         <div class="cadastro_container_usuario" *ngIf="exibirSecao == 1">
             <div class="cadastro_conjunto_input">
+                <div><h1 class="cadastro_criar_titulo">Criar conta</h1></div>
+               
                 <div class="cadastro_input">
                     <p>Nome completo*</p>
                     <input type="text" [(ngModel)]="usuario.nome">
@@ -43,9 +44,10 @@
                     <p>Usuario*</p>
                     <input type="text" [(ngModel)]="usuario.nomeUsuario"><br>
                 </div>
+                <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
             </div>
-            <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
         </div>
+           
         <div class="cadastro_container_usuario" *ngIf="exibirSecao == 2">
             <div class="cadastro_conjunto_input">
                 <div class="cadastro_input">
@@ -54,11 +56,11 @@
                 </div>
     
                 <div class="cadastro_inputs_flex">
-                    <div class="cadastro_input">
+                    <div class="cadastro_input menor">
                         <p>Cidade*</p>
                         <input type="text" [(ngModel)]="usuario.cidade">
                     </div>
-                    <div class="cadastro_input">
+                    <div class="cadastro_input menor">
                         <p>Estado*</p>
                         <input type="text" [(ngModel)]="usuario.estado">
                     </div>
@@ -70,23 +72,25 @@
                 </div>
                 <div class="cadastro_inputs_flex">
                     
-                    <div class="cadastro_input">
+                    <div class="cadastro_input menor">
                         <p>Logradouro*</p>
                         <input type="text" [(ngModel)]="usuario.logradouro">
                     </div>
                     
-                    <div class="cadastro_input">
+                    <div class="cadastro_input menor">
                         <p>Número*</p>
                         <input type="text" [(ngModel)]="usuario.numero">
                     </div>
                 </div>
                 <div class="cadastro_input">
                     <p>Complemento</p>
-                    <input type="text" [(ngModel)]="usuario.complemento">    
+                    <input type="text" [(ngModel)]="usuario.complemento"><br>
                 </div>
+                <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
             </div>
-            <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
+            
         </div>
+        
         <div class="cadastro_container_usuario" *ngIf="exibirSecao == 3">
             <div class="cadastro_conjunto_input">
                 <div class="cadastro_input">
@@ -96,10 +100,10 @@
 
                 <div class="cadastro_input">
                     <p>Confirmar senha*</p>
-                    <input type="text">
+                    <input type="text"><br>
                 </div>
+                <app-primary-button (click)="incluir(usuario)">Cadastrar</app-primary-button>
             </div>
-            <app-primary-button (click)="incluir(usuario)">Cadastrar</app-primary-button>
         </div>
     </main>
 </div>

@@ -4,49 +4,67 @@
       <img src="assets/logo 512x120.png" alt="Logo do NULL BANK" class="w-40 mb-4" />
       <p class="text-lg font-medium">Onde o impossível encontra valor.</p>
     </div>
-     <!-- Direita -->
-
+    <!-- Direita -->
     <div class="flex-1 flex flex-col justify-center items-center p-6">
-       
-        <h1 style="color: #151515; font-size: 40px; font-family: Inter; font-weight: 700; word-wrap: break-word">Entrar</h1>
-        <div class="mt-[20px]">
+      <h1 style="color: #151515; font-size: 40px; font-family: Inter; font-weight: 700; word-wrap: break-word">Entrar</h1>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="mt-[20px]">
         <div class="flex space-x-[39.5px]">
-            <app-input-label 
-              placeholderText="Agência"
-              [width]="'150px'" 
-              [height]="'53.3px'">
-            </app-input-label>
-            
-            <app-input-label 
-              placeholderText="Conta"
-              [width]="'200px'" 
-              [height]="'53.3px'">
-            </app-input-label>
+          <div class="form-group">
+            <label for="agencia" class="sr-only">Agência</label>
+            <input
+              id="agencia"
+              type="text"
+              formControlName="agencia"
+              placeholder="Agência"
+              class="form-control"
+              [class.is-invalid]="loginForm.get('agencia')?.invalid && loginForm.get('agencia')?.touched"
+              style="width: 150px; height: 53.3px;"
+            />
           </div>
-
-          <div class="mt-[47px]">
-            <app-input-label 
-              placeholderText="Senha"
-              [width]="'380px'" 
-              [height]="'53.3px'">
-            </app-input-label>
+          
+          <div class="form-group">
+            <label for="conta" class="sr-only">Conta</label>
+            <input
+              id="conta"
+              type="text"
+              formControlName="conta"
+              placeholder="Conta"
+              class="form-control"
+              [class.is-invalid]="loginForm.get('conta')?.invalid && loginForm.get('conta')?.touched"
+              style="width: 200px; height: 53.3px;"
+            />
           </div>
-        
-
-        
-
-
+        </div>
+  
+        <div class="mt-[47px]">
+          <div class="form-group">
+            <label for="senha" class="sr-only">Senha</label>
+            <input
+              id="senha"
+              type="password"
+              formControlName="senha"
+              placeholder="Senha"
+              class="form-control"
+              [class.is-invalid]="loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched"
+              style="width: 380px; height: 53.3px;"
+            />
+          </div>
+        </div>
+  
         <!-- Botão preenchido com texto "Acessar" -->
         <div class="mt-[20px] flex flex-col items-center space-y-4">
-    <app-button-filled>
-        <div class="w-[120px] h-6 text-[#151515] text-xl font-bold font-['Inter']">Acessar</div>
-    </app-button-filled>
-
-    <a href="#" class="text-center text-[#50f1be] text-lg font-bold font-['Inter'] underline">
-        Esqueci minha senha
-      </a>
-    <!-- Botão secundario  com texto "Criar conta" -->
-     <app-secundary-button>
-        <div class="w-[120px] h-6 text-[#151515] text-xl font-bold font-['Inter']" routerLink="/cadastro">Criar Conta</div>
-    </app-secundary-button>
-
+          <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid" style="width: 120px; height: 53.3px; background-color: #50f1be; color: #151515; font-size: 1.25rem; font-weight: bold; font-family: 'Inter', sans-serif;">
+            Acessar
+          </button>
+  
+          <a href="#" class="text-center text-[#50f1be] text-lg font-bold font-['Inter'] underline">
+            Esqueci minha senha
+          </a>
+          <!-- Botão secundário com texto "Criar conta" -->
+          <button type="button" class="btn btn-secondary" routerLink="/cadastro" style="width: 120px; height: 53.3px; background-color: transparent; color: #151515; font-size: 1.25rem; font-weight: bold; font-family: 'Inter', sans-serif;">
+            Criar Conta
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>

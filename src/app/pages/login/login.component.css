@@ -1,0 +1,94 @@
+.flex {
+    display: flex;
+  }
+  
+  .h-screen {
+    height: 100vh;
+  }
+  
+  .flex-1 {
+    flex: 1;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .text-black {
+    color: black;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .p-6 {
+    padding: 1.5rem;
+  }
+  
+  .w-40 {
+    width: 10rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .title {
+    color: #151515;
+    font-size: 40px;
+    font-family: Inter;
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  
+  .mt-20 {
+    margin-top: 20px;
+  }
+  
+  .flex.space-x-39-5 {
+    display: flex;
+    gap: 39.5px;
+  }
+  
+  .mt-47 {
+    margin-top: 47px;
+  }
+  
+  .mt-20 {
+    margin-top: 20px;
+  }
+  
+  .button-text {
+    width: 120px;
+    height: 1.5rem;
+    color: #151515;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: 'Inter';
+  }
+  
+  .forgot-password {
+    text-align: center;
+    color: #50f1be;
+    font-size: 1.125rem;
+    font-weight: bold;
+    font-family: 'Inter';
+    text-decoration: underline;
+  }
