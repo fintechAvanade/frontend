@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AdminService } from '../../services/admin.service';
+import { GestaoContas } from '../../classes/responses/gestao-contas';
 
 @Component({
   selector: 'app-admin-home',
@@ -8,9 +10,21 @@ import { RouterLink } from '@angular/router';
   templateUrl: './admin-home.component.html',
   styleUrl: './admin-home.component.css'
 })
-export class AdminHomeComponent {
+export class AdminHomeComponent implements OnInit{
 
+  constructor(
+    private adminService: AdminService
+  ) {}
 
+  ngOnInit(): void {
+    this.adminService.getContasClientesGestaoApi()
+    .subscribe(res => {
+      this.listaClientes = res
+    });
+  }
+
+  listaClientes: GestaoContas[] = []
+  
   ativo: boolean = true;
 
   inativo: boolean = false;

@@ -1,0 +1,155 @@
+.admin-editar-conta_container{
+    margin: 40px 100px 0 40px;
+}
+.admin-editar-conta_forms{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.admin-editar-conta_input{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: fit-content;
+    margin: 5px 0;
+}
+
+.admin-editar-conta_input p{
+    color: var(--fintech_black);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.estado{
+    margin-left: 20px;
+}
+
+.numero{
+    margin-left: 20px;
+}
+
+.numero input{
+    padding: 4px 20px;
+    width: 80px;
+    align-content: start;
+}
+
+option{
+    text-align: start;
+    align-items: start;
+}
+
+select{
+    width: 80px;
+    padding: 4px 6px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--fintech_gray);
+    outline: none;
+}
+
+.admin-editar-conta_input input{
+    border-radius: 5px;
+    border: 1px solid var(--fintech_gray);
+    background: var(--fintech_white, #FFF);
+    color: var(--fintech_gray);
+    padding: 3px 40px;
+    padding-left: 10px;
+    outline: none;
+    font-size: 12px;
+}
+
+.admin-editar-conta_cabecalho_input{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.admin-editar-conta_inputs_flex{
+    display: flex;
+}
+
+h1{
+    color: var(--fintech_black, #151515);
+
+    /* Titulo-H4-24-Bold */
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 43.2px */
+    margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+h2{
+    color: var(--fintech_black, #151515);
+    
+    /* Titulo-H4-24-Bold */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 43.2px */
+    margin-bottom: 15px;
+}
+
+.admin-editar-conta_senha{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.admin-editar-conta_botoes{
+    align-self: flex-end;
+}
+
+.admin-editar-conta_botao-voltar, .admin-editar-conta_botao-editar{
+    padding: 5px 35px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-weight: 600;
+}
+
+.admin-editar-conta_botao-editar{
+    background-color: var(--primary-color);
+}
+
+.admin-editar-conta_botao-voltar{
+    background-color: #f36c6c;
+}
+
+.admin-editar-conta_checkboxes{
+    margin: 10px 0;
+}
+
+.admin-editar-conta_checkbox{
+    display: flex;
+}
+
+.admin-editar-conta_checkbox p{
+    margin: 0 10px;
+}
+
+.admin-editar-conta_checkbox input{
+    color: var(--primary-color);
+}
+
+
+.admin-editar-conta_tipo-conta{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.admin-editar-conta_tipo-conta h2{
+    color: var(--fintech_black, #151515);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 43.2px */
+    margin: 15px 0 5px 0;
+}

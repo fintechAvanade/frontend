@@ -1,9 +1,9 @@
-import { NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cliente-home',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './cliente-home.component.html',
   styleUrl: './cliente-home.component.css'
 })

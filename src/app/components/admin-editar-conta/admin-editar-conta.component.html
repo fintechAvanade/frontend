@@ -1,1 +1,106 @@
-<p>admin-editar-conta works!</p>
+<div class="admin-editar-conta_container">
+    <h1>Editar Conta</h1>
+    <div class="admin-editar-conta_forms">
+        <div class="admin-editar-conta_dados-pessoais">
+            <h2>Dados Pessoais</h2>
+            <div class="admin-editar-conta_input">
+                <p>Nome completo*</p>
+                <input type="text" [(ngModel)]="usuario.nome">
+            </div>
+            <div class="admin-editar-conta_input">
+                <p>CPF*</p>
+                <input type="text" [(ngModel)]="usuario.cpf">
+            </div>
+            <div class="admin-editar-conta_input">
+                <p>Data de Nascimento*</p>
+                <input type="text" placeholder="yyyy-mm-dd"[(ngModel)]="usuario.dataNascimento">
+            </div>
+        
+            <div class="admin-editar-conta_input">
+                <p>Telefone*</p>
+                <input type="text" [(ngModel)]="usuario.telefone">
+            </div>
+        
+            <div class="admin-editar-conta_input">
+                <p>E-mail*</p>
+                <input type="text" [(ngModel)]="usuario.email">
+            </div>
+        
+            <div class="admin-editar-conta_input">
+                <p>Usuario*</p>
+                <input type="text" [(ngModel)]="usuario.nomeUsuario"><br>
+            </div>    
+        </div>
+        <div class="admin-editar-conta_endereco">
+            <h2>Endereço</h2>
+            <div class="admin-editar-conta_input">
+                <p>CEP*</p>
+                <input type="text" [(ngModel)]="usuario.cep">
+            </div>
+            <div class="admin-editar-conta_inputs_flex">
+                <div class="admin-editar-conta_input">
+                    <p>Cidade*</p>
+                    <input type="text" [(ngModel)]="usuario.cidade">
+                </div>
+                <div class="admin-editar-conta_input estado">
+                    <p>Estado*</p>
+                    <select [(ngModel)]="usuario.estado" name="" id="" >
+                        <option value=''></option>
+                        <option *ngFor="let e of estadosBrasileiros" value=>{{e}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="admin-editar-conta_input">
+                <p>Bairro*</p>
+                <input type="text" [(ngModel)]="usuario.bairro">
+            </div>
+            <div class="admin-editar-conta_inputs_flex">
+                <div class="admin-editar-conta_input">
+                    <p>Logradouro*</p>
+                    <input type="text" [(ngModel)]="usuario.logradouro">
+                </div>
+                <div class="admin-editar-conta_input numero">
+                    <p>Número*</p>
+                    <input type="text" [(ngModel)]="usuario.numero">
+                </div>
+            </div>
+            <div class="admin-editar-conta_input">
+                <p>Complemento</p>
+                <input type="text" [(ngModel)]="usuario.complemento">    
+            </div>
+        </div>
+        <div class="admin-editar-conta_senha">
+            <div class="admin-editar-conta_senha-conteudo">
+                <h2>Senha de Acesso</h2>
+        
+                <div class="admin-editar-conta_input">
+                    <p>Senha*</p>
+                    <input type="text" [(ngModel)]="usuario.senha">
+                </div>
+        
+                <div class="admin-editar-conta_input">
+                    <p>Confirmar senha*</p>
+                    <input type="text">
+                </div>
+                <div class="admin-editar-conta_tipo-conta">
+                    <h2>Tipo de conta</h2>
+                    <div class="admin-editar-conta_checkboxes">
+                        <div class="admin-editar-conta_checkbox">
+                            <p>Simples</p>
+                            <input type="checkbox" value="SIMPLES" [(ngModel)]="checkboxSimples" (change)="selecionarCheckbox('checkboxSimples')">
+                        </div>
+                        <div class="admin-editar-conta_checkbox">
+                            <p>Especial</p>
+                            <input type="checkbox" [(ngModel)]="checkboxEspecial" (change)="selecionarCheckbox('checkboxEspecial')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="admin-editar-conta_botoes">
+                <button routerLink="/admin" class="admin-editar-conta_botao-voltar">Cancelar</button>
+                <button routerLink="/admin" class="admin-editar-conta_botao-editar">Editar conta</button>
+            </div>
+        </div>
+    </div>
+
+</div>
