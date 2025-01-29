@@ -1,7 +1,9 @@
 .flex {
     display: flex;
   }
-  
+  .h1_entrar{
+    font: bold;
+  }
   .h-screen {
     height: 100vh;
   }

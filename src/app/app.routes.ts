@@ -19,8 +19,8 @@ import { SaqueComponent } from './components/saque/saque.component';
 import { TransferenciaPadraoComponent } from './components/transferencia-padrao/transferencia-padrao.component';
 import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
 import { InvestimentosComponent } from './components/investimentos/investimentos.component';
-import { AuthGuardService } from './services/authGuard.service';
 import { NgModule } from '@angular/core';
+import { AuthGuardService } from './services/authGuard.service';
 
 export const routes: Routes = [
     {path: '', component: LandingPageComponent},

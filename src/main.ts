@@ -10,7 +10,7 @@ import { JWTInterceptor } from './app/services/interceptor.service';
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
-    importProvidersFrom(HttpClientModule), // Importa o módulo HTTP
+    importProvidersFrom(HttpClientModule),
     { provide: HTTP_INTERCEPTORS, useClass: JWTInterceptor, multi: true },
     AuthService, // Registra o AuthService como provider global
   ],

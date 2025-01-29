@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
+  constructor(private fb: FormBuilder, private authService: AuthService) {
     this.loginForm = this.fb.group({
       agencia: ['', Validators.required],
       conta: ['', Validators.required],
@@ -22,7 +22,7 @@ export class LoginComponent {
     });
   }
 
-  onSubmit() {
+  login() {
     if (this.loginForm.valid) {
       const { agencia, conta, senha } = this.loginForm.value;
 
