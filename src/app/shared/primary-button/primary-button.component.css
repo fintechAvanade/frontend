@@ -2,6 +2,8 @@ button{
     background-color: var(--primary-color);
     color: var(--fintech_black);
 
+    margin-top: auto;
+    
     width: 250px;
     height: 60px;
     border-radius: 8px;

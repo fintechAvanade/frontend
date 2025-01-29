@@ -25,5 +25,4 @@ export class ClienteComponent implements OnInit{
       .subscribe(response => this.usuario = response);
 
   }
-
 }

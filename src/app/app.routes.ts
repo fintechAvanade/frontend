@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
@@ -19,6 +19,8 @@ import { SaqueComponent } from './components/saque/saque.component';
 import { TransferenciaPadraoComponent } from './components/transferencia-padrao/transferencia-padrao.component';
 import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
 import { InvestimentosComponent } from './components/investimentos/investimentos.component';
+import { NgModule } from '@angular/core';
+import { AuthGuardService } from './services/authGuard.service';
 
 export const routes: Routes = [
     {path: '', component: LandingPageComponent},
@@ -28,8 +30,9 @@ export const routes: Routes = [
     {
         path: 'cliente', 
         component: ClienteComponent,
+        canActivate: [AuthGuardService],
         children:[
-            { path: '', component: ClienteHomeComponent },
+            { path: '', component: ClienteHomeComponent},
             { path: 'chavesPix', component: ChavesPixComponent },
             { path: 'deposito', component: DepositoComponent },
             { path: 'editarUsuario', component: EditarUsuarioComponent },
@@ -53,3 +56,8 @@ export const routes: Routes = [
         ]
     }
 ];
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule {}
