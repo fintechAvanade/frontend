@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D9D9D9;
+}
+
+.navbar {
+    background-color: #50F1BE;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    position: relative;
+}
+
+.navbar .menu button {
+    background-color: #50F1BE;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar .menu .dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.navbar .menu .dropdown a {
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar .menu .dropdown a:hover {
+    background-color: #50F1BE;
+    color: white;
+}
+
+.navbar .menu:hover .dropdown {
+    display: block;
+}
+
+.header {
+    text-align: center;
+    padding: 100px 20px 20px;
+    background-color: #6DDEE5;
+    color: white;
+}
+
+.header img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.cta {
+    background-color: #50F1BE;
+    padding: 10px;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 10;
+}
+
+.cta form {
+    display: flex;
+    align-items: center;
+}
+
+.cta input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.cta button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    border: none;
+    color: #50F1BE;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.benefits, .student-benefits, .accounts, .instructions {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.benefit-item, .account-item, .instruction-item {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    text-align: left;
+}
+
+.benefit-item i, .account-item i, .instruction-item i {
+    font-size: 24px;
+    color: #50F1BE;
+}
+
+.benefit-item h3, .account-item h3, .instruction-item h3 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+.benefit-item p, .account-item p, .instruction-item p {
+    font-size: 16px;
+}
+
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #50F1BE;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.popup-menu {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: white;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.popup-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.popup-menu a:hover {
+    background-color: #50F1BE;
+    color: white;
+}
+
+.popup:hover + .popup-menu {
+    display: block;
+}
