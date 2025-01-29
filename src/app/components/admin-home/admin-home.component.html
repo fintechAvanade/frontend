@@ -1,13 +1,103 @@
 <div class="admin-home_container">
     <header class="admin-home_header">
-
+        <h1>Home</h1>
+        <p>Bem-vindo ao seu painel administrativo!</p>
+        <p>Aqui é possivel cadastrar contas simples, editar informações e desativar contas.</p>
     </header>
-    <div class="dmin-home_content">
+    <div class="admin-home_content">
         <div class="admin-home_busca-contas">
-
+            <h1>Buscar Conta</h1>
+            <p>Opções de pesquisa</p>
+            <div class="admin-home_pesquisa">
+                <select #lista class="admin-home_select" (change)="pegarVariavelBusca(lista.value)">
+                    <option value=""></option>
+                    <option value="nome">Nome do cliente</option>
+                    <option value="cpf">CPF</option>
+                    <option value="numeroConta">Numero da conta</option>
+                </select>
+                <input type="text" placeholder="Pesquisar">
+                <i class="ph ph-magnifying-glass pesquisar"></i>
+            </div>
+            <div class="admin-home_tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Agencia</th>
+                            <th>Conta</th>
+                            <th>Nome Cliente</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0001</td>
+                            <td>0000000-0</td>
+                            <td>Joe Due</td>
+                            <td>
+                                <p [ngClass]="ativo ? 'admin-home_ativo' : 'admin-home_inativo'">
+                                    {{ ativo ? 'Ativo' : 'Inativo' }}
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>0000000-0</td>
+                            <td>Joe Due</td>
+                            <td>
+                                <p [ngClass]="ativo ? 'admin-home_ativo' : 'admin-home_inativo'">
+                                    {{ ativo ? 'Ativo' : 'Inativo' }}
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>0000000-0</td>
+                            <td>Joe Due</td>
+                            <td>
+                                <p [ngClass]="inativo ? 'admin-home_ativo' : 'admin-home_inativo'">
+                                    {{ inativo ? 'Ativo' : 'Inativo' }}
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>0000000-0</td>
+                            <td>Joe Due</td>
+                            <td>
+                                <p [ngClass]="ativo ? 'admin-home_ativo' : 'admin-home_inativo'">
+                                    {{ ativo ? 'Ativo' : 'Inativo' }}
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>0000000-0</td>
+                            <td>Joe Due</td>
+                            <td>
+                                <p [ngClass]="inativo ? 'admin-home_ativo' : 'admin-home_inativo'">
+                                    {{ inativo ? 'Ativo' : 'Inativo' }}
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="admin-home_botoes">
-            
+        <div class="admin-home_acoes">
+            <h1>Ações</h1>
+            <div class="admin-home_botoes">
+                <div routerLink="/admin/gestaoContas" class="admin-home_botao">
+                    <i class="ph ph-user-list acoes"></i>
+                    <p>Gerenciar Contas</p>
+                </div>
+                <div routerLink="/admin/criarConta" class="admin-home_botao">
+                    <i class="ph ph-user-plus acoes"></i>
+                    <p>Criar Conta</p>
+                </div>
+                <div class="admin-home_botao">
+
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,30 @@
+.container_saldo {
+    width: 140px;
+    height: 140px; /* Agora é quadrado */
+    flex-shrink: 0; /* Evita que o container encolha em layouts flex */
+    background: var(--fintech_black, #151515); /* Fundo preto, usando uma variável CSS */
+    border-radius: 20px; /* Bordas arredondadas */
+    display: flex; /* Para alinhar o conteúdo */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+    color: white; /* Texto branco para contraste */
+  }
+  
+  .header_saldo h1 {
+    color: var(--gray); /* Corrigida a variável para "var(--gray)" */
+    font-family: 'Montserrat', sans-serif; /* Fonte utilizada */
+    font-size: 16px; /* Tamanho da fonte */
+    font-style: normal; /* Estilo da fonte (normal) */
+    font-weight: 700; /* Peso da fonte (negrito) */
+    line-height: 135%; /* Altura da linha proporcional ao tamanho da fonte */
+    margin: 0; /* Remove margens padrão do subtítulo */
+    padding: 0; /* Remove espaçamento interno, se houver */
+  }
+
+  .header_saldo p {
+    color: var(--gray); /* Corrigida a variável para "var(--gray)" */
+    font-family: 'Montserrat', sans-serif; /* Fonte utilizada */
+    font-size: 20px; /* Tamanho da fonte */
+    margin-top: 5px;
+  }
