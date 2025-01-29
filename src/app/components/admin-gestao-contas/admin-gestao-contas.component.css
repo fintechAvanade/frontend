@@ -1,0 +1,106 @@
+.admin-gestao_container{
+    margin: 40px 0 0 40px;
+}
+
+.admin-gestao_container h1{
+    color: var(--fintech_black, #151515);
+    /* Titulos-H3-40-Bold */
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 54px */
+    margin-bottom: 30px;
+}
+
+
+.admin-gestao_select{
+    padding: 5px 15px;
+    background-color: transparent;
+    border: 1px solid var(--fintech_gray);
+    margin: 5px 0 20px 0;
+    border-radius: 7px;
+    outline: none;
+    font-size: 13px;
+}
+
+option{
+    font-size: 12px;
+}
+
+.admin-gestao_busca-contas h1{
+    margin-bottom: 20px;
+}
+
+input{
+    margin: 0 12px;
+    padding: 2px 15px;
+    border: 1px solid var(--fintech_gray);
+    border-radius: 7px;
+    background-color: transparent;
+    outline: none;
+}
+
+.pesquisar{
+    background-color: var(--primary-color);
+    padding: 6px;
+    border-radius: 7px;
+}
+
+
+table{
+    font-size: 12px;
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px solid black;
+    border-collapse: separate; /* Evita que as bordas se sobreponham */
+    border-radius: 10px;
+    border-spacing: 0;
+}
+
+th, td{
+    text-align: center;
+    border-bottom: solid 1px black;
+    padding: 12px 24px;
+}
+
+table tr:last-child td {
+    border: none;
+}
+
+
+td p{
+    width: 70px;
+    padding: 2px 0;
+    border-radius: 7px;
+}
+
+.admin-gestao_ativo{
+    background-color: #1cecab;
+}
+
+.admin-gestao_inativo{
+    background-color: #f36c6c;
+}
+
+.lapis, .lixo{
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lapis{
+    color: #42e4f0;
+}
+
+.lixo{
+    color: #f36c6c;
+}
+
+.lapis:hover{
+    color: #04929c;
+}
+
+.lixo:hover{
+    color: #d62424;
+}

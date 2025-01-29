@@ -1,1 +1,47 @@
-<p>deposito works!</p>
+<div class="deposito_container">
+    <header class="deposito_header">
+        <h1>Depósito</h1>
+        <p>NULLbank: depósitos rápidos, sem taxas, sem complicação.</p>
+    </header>
+    <!--Saldo-->
+    <section class="saldo_contend">
+       <app-saldo></app-saldo>
+    </section>
+    <!--Corpo do deposito-->
+    <div class="deposito_body"> 
+        <p>Valor do Depósito:</p>
+    <!--botoes do valor pré-definido-->
+    </div>
+        <div class="deposito_botoes">
+            <div  class="botao">
+                <button (click)="adicionarValor(5)">R$ 5,00 </button>
+            </div>
+            <div class="botao">
+                <button (click)="adicionarValor(10)">R$ 10,00 </button>
+            </div>
+            <div  class="botao">
+                <button (click)="adicionarValor(50)">R$ 50,00 </button>
+            </div>
+            <div  class="botao">
+                <button (click)="adicionarValor(100)">R$ 100,00 </button>
+            </div>
+        </div>
+    <!-- Campo do valor personalizado-->  
+        
+    <div class="input_valor">
+        <label for="valor-deposito">Outro Valor:</label>
+        <input 
+            id="valor-deposito" 
+            type="number" 
+            placeholder="Digite o valor (R$)" 
+            [(ngModel)]="valorInput" 
+        />
+    </div>
+         <!--ver a aula sobre isso-->
+        
+    <!--Botao de confirmacao do deposito-->
+    <!--volta para tela de transação e colocar que foi efetuada a transação, mas ela ainda nao existe <-->
+    <div class="botao_depositar">
+        <button (click)="confirmarDeposito()">Depositar</button>
+    </div>
+</div>

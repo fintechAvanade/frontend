@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.fb.group({
       agencia: ['', Validators.required],
       conta: ['', Validators.required],
@@ -30,6 +30,7 @@ export class LoginComponent {
         next: (response: { accessToken: string; expiresIn: number }) => {
           this.authService.setToken(response.accessToken);
           console.log('Login bem-sucedido!');
+          this.router.navigate(['/cliente/chavesPix']);
         },
         error: (error: any) => {
           console.error('Erro no login:', error);
