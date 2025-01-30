@@ -147,7 +147,7 @@ body {
   .benefit-item p, .student-benefit-item p, .account-item p {
     font-size: 18px;
     color: #555;
-
+  }
 .popup {
     position: fixed;
     bottom: 20px;
