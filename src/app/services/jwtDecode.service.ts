@@ -37,6 +37,17 @@ export class JwtDecodeService {
         return null;
     }
 
+
+    getIdContaFromToken(): number | null {
+        const token = localStorage.getItem('accessToken');
+        if(token){
+            const decodedToken = this.decodedToken(token);
+            return decodedToken?.contaId || null;
+        }
+        return null;
+    }
+    
+
 }
 
 

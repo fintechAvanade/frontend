@@ -1,30 +1,31 @@
 <div class="login-home_container">
-    <div class="login-home_header">
-        <h1>Home</h1>
+    <div class="perfil">
+        <i class="ph-bold ph-user-circle"></i>
+        <p>Olá, {{usuario.nomeUsuario}}</p>
     </div>
     <div class="login-home_content">
         <div class="login-home_main">
             <div class="login-home_cards">
                 <div class="login-home_card-saldo">
                     <h2>Saldo</h2>
-                    <p>R$ {{saldo.toFixed(2) }}</p>
+                    <p>R$ {{ valor | number: '1.2-2' }}</p>
                 </div>
                 <div class="login-home_card-cartao">
                     <div class="login-home_cartao-header">
                         <i class="ph-bold ph-wifi-high wifi"></i>
                         <i class="ph-bold ph-credit-card"></i>
                     </div>
-                    <p class="numero">{{cartao.numero}}</p>
+                    <p class="numero">{{cartao.numeroConta}}</p>
                     <p class="nome-titular">Nome do titular</p>
-                    <h2>{{cartao.nomeTitular}}</h2>
+                    <h2>{{cartao.titular}}</h2>
                     <div class="login-home_cartao-infos">
                         <div class="login-home_cartao-validade">
                             <p class="label-validade">Validade</p>
-                            <p class="valor-validade">{{cartao.Validade}}</p>
+                            <p class="valor-validade">{{cartao.dataExpiracao | date:'MM/yy'}}</p>
                         </div>
                         <div class="login-home_cartao-cvv">
                             <p class="label-cvv">CVV</p>
-                            <p class="valor-cvv">{{cartao.CVV}}</p>
+                            <p class="valor-cvv">{{cartao.cvv}}</p>
                         </div>
                         <i class="ph-bold ph-circuitry"></i>
                     </div>
@@ -53,9 +54,6 @@
                     <p>Pagar</p>
                 </div>
             </div>
-        </div>
-        <div class="login-home_extrato">
-            <button>Extrato Completo</button>
         </div>
     </div>
 </div>

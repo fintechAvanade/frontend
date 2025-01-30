@@ -11,7 +11,7 @@ import { Observable } from "rxjs";
         constructor(private http: HttpClient) { }
 
         // necessario aguardar para refatorar com o idusuario
-        getCartao(contaId: number): Observable<any> {
-            return this.http.get<any>(`${this.baseUrl}/conta/${contaId}`);
+        getCartao(id: number): Observable<any> {
+            return this.http.get<any>(`${this.baseUrl}/usuario/${id}`);
         }
     }    
