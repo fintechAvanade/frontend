@@ -10,7 +10,7 @@
                 <option value="cpf">CPF</option>
                 <option value="numeroConta">Numero da conta</option>
             </select>
-            <input type="text" placeholder="Pesquisar">
+            <input #filtro type="text" placeholder="Pesquisar" (keyup)="0">
             <i class="ph ph-magnifying-glass pesquisar"></i>
         </div>
     </div>
@@ -28,12 +28,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let c of listaClientes | slice:inicio:fim">
+                <tr *ngFor="let c of (listaClientes | filtro:filtro.value:lista.value | slice:inicio:fim)">
                     <td>{{c.agencia}}</td>
                     <td>{{c.numeroConta}}</td>
                     <td>{{c.nome}}</td>
-                    <td>{{c.ultimaMovimentacao | date:'dd/MM/yyyy HH:mm'}}</td>
-                    <td>{{c.ultimoAcesso | date:'dd/MM/yyyy HH:mm'}}</td>
+                    <td>{{(c.ultimaMovimentacao | date:'dd/MM/yyyy HH:mm') ?? '-'}}</td>
+                    <td>{{(c.ultimoAcesso | date:'dd/MM/yyyy HH:mm') ?? '-'}}</td>
                     <td>
                         <p [ngClass]=" c.ativo ? 'admin-gestao_ativo' : 'admin-gestao_inativo'">
                             {{ c.ativo ? 'Ativo' : 'Inativo' }}

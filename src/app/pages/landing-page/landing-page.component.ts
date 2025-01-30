@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
@@ -5,7 +6,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-landing-page',
   standalone: true, // Define o componente como standalone
-  imports: [ReactiveFormsModule], // Importa ReactiveFormsModule diretamente no componente standalone
+  imports: [ReactiveFormsModule, CommonModule], // Importa ReactiveFormsModule diretamente no componente standalone
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })

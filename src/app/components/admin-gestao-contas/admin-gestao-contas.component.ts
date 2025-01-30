@@ -4,14 +4,16 @@ import { AdminService } from '../../services/admin.service';
 import { GestaoContas } from '../../classes/responses/gestao-contas';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { FiltroPipe } from '../../pipes/filtro.pipe';
 
 @Component({
   selector: 'app-admin-gestao-contas',
-  imports: [CommonModule, FormsModule, RouterLink],
+  imports: [CommonModule, FormsModule, RouterLink, FiltroPipe],
   templateUrl: './admin-gestao-contas.component.html',
   styleUrl: './admin-gestao-contas.component.css'
 })
 export class AdminGestaoContasComponent implements OnInit{
+  listaFiltrada: any;
 
   
   
@@ -27,6 +29,7 @@ export class AdminGestaoContasComponent implements OnInit{
       this.numeroPaginas = Math.ceil(this.listaClientes.length / this._clientesPorPagina);
     });
   }
+  
   
   listaClientes: GestaoContas[] = []
   numeroPaginas:number = 0;

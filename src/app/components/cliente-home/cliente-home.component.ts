@@ -5,10 +5,13 @@ import { ContaService } from '../../services/conta.service';
 import { CartaoService } from '../../services/cartoes.service';
 import { Usuario } from '../../classes/responses/usuario';
 
+import { RouterLink } from '@angular/router';
+
+
 @Component({
   selector: 'app-cliente-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './cliente-home.component.html',
   styleUrl: './cliente-home.component.css',
 })

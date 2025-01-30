@@ -9,7 +9,7 @@ import { Usuario } from '../classes/responses/usuario';
 })
 export class UsuariosService {
 //baseUrl: string = 'http://localhost:8080/chavePix/lista/conta';
-  baseUrl: string = 'http://localhost:8080/usuarios';
+  baseUrl: string = 'http://localhost:8080/';
 
   constructor(private http: HttpClient) { }
 
@@ -17,9 +17,7 @@ export class UsuariosService {
     return this.http.get<Usuario>(`${this.baseUrl}/chavesPix/lista/conta/${id}`)
   }
 
-  public postUsuarioApi(usuario: CriacaoUsuario): Observable<CriacaoUsuario> {
-    return this.http.post<CriacaoUsuario>(`${this.baseUrl}/usuarios/novo`, usuario)
-  }
+  
 
 }
 

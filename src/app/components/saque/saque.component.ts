@@ -28,15 +28,23 @@ import { ValorRequest } from '../../classes/requests/valor-request';
     ) {}
 
     ngOnInit(): void {
-     this.contaId=this.jwtDecodedService.getIdContaFromToken();
-     
+
     }
     saldo: number = 0;
 
-    // Método para adicionar valores ao saque
-    saqueValor(valor: number): void {
+    // Método para adicionar valores ao depósito
+    adicionarValor(valor: number): void {
     
       this.valorInput += valor; 
+    }
+      
+    // Método para confirmar o depósito
+    confirmarDeposito(): void {
+      if (this.valorInput > 0) {
+        this.router.navigate(['/transacao']); // falar com o professor como colocar uma rota que coloque que foi efetuado o deposito, e depois apagassse e continuasse na home.
+      } else {
+        alert('Por favor, insira um valor válido!');
+      }
     }
       
     // Método para confirmar o saque

@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { PrimaryButtonComponent } from '../../shared/primary-button/primary-button.component';
 import { CriacaoUsuario } from '../../classes/requests/criacao-usuario';
 import { UsuariosService } from '../../services/usuarios.service';
+import { AdminService } from '../../services/admin.service';
 
 
 @Component({
@@ -20,10 +21,11 @@ export class CadastroComponent {
 
 
   constructor(private router: Router,
-    private usuarioService: UsuariosService) { }
+    private adminService: AdminService) { }
 
   usuario: CriacaoUsuario = new CriacaoUsuario();
 
+  resposta: any = {}
 
   exibirSecao: number = 1;
 
@@ -40,13 +42,15 @@ export class CadastroComponent {
   }
 
   incluir(usuario: CriacaoUsuario): void {
-    this.usuarioService.postUsuarioApi(usuario)
+    this.adminService.postUsuarioApi(usuario)
       .subscribe({
-        next: () => {
-
+        next: (res) => {
+          this.resposta = res
         },
         complete: () => {
+          const mensagem: string = `Agencia: ${this.resposta['agencia']}\nNumero da conta: ${this.resposta['conta']}\n Senha para pagamentos: ${this.resposta['senhaPagamento']}`
           this.router.navigate(['/cliente'])
+          window.alert(mensagem)
         },
         error: erro => {
           console.error(erro);

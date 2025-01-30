@@ -50,7 +50,7 @@
     background-color: var(--primary-color);
     font-size: 40px;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     transition: 0.3s;
     margin: 0 20px 10px 20px;
 }

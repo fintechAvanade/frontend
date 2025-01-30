@@ -30,7 +30,7 @@ export const routes: Routes = [
     {
         path: 'cliente', 
         component: ClienteComponent,
-        canActivate: [AuthGuardService],
+        //canActivate: [AuthGuardService],
         children:[
             { path: '', component: ClienteHomeComponent},
             { path: 'chavesPix', component: ChavesPixComponent },

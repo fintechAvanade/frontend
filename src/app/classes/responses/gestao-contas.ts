@@ -4,6 +4,7 @@ export class GestaoContas {
         public agencia: string = '',
         public numeroConta: string = '',
         public nome: string = '',
+        public cpf: string = '',
         public ultimaMovimentacao: string = '',
         public ultimoAcesso: string = '',
         public ativo: boolean = false

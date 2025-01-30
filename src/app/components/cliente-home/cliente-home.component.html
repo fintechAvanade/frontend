@@ -9,6 +9,14 @@
                 <div class="login-home_card-saldo">
                     <h2>Saldo</h2>
                     <p>R$ {{ valor | number: '1.2-2' }}</p>
+                    <div class="login-home_agencia">
+                        <h3>Agencia: </h3>
+                        <p>3829</p>
+                    </div>
+                    <div class="login-home_numero-conta">
+                        <h3>Conta:</h3>
+                        <p>01092716-8</p>
+                    </div>
                 </div>
                 <div class="login-home_card-cartao">
                     <div class="login-home_cartao-header">
@@ -34,23 +42,23 @@
             <h2>Transações</h2>
             <div class="login-home_botoes">
                 <div class="login-home_botao">
-                    <i class="ph-bold ph-arrow-line-down icone"></i>
+                    <i routerLink="/cliente/deposito" class="ph-bold ph-arrow-line-down icone"></i>
                     <p>Depositar</p>                    
                 </div>
                 <div class="login-home_botao">
-                    <i class="ph-bold ph-money-wavy icone"></i>
+                    <i routerLink="/cliente/saque" class="ph-bold ph-money-wavy icone"></i>
                     <p>Sacar</p>                    
                 </div>
                 <div class="login-home_botao">
-                    <i class="ph-bold ph-arrows-left-right icone"></i>
+                    <i routerLink="/cliente/transferencia" class="ph-bold ph-arrows-left-right icone"></i>
                     <p>Transferir</p>                    
                 </div>
                 <div class="login-home_botao">
-                    <i class="ph-bold ph-circles-four icone"></i>
+                    <i routerLink="/cliente/pix" class="ph-bold ph-circles-four icone"></i>
                     <p>Área Pix</p>
                 </div>
                 <div class="login-home_botao">
-                    <i class="ph-bold ph-barcode icone"></i>
+                    <i routerLink="/cliente/boleto" class="ph-bold ph-barcode icone"></i>
                     <p>Pagar</p>
                 </div>
             </div>

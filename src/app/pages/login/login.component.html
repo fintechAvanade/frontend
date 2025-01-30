@@ -52,8 +52,8 @@
         </div>
   
         <!-- Botão preenchido com texto "Acessar" -->
-        <div class="login_botoes">
-          <button type="submit" class="btn_login" style="width: 120px; height: 53.3px; background-color: #50f1be; color: #151515; font-size: 1.25rem; font-weight: bold; font-family: 'Inter', sans-serif;">
+        <div class="mt-[20px] flex flex-col items-center space-y-4">
+          <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid" style="width: 120px; height: 53.3px; background-color: #50f1be; color: #151515; font-size: 1.25rem; font-weight: bold; font-family: 'Inter', sans-serif;">
             Acessar
           </button>
   

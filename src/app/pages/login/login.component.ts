@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { PrimaryButtonComponent } from '../../shared/primary-button/primary-button.component';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { PrimaryButtonComponent } from '../../shared/primary-button/primary-butt
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'], 
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   loginForm: FormGroup;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
@@ -23,9 +22,6 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    localStorage.removeItem('accessToken');
-  }
   login() {
     if (this.loginForm.valid) {
       const { agencia, conta, senha } = this.loginForm.value;
