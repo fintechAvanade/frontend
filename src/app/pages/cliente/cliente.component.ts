@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarClienteComponent } from '../../components/navbar-cliente/navbar-cliente.component';
 import { Usuario } from '../../classes/responses/usuario';
 import { UsuariosService } from '../../services/usuarios.service';
+import { JwtDecodeService } from '../../services/jwtDecode.service';
 
 @Component({
   selector: 'app-cliente',
@@ -11,18 +12,17 @@ import { UsuariosService } from '../../services/usuarios.service';
   styleUrl: './cliente.component.css'
 })
 export class ClienteComponent implements OnInit{
-
-  idUsuario: number = 1;
   usuario: Usuario = new Usuario();
 
   constructor(
-    private usuarioService: UsuariosService
+    private usuarioService: UsuariosService,
+    private jwtDecodeService: JwtDecodeService
   ) { }
 
   ngOnInit(): void {
-    this.usuarioService
-      .getUsuarioApi(this.idUsuario)
-      .subscribe(response => this.usuario = response);
-
+    const nomeUsuario = this.jwtDecodeService.getUserNameFromToken();
+    if(nomeUsuario) {
+      this.usuario.nomeUsuario = nomeUsuario;
+    }
   }
 }

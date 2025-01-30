@@ -1,5 +1,5 @@
 .admin-gestao_container{
-    margin: 40px 0 0 40px;
+    margin: 40px 40px 0 40px;
 }
 
 .admin-gestao_container h1{
@@ -49,12 +49,13 @@ input{
 
 table{
     font-size: 12px;
-    width: fit-content;
+    width: max-content;
     border-radius: 10px;
     border: 1px solid black;
     border-collapse: separate; /* Evita que as bordas se sobreponham */
     border-radius: 10px;
     border-spacing: 0;
+    width: 100%;
 }
 
 th, td{
@@ -103,4 +104,25 @@ td p{
 
 .lixo:hover{
     color: #d62424;
+}
+
+.admin-gestao_paginacao{
+    margin: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+.admin-gestao_paginacao input{
+    width: 50px;
+}
+
+.seta{
+    background-color: #71e4ec;
+    border-radius: 50px;
+    padding: 7px;
+    margin: 0 5px;
+    font-size: 20px;
 }

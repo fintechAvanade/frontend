@@ -4,9 +4,11 @@
     justify-content: space-between;
     height: 100%;
     min-height: 100vh;
-    margin: 0 20px;
-    width: 200px;
-    font-size: 13px;
+    padding: 0 0 0 30px;
+    width: 230px;
+    font-size: 15px;
+    background-color:var(--primary-color);
+
 }
 
 .navbar_itens_primarios{
@@ -16,7 +18,7 @@
 
 .navbar_imagem{
     margin: 20px 40px 0 0;
-    width: 130px;
+    width: 150px;
     align-self: center;
 }
 
@@ -29,15 +31,17 @@
     align-items: center;
     padding: 10px;
     width: 100%;
-    color: var(--primary-color);
+    color: black;
     font-weight: 600;
     cursor: pointer;
 }
 
-.navbar_item_hover:hover{
-    background-color:#e5fdf5;
-    border-left: 2px solid var(--primary-color);
+.navbar_item:hover{
+    background-color:#354d45;
+    border-left: 2px solid #ffffff;
+    color: aliceblue;
 }
+
 
 .navbar_itens_finais{
     margin: 20px 0;

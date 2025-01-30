@@ -44,7 +44,7 @@
                 </div>
                 <div class="admin-criar-conta_input estado">
                     <p>Estado*</p>
-                    <select name="" id="" >
+                    <select [(ngModel)]="usuario.estado" name="" id="" >
                         <option value=''></option>
                         <option *ngFor="let e of estadosBrasileiros" value=>{{e}}</option>
                     </select>

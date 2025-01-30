@@ -2,40 +2,38 @@
     <div class="navbar_itens_primarios">
         <img class="navbar_imagem" src="assets/logo 512x120.png" alt="Logo do NULL BANK"/>
         <ul class="navbar_itens">
-            <div class="navbar_item navbar_item_hover" routerLink="/cliente">
+            <div class="navbar_item" routerLink="/cliente">
                 <i class="ph ph-house"></i>
                 <li>Home</li>
             </div>
-            <div class="navbar_item navbar_item_hover" routerLink="/cliente/extrato">
+            <div class="navbar_item" routerLink="/cliente/extrato">
                 <i class="ph ph-scroll"></i>
                 <li >Extrato</li>
             </div> 
             <ul>
-                <div class="navbar_transacoes_dropdown navbar_item_hover">
-                    <div class="navbar_item">
-                        <i class=" ph ph-arrows-left-right"></i>
-                        <li>Transações</li>
-                    </div>
-                    <i *ngIf="false" class="seta ph ph-caret-up"></i>
-                    <i class="seta ph ph-caret-down"></i>
+                <div class="navbar_item">
+                    <i class=" ph ph-arrows-left-right"></i>
+                    <li>Transações</li>
+                    <i *ngIf="false" class="ph ph-caret-up"></i>
+                    <i class="ph ph-caret-down"></i>
                 </div>
                 <div class="navbar_dropdown_itens">
-                    <li class="navbar_dropdown_item navbar_item_hover" routerLink="/cliente/deposito">Deposito</li>
-                    <li class="navbar_dropdown_item navbar_item_hover" routerLink="/cliente/saque">Saque</li>
-                    <li class="navbar_dropdown_item navbar_item_hover" routerLink="/cliente/transferencia">Transferencia</li>
-                    <li class="navbar_dropdown_item navbar_item_hover" routerLink="/cliente/pix">Pix</li>
-                    <li class="navbar_dropdown_item navbar_item_hover" routerLink="/cliente/boleto">Pagamento de boleto</li>
+                    <li class="navbar_dropdown_item" routerLink="/cliente/deposito">Deposito</li>
+                    <li class="navbar_dropdown_item" routerLink="/cliente/saque">Saque</li>
+                    <li class="navbar_dropdown_item" routerLink="/cliente/transferencia">Transferencia</li>
+                    <li class="navbar_dropdown_item" routerLink="/cliente/pix">Pix</li>
+                    <li class="navbar_dropdown_item" routerLink="/cliente/boleto">Pagamento de boleto</li>
                 </div>
             </ul>
         </ul>
     </div>
     <div class="navbar_itens_finais">
         <ul>
-            <div class="navbar_item navbar_item_hover">
+            <div class="navbar_item">
                 <i class="ph ph-gear"></i>
                 <li>Configurações</li>
             </div>
-            <div class="navbar_item navbar_item_hover" routerLink="/login">
+            <div class="navbar_item" routerLink="/login">
                 <i class="ph ph-sign-out"></i>
                 <li >Sair</li>
             </div>

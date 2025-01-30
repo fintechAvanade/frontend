@@ -50,7 +50,7 @@ export const routes: Routes = [
         children:[
             { path: '', component: AdminHomeComponent },
             { path: 'criarConta', component: AdminCriarContaComponent },
-            { path: 'editarConta', component: AdminEditarContaComponent },
+            { path: 'editarConta/:id', component: AdminEditarContaComponent },
             { path: 'gestaoContas', component: AdminGestaoContasComponent },
 
         ]

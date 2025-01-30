@@ -29,56 +29,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>0001</td>
-                            <td>0000000-0</td>
-                            <td>Joe Due</td>
+                        <tr *ngFor="let c of listaClientes | slice:0:5">
+                            <td>{{c.agencia}}</td>
+                            <td>{{c.numeroConta}}</td>
+                            <td>{{c.nome}}</td>
                             <td>
-                                <p [ngClass]="ativo ? 'admin-home_ativo' : 'admin-home_inativo'">
-                                    {{ ativo ? 'Ativo' : 'Inativo' }}
+                                <p [ngClass]="c.ativo ? 'admin-home_ativo' : 'admin-home_inativo'">
+                                    {{ c.ativo ? 'Ativo' : 'Inativo' }}
                                 </p>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>0001</td>
-                            <td>0000000-0</td>
-                            <td>Joe Due</td>
-                            <td>
-                                <p [ngClass]="ativo ? 'admin-home_ativo' : 'admin-home_inativo'">
-                                    {{ ativo ? 'Ativo' : 'Inativo' }}
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0001</td>
-                            <td>0000000-0</td>
-                            <td>Joe Due</td>
-                            <td>
-                                <p [ngClass]="inativo ? 'admin-home_ativo' : 'admin-home_inativo'">
-                                    {{ inativo ? 'Ativo' : 'Inativo' }}
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0001</td>
-                            <td>0000000-0</td>
-                            <td>Joe Due</td>
-                            <td>
-                                <p [ngClass]="ativo ? 'admin-home_ativo' : 'admin-home_inativo'">
-                                    {{ ativo ? 'Ativo' : 'Inativo' }}
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0001</td>
-                            <td>0000000-0</td>
-                            <td>Joe Due</td>
-                            <td>
-                                <p [ngClass]="inativo ? 'admin-home_ativo' : 'admin-home_inativo'">
-                                    {{ inativo ? 'Ativo' : 'Inativo' }}
-                                </p>
-                            </td>
-                        </tr>
+                        </tr>                
                     </tbody>
                 </table>
             </div>

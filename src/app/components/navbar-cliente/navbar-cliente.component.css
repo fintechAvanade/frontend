@@ -3,11 +3,11 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    margin: 0 20px;
+    padding: 0 0px 0 30px;
     width: 230px;
     font-size: 15px;
+    background-color:var(--primary-color);
 }
-
 
 .navbar_itens_primarios{
     display: flex;
@@ -24,43 +24,51 @@
     margin: 40px 0 40px 0;
 }
 
+.ph{
+    font-weight: bold;
+}
+
 .navbar_item{
     display: flex;
     align-items: center;
     padding: 10px;
     width: 100%;
-    color: var(--primary-color);
-    font-weight: 600;
+    color:black;
+    font-weight: 500;
     cursor: pointer;
+    transition: 0.2s;
 }
 
-.navbar_item_hover:hover{
-    background-color:#e5fdf5;
-    border-left: 2px solid var(--primary-color);
+.navbar_item:hover, .navbar_dropdown_item:hover{
+    background-color:#354d45;
+    border-left: 2px solid #ffffff;
+    color: aliceblue;
 }
 
 .seta{
-    color: var(--primary-color);
+    color: black;
     font-weight: 600;
 }
 
 .navbar_dropdown_itens{
-    background-color: rgb(233, 231, 231, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
     font-size: 13px;
     font-weight: 700;
     border-radius: 7px;
-    margin: 20px 0 0 30px;
+    padding-right: 10px;
+    margin: 20px 10px 0 0px;
 }
 
 .navbar_dropdown_item{
     cursor: pointer;
     padding: 10px 0 10px 30px;
+    transition: 0.2s;
 }
 
 .navbar_transacoes_dropdown{
+    margin-right: 20px ;
     display: flex;
     align-items: center;
-    margin: 0px 0;
     cursor: pointer;
 }
 

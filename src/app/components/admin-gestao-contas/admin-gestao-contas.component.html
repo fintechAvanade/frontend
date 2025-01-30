@@ -28,7 +28,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let c of listaClientes | slice:0:10">
+                <tr *ngFor="let c of listaClientes | slice:inicio:fim">
                     <td>{{c.agencia}}</td>
                     <td>{{c.numeroConta}}</td>
                     <td>{{c.nome}}</td>
@@ -39,19 +39,15 @@
                             {{ c.ativo ? 'Ativo' : 'Inativo' }}
                         </p>
                     </td>
-                    <td><i class="ph ph-pencil-simple-line lapis"></i>  <i class="ph ph-trash-simple lixo"></i></td>
+                    <td><i  routerLink="/admin/editarConta/{{c.id}}" class="ph ph-pencil-simple-line lapis"></i>  <i class="ph ph-trash-simple lixo"></i></td>
                 </tr>
             </tbody>
         </table>
         <div class="admin-gestao_paginacao">
+            <p>{{paginaAtual}} de {{numeroPaginas}}</p>
             <div>
-                <input type="text">
-                
-            </div>
-            <div>
-                <i class="ph ph-caret-left"></i>
-                <i class="ph ph-caret-right"></i>
+                <i (click)="voltarPagina()" class="ph ph-caret-left seta"></i>
+                <i (click)="avancarPagina()" class="ph ph-caret-right seta"></i>
             </div>
         </div>
-
 </div>
