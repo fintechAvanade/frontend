@@ -107,11 +107,11 @@ td p{
 }
 
 .admin-gestao_paginacao{
-    margin: 20px 0px;
+    margin: 15px 0px;
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
-    padding: 15px 30px;
+    padding: 15px 25px;
     border-radius: 10px;
 }
 

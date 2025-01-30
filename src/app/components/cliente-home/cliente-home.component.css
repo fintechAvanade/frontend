@@ -47,8 +47,8 @@
 }
 
 .login-home_card-saldo, .login-home_card-cartao{
-    width: 300px;
-    height: 150px;
+    width: 350px;
+    height: 200px;
     border-radius: 10px;
 }
 
@@ -87,4 +87,52 @@
 .login-home_card-saldo p{
     font-size: 30px;
     font-weight: 700;
+}
+
+
+.login-home_card-cartao, .login-home_card-cartao h2{
+    color: aliceblue;
+}
+
+.login-home_card-cartao h2{
+    margin:0px 0 0 30px;
+    font-size: 14px;
+}
+
+.login-home_cartao-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 0 20px;
+    font-size: 20px;
+}
+
+.nome-titular{
+    font-size: 10px;
+    margin:0px 0 0 30px;
+}
+
+.numero{
+    margin: 15px 0 15px 30px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.wifi{
+    rotate: 90deg;
+}
+
+.login-home_cartao-infos{
+    display: flex;
+    justify-content: space-between;
+    margin:18px 30px 30px 30px;
+}
+
+.label-cvv, .label-validade{
+    font-size: 10px;
+}
+
+.valor-cvv, .valor-validade{
+    font-size: 12px;
+    font-weight: bolder;
 }

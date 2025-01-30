@@ -9,8 +9,8 @@ import { Usuario } from '../classes/responses/usuario';
 })
 export class UsuariosService {
 
-baseUrl: string = 'http://localhost:8080/chavePix/lista/conta';
-  // baseUrl: string = 'http://localhost:8080/usuarios';
+//baseUrl: string = 'http://localhost:8080/chavePix/lista/conta';
+  baseUrl: string = 'http://localhost:8080/usuarios';
 
   constructor(private http: HttpClient) { }
 
