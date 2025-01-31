@@ -30,7 +30,7 @@ export class LoginComponent {
         next: (response: { accessToken: string; expiresIn: number }) => {
           this.authService.setToken(response.accessToken);
           console.log('Login bem-sucedido!');
-          this.router.navigate(['/cliente/chavesPix']);
+          this.router.navigate(['/cliente']);
         },
         error: (error: any) => {
           console.error('Erro no login:', error);

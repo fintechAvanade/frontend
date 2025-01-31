@@ -59,8 +59,6 @@ import { ValorRequest } from '../../classes/requests/valor-request';
  
         })
         this.router.navigate(['/transacao']); // falar com o professor como colocar uma rota que coloque que foi efetuado o deposito, e depois apagassse e continuasse na home.
-      
-      
       } else {
         alert('Por favor, insira um valor válido!');
       }

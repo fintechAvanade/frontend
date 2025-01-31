@@ -1,9 +1,13 @@
 <div class="w-full flex">
+    <!-- Lado esquerdo (imagens) -->
     <div class="cadastro_container_imagens">
         <img ngSrc="./assets/frame1.png" width="10" height="10" alt="imagem 1" class="cadastro_imagem1">
         <img ngSrc="./assets/frame3.png" width="10" height="10" alt="imagem 2" class="cadastro_imagem2">
     </div>
+
+    <!-- Lado direito (formulário) -->
     <main class="teste flex-1 text-center flex-col">
+        <!-- Ícone de voltar -->
         <div class="cadastro_icone_voltar">
             <i *ngIf="exibirSecao == 1; else seta" class="ph ph-x-circle" (click)="navegarParaLogin()"></i>
             <ng-template #seta>
@@ -11,50 +15,62 @@
             </ng-template>
         </div>
 
+        <!-- Seção 1: Dados pessoais -->
         <div class="cadastro_container_usuario" *ngIf="exibirSecao == 1">
             <div class="cadastro_conjunto_input">
                 <div><h1 class="cadastro_criar_titulo">Criar conta</h1></div>
-               
+
+                <!-- Nome completo -->
                 <div class="cadastro_input">
                     <p>Nome completo*</p>
                     <input type="text" [(ngModel)]="usuario.nome">
                 </div>
-            
+
+                <!-- CPF -->
                 <div class="cadastro_input">
                     <p>CPF*</p>
                     <input type="text" [(ngModel)]="usuario.cpf">
                 </div>
 
+                <!-- Data de Nascimento -->
                 <div class="cadastro_input">
                     <p>Data de Nascimento*</p>
-                    <input type="text" placeholder="yyyy-mm-dd"[(ngModel)]="usuario.dataNascimento">
+                    <input type="text" placeholder="dd/mm/yyyy" [(ngModel)]="usuario.dataNascimento">
                 </div>
 
+                <!-- Telefone -->
                 <div class="cadastro_input">
                     <p>Telefone*</p>
                     <input type="text" [(ngModel)]="usuario.telefone">
                 </div>
 
+                <!-- E-mail -->
                 <div class="cadastro_input">
                     <p>E-mail*</p>
                     <input type="text" [(ngModel)]="usuario.email">
                 </div>
 
+                <!-- Nome de usuário -->
                 <div class="cadastro_input">
-                    <p>Usuario*</p>
-                    <input type="text" [(ngModel)]="usuario.nomeUsuario"><br>
+                    <p>Usuário*</p>
+                    <input type="text" [(ngModel)]="usuario.nomeUsuario">
                 </div>
+
+                <!-- Botão para avançar -->
                 <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
             </div>
         </div>
-           
+
+        <!-- Seção 2: Endereço -->
         <div class="cadastro_container_usuario" *ngIf="exibirSecao == 2">
             <div class="cadastro_conjunto_input">
+                <!-- CEP -->
                 <div class="cadastro_input">
                     <p>CEP*</p>
                     <input type="text" [(ngModel)]="usuario.cep">
                 </div>
-    
+
+                <!-- Cidade e Estado -->
                 <div class="cadastro_inputs_flex">
                     <div class="cadastro_input menor">
                         <p>Cidade*</p>
@@ -65,43 +81,52 @@
                         <input type="text" [(ngModel)]="usuario.estado">
                     </div>
                 </div>
-                
+
+                <!-- Bairro -->
                 <div class="cadastro_input">
                     <p>Bairro*</p>
                     <input type="text" [(ngModel)]="usuario.bairro">
                 </div>
+
+                <!-- Logradouro e Número -->
                 <div class="cadastro_inputs_flex">
-                    
                     <div class="cadastro_input menor">
                         <p>Logradouro*</p>
                         <input type="text" [(ngModel)]="usuario.logradouro">
                     </div>
-                    
                     <div class="cadastro_input menor">
                         <p>Número*</p>
                         <input type="text" [(ngModel)]="usuario.numero">
                     </div>
                 </div>
+
+                <!-- Complemento -->
                 <div class="cadastro_input">
                     <p>Complemento</p>
-                    <input type="text" [(ngModel)]="usuario.complemento"><br>
-                </div>
-                <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
-            </div>
-            
-        </div>
-        
-        <div class="cadastro_container_usuario" *ngIf="exibirSecao == 3">
-            <div class="cadastro_conjunto_input">
-                <div class="cadastro_input">
-                    <p>Senha*</p>
-                    <input type="text" [(ngModel)]="usuario.senha">
+                    <input type="text" [(ngModel)]="usuario.complemento">
                 </div>
 
+                <!-- Botão para avançar -->
+                <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
+            </div>
+        </div>
+
+        <!-- Seção 3: Senha -->
+        <div class="cadastro_container_usuario" *ngIf="exibirSecao == 3">
+            <div class="cadastro_conjunto_input">
+                <!-- Senha -->
+                <div class="cadastro_input">
+                    <p>Senha*</p>
+                    <input type="password" [(ngModel)]="usuario.senha">
+                </div>
+
+                <!-- Confirmar Senha -->
                 <div class="cadastro_input">
                     <p>Confirmar senha*</p>
-                    <input type="text"><br>
+                    <input type="password" [(ngModel)]="usuario.senha">
                 </div>
+
+                <!-- Botão para finalizar cadastro -->
                 <app-primary-button (click)="incluir(usuario)">Cadastrar</app-primary-button>
             </div>
         </div>

@@ -63,7 +63,7 @@
 
 .cadastro_input p{
     color: var(--fintech_black);
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 150%;
@@ -83,7 +83,7 @@
 }
 
 .cadastro_cabecalho_input{
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
