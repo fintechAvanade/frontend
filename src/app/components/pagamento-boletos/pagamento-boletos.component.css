@@ -8,3 +8,22 @@
     flex-shrink: 0; /* Garante que não encolha */
     margin: 40px;
   }
+    .boleto_header h1{
+      color: var(--black); 
+      font-family: 'Montserrat' sans-serif ; 
+      font-size: 25px; 
+      font-style: normal;
+      font-weight: 700; 
+      line-height: 1.2; 
+      margin-bottom: 0px;
+
+    }
+    .boleto_header p{
+      color: var(--fintech_gray);
+  /* Body-text-18-bold */
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      margin-top: 15px;
+      line-height: 1.3;
+    }
