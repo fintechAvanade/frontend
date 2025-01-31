@@ -4,8 +4,9 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { PrimaryButtonComponent } from '../../shared/primary-button/primary-button.component';
 import { CriacaoUsuario } from '../../classes/requests/criacao-usuario';
-import { UsuariosService } from '../../services/usuarios.service';
 import { AdminService } from '../../services/admin.service';
+import { EnderecoService } from '../../services/endereco.service';
+
 
 @Component({
   selector: 'app-cadastro',
@@ -14,11 +15,31 @@ import { AdminService } from '../../services/admin.service';
   styleUrl: './cadastro.component.css'
 })
 export class CadastroComponent {
-  constructor(private router: Router, private adminService: AdminService) {}
+  constructor(
+    private router: Router,
+    private adminService: AdminService,
+    private enderecoService: EnderecoService
+  ) { }
 
   usuario: CriacaoUsuario = new CriacaoUsuario(); // Objeto para armazenar os dados do usuário
   resposta: any = {}; // Armazena a resposta da API
   exibirSecao: number = 1; // Controla a seção atual do formulário
+
+
+  // Função para pegar o cep
+  getEndereco() {
+    let cep = this.usuario.cep;
+
+    this.enderecoService.buscarEndereco(cep).subscribe({
+      next: (response) => {
+        this.usuario.cidade = response.localidade;
+        this.usuario.bairro = response.bairro;
+        this.usuario.estado = response.uf;
+        this.usuario.logradouro = response.logradouro;
+      }
+    })
+
+  }
 
   // Função para converter o formato da data de dd/mm/yyyy para yyyy-mm-dd
   convertDateFormat(dateString: string | undefined): string {
