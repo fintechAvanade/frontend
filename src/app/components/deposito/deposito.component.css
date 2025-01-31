@@ -63,7 +63,7 @@
       width: 85px; /* Largura do botão */
       height: 65px; /* Altura do botão */
       flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
-      background-color: var(--primary-color); /* Cor de fundo usando variável */
+      background-color: var(--secondary-color); /* Cor de fundo usando variável */
       color: var(--black, #000); /* Cor do texto */
       font-family: 'Montserrat', sans-serif; /* Fonte */
       font-size: 16px; /* Tamanho da fonte */
@@ -81,7 +81,7 @@
     }
     .botao:hover {
       transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
-      background-color: var(--primary-color); /* Mudança de cor ao passar o mouse */
+      background-color: var(--secundary-hover); /* Mudança de cor ao passar o mouse */
     }
 
     .botao_depositar {
@@ -89,7 +89,7 @@
       max-width: 400px; /* Tamanho máximo para a largura */
       height: 65px; /* Altura do botão */
       flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
-      background-color: var(--secondary-color); /* Cor de fundo com variável */
+      background-color: var(--primary-color); /* Cor de fundo com variável */
       color: var(--black); /* Cor do texto */
       font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
       font-size: 16px; /* Tamanho da fonte */
@@ -103,8 +103,7 @@
       transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transições suaves */
   }
     .botao_depositar:hover {
-      background-color: var(--secondary-color);/* Altera a cor de fundo no hover */
-      transform: scale(1.05); /* Aumenta o botão */
+      background-color: var(--primary-hover);/* Altera a cor de fundo no hover */
   }  
     
 

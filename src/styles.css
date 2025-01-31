@@ -4,8 +4,10 @@
 
 :root {
   --primary-color: #69f5c8;
+  --primary-hover: #43CDA1;
   /* Verde */
   --secondary-color: #6DDEE5;
+  --secundary-hover: #0288b1;
   /* Azul */
   --black: #151515;
   /* Black */

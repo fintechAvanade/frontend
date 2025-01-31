@@ -22,7 +22,7 @@
   /* Body-text-18-bold */
       font-size: 12px;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       margin-top: 15px;
       line-height: 1.3;
 
@@ -37,20 +37,6 @@
     margin-left: 10px;
     margin-top: 20px;
 }
-
-  .botao_depositar {
-    width: 638.182px; 
-    height: 65px; 
-    flex-shrink: 0; 
-    background-color: var(--primary-color); /* Cor de fundo utilizando a variável */
-    border: none; 
-    border-radius: 8px; 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito de transição */
-  }
   
   .saque_botoes {
     display: flex; 
@@ -63,7 +49,7 @@
       width: 85px; /* Largura do botão */
       height: 65px; /* Altura do botão */
       flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
-      background-color: var(--primary-color); /* Cor de fundo usando variável */
+      background-color: var(--secondary-color); /* Cor de fundo usando variável */
       color: var(--black, #000); /* Cor do texto */
       font-family: 'Montserrat', sans-serif; /* Fonte */
       font-size: 16px; /* Tamanho da fonte */
@@ -81,15 +67,15 @@
     }
     .botao:hover {
       transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
-      background-color: var(--primary-color); /* Mudança de cor ao passar o mouse */
+      background-color: var(--secundary-hover); /* Mudança de cor ao passar o mouse */
     }
 
-    .botao_depositar {
+    .botao_sacar {
       width: 100%; /* Ajuste para largura 100%, vai se ajustar ao tamanho do container */
       max-width: 400px; /* Tamanho máximo para a largura */
       height: 65px; /* Altura do botão */
       flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
-      background-color: var(--secondary-color); /* Cor de fundo com variável */
+      background-color: var(--primary-color); /* Cor de fundo com variável */
       color: var(--black); /* Cor do texto */
       font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
       font-size: 16px; /* Tamanho da fonte */
@@ -102,9 +88,8 @@
       margin-left: 10px; /* Afasta o botão da margem esquerda */
       transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transições suaves */
   }
-    .botao_depositar:hover {
-      background-color: var(--secondary-color);/* Altera a cor de fundo no hover */
-      transform: scale(1.05); /* Aumenta o botão */
+    .botao_sacar:hover {
+      background-color: var(--primary-hover);
   }  
     
 
