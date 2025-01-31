@@ -13,7 +13,7 @@ import { SaldoComponent } from '../../shared/saldo/saldo.component';
 export class PagamentoBoletosComponent implements OnInit{
   router: any;
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
 
   valorBoleto: number = 0;

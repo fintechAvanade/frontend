@@ -1,10 +1,10 @@
 .transferencia_contend{
-    margin-top: 15px;
-  }
-  
-  
+  margin-top: 15px;
+}
+
+
 .transferencia_container {
-    position: relative; /* Mantém o fluxo do layout */
-    flex-shrink: 0; /* Garante que não encolha */
-    margin: 40px;
-  }
+  position: relative; /* Mantém o fluxo do layout */
+  flex-shrink: 0; /* Garante que não encolha */
+  margin: 40px;
+}

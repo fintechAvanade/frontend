@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
@@ -9,14 +8,6 @@ import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-login',
   imports: [ReactiveFormsModule, RouterLink],
-=======
-import { Component } from '@angular/core';
-import { ButtonFilledComponent } from '../../shared/button-filled/button-filled.component';
-
-@Component({
-  selector: 'app-login',
-  imports: [ButtonFilledComponent],
->>>>>>> Stashed changes
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'], 
 })

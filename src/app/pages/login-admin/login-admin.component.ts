@@ -5,7 +5,7 @@ import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login-admin',
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule],
   templateUrl: './login-admin.component.html',
   styleUrl: './login-admin.component.css'
 })

@@ -4,7 +4,44 @@
         <p>NULLbank: sua transferência sem burocracia. Preencha os campos necessários e conclua o envio.
         </p>
     </header>
-    <!--Saldo-->
-    <section class="saldo_contend">
+    <section class="transferencia_content">
        <app-saldo></app-saldo>
+       <div class="transferencia_forms">
+        <h2>Destino</h2>
+        <div class="input_valor">
+            <label for="valor-saque">Agencia: </label>
+            <input
+                id="valor-saque"
+                type="text"
+                placeholder="Digite a agencia"
+                [(ngModel)]="transferencia.agencia"/>
+        </div>
+        <div class="input_valor">
+            <label for="valor-saque">Conta: </label>
+            <input
+                id="valor-saque"
+                type="text"
+                placeholder="Digite a conta"
+                [(ngModel)]="transferencia.conta"/>
+        </div>
+        <div class="input_valor">
+            <label for="valor-saque">Descrição: </label>
+            <input
+                id="valor-saque"
+                type="text"
+                placeholder="Digite a descrição"
+                [(ngModel)]="transferencia.descricao"/>
+        </div>
+        <div class="input_valor">
+            <label for="valor-saque">Valor: </label>
+            <input
+                id="valor-saque"
+                type="number"
+                placeholder="Digite o valor"
+                [(ngModel)]="transferencia.valor"/>
+        </div>
+        <button (click)="transferir(transferencia)">
+            Transferir
+        </button>
+       </div>
     </section>

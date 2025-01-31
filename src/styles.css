@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< Updated upstream
 :root {
   --primary-color: #69f5c8;
   --primary-hover: #43CDA1;
@@ -31,5 +30,3 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-=======
->>>>>>> Stashed changes
