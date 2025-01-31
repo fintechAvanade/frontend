@@ -55,7 +55,9 @@ table{
 th, td{
     text-align: center;
     border-bottom: solid 1px black;
-    padding: 12px 35px;
+    align-items: center;
+    width: 150px;
+    height: 45px;
 }
 
 table tr:last-child td {
@@ -138,12 +140,16 @@ td p{
     width: 90px;
     padding: 2px 0;
     border-radius: 7px;
+    align-self: center;
+    text-align: center;
 }
 
 .admin-home_ativo{
+    margin-left: 30px;
     background-color: #1cecab;
 }
 
 .admin-home_inativo{
+    margin-left: 30px;
     background-color: #f36c6c;
 }

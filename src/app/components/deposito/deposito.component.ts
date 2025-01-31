@@ -5,9 +5,6 @@ import { SaldoComponent } from '../../shared/saldo/saldo.component';
   
 
 
-  // import { SaldoService } from './saldo.service';  
-  // // Falta Importar o serviço que criamos para o Saldo.
-
   @Component({
     selector: 'app-deposito',
     imports: [FormsModule, SaldoComponent],

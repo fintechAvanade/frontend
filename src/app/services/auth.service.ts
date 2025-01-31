@@ -20,6 +20,15 @@ export class AuthService {
       );
   }
 
+  public loginAdmin(usuario: string, senha: string): Observable<any> {
+    return this.http
+      .post<any>(`http://localhost:8080/usuarios/login-admin`, { usuario, senha })
+      .pipe(
+        take(1),
+        tap((response: any) => response.accessToken)
+      );
+  }
+
   setToken(token: string) {
     localStorage.setItem('accessToken', token);
     this.tokenSubject.next(token);

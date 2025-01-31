@@ -1,30 +1,29 @@
 <div class="saque_container">
     <header class="saque_header">
         <h1>Saque</h1>
-        <p>NULLbank torna o saque rápido, sem taxas e sem complicação.
-        </p>
+        <p>NULLbank torna o saque rápido, sem taxas e sem complicação.</p>
     </header>
     <!--Saldo-->
     <section class="saldo_contend">
        <app-saldo></app-saldo>
     </section>
     <!--Corpo do saque-->
-    <div class="saque"> 
+    <div class="saque_body"> 
         <p>Valor do Saque:</p>
     <!--botoes do valor pré-definido-->
     </div>
-        <div class="saque">
+        <div class="saque_botoes">
             <div  class="botao">
-                <button (click)="saqueValor(5)">R$ 5,00 </button>
+                <button (click)="adicionarValor(5)">R$ 5,00 </button>
             </div>
             <div class="botao">
-                <button (click)="saqueValor(10)">R$ 10,00 </button>
+                <button (click)="adicionarValor(10)">R$ 10,00 </button>
             </div>
             <div  class="botao">
-                <button (click)="saqueValor(50)">R$ 50,00 </button>
+                <button (click)="adicionarValor(50)">R$ 50,00 </button>
             </div>
             <div  class="botao">
-                <button (click)="saqueValor(100)">R$ 100,00 </button>
+                <button (click)="adicionarValor(100)">R$ 100,00 </button>
             </div>
         </div>
     <!-- Campo do valor personalizado-->  
@@ -37,7 +36,9 @@
             placeholder="Digite o valor (R$)" 
             [(ngModel)]="valorInput" 
         />
-    </div>        
+    </div>
+         <!--ver a aula sobre isso-->
+        
     <!--Botao de confirmacao do saque-->
     <!--volta para tela de transação e colocar que foi efetuada a transação, mas ela ainda nao existe <-->
     <div class="botao_sacar">

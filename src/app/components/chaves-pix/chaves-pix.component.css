@@ -1,6 +1,6 @@
 .page {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 150%;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,9 @@
     justify-content: flex-start;
     gap: 30px;
     margin-top: 50px;
+}
+p{
+    font-weight: 500;
 }
 
 h1 {
@@ -27,7 +30,7 @@ h1 {
 }
 
 .btn-secundary {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     border-radius: 20px;
     font-size: 12px;
     display: flex;
@@ -36,10 +39,11 @@ h1 {
     padding: 5px 40px;
     height: 40px;
     transition: 0.3s;
+    
 }
 
 .btn-secundary:hover{
-    background-color: #55dae4;
+    background-color: var(--primary-hover);
 }
 
 .btn-secundary p{

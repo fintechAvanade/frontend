@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CriacaoUsuario } from '../../classes/requests/criacao-usuario';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -10,7 +10,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './admin-editar-conta.component.html',
   styleUrl: './admin-editar-conta.component.css'
 })
-export class AdminEditarContaComponent {
+export class AdminEditarContaComponent implements OnInit{
+
+
+  ngOnInit(): void {
+    
+  }
 
     checkboxSimples: boolean = false;
     checkboxEspecial: boolean = false;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="navbar">
     <div class="logo">
       <img src="assets/logo nullbank-verde.png" alt="LogoNullBank">
@@ -57,3 +58,66 @@
     </div>
   </div>
   
+=======
+<div class="landing-page_container">
+    <div class="navbar">
+        <img class="logo_imagem" src="assets/logo nullbank-verde.png" alt="LogoNullBank">
+        <div class="menu">
+            <button>Login</button>
+            <div class="dropdown">
+                <a routerLink="/login">Cliente</a>
+                <a routerLink="/loginAdmin">Administrador</a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header_texto">
+            <div></div>
+            <div>
+                <h3>Preenchendo o vazio com valores reais</h3>
+                <p>NullBank: Transformando o nada em tudo</p>
+            </div>
+            <app-primary-button class="header_botao">Abrir conta</app-primary-button>
+        </div>
+        
+        <img class="header_imagem" src="assets/subtract.png" alt="Imagem de capa">
+
+    </div>
+    <div class="cta">
+        <form>
+        </form>
+    </div>
+    <div class="section">
+        <h2>Benefícios do NullBank</h2>
+        <div class="benefits">
+            <div *ngFor="let benefit of benefits" class="benefit-item">
+                <i class="{{ benefit.icon }}"></i>
+                <h3>{{ benefit.title }}</h3>
+                <p>{{ benefit.description }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Benefícios para Estudantes</h2>
+        <div class="student-benefits">
+            <div *ngFor="let studentBenefit of studentBenefits" class="student-benefit-item">
+                <i class="{{ studentBenefit.icon }}"></i>
+                <h3>{{ studentBenefit.title }}</h3>
+                <p>{{ studentBenefit.description }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Tipos de Contas</h2>
+        <div class="accounts">
+            <div *ngFor="let accountType of accountTypes" class="account-item">
+                <i class="{{ accountType.icon }}"></i>
+                <h3>{{ accountType.title }}</h3>
+                <p>{{ accountType.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+>>>>>>> 2073abab9352abf0b33245a62473505dff678af1

@@ -3,10 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AdminService } from '../../services/admin.service';
 import { GestaoContas } from '../../classes/responses/gestao-contas';
+import { FiltroPipe } from "../../pipes/filtro.pipe";
 
 @Component({
   selector: 'app-admin-home',
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule, FiltroPipe],
   templateUrl: './admin-home.component.html',
   styleUrl: './admin-home.component.css'
 })

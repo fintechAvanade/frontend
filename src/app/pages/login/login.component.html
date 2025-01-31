@@ -1,70 +1,59 @@
-<div class="flex h-screen">
-    <!-- Esquerda -->
-    <div class="flex-1 bg-[#50f1be] flex flex-col justify-center items-center text-black text-center p-6">
-      <img src="assets/logo 512x120.png" alt="Logo do NULL BANK" class="w-40 mb-4" />
-      <p class="text-lg font-medium">Onde o impossível encontra valor.</p>
-    </div>
-    <!-- Direita -->
-    <div class="flex-1 flex flex-col justify-center items-center p-6">
-      <h1 class="h1_entrar" style="color: #151515; font-size: 40px; font-family: Inter; font-weight: 700; word-wrap: break-word">Entrar</h1>
-      <form [formGroup]="loginForm" (ngSubmit)="login()" class="mt-[20px]">
-        <div class="flex space-x-[39.5px]">
-          <div class="form-group">
-            <label for="agencia" class="sr-only">Agência</label>
-            <input
-              id="agencia"
-              type="text"
-              formControlName="agencia"
-              placeholder="Agência"
-              class="form-control"
-              [class.is-invalid]="loginForm.get('agencia')?.invalid && loginForm.get('agencia')?.touched"
-              style="width: 150px; height: 53.3px;"
-            />
-          </div>
-          
-          <div class="form-group">
-            <label for="conta" class="sr-only">Conta</label>
-            <input
-              id="conta"
-              type="text"
-              formControlName="conta"
-              placeholder="Conta"
-              class="form-control"
-              [class.is-invalid]="loginForm.get('conta')?.invalid && loginForm.get('conta')?.touched"
-              style="width: 200px; height: 53.3px;"
-            />
-          </div>
-        </div>
-  
-        <div class="mt-[47px]">
-          <div class="form-group">
-            <label for="senha" class="sr-only">Senha</label>
-            <input
-              id="senha"
-              type="password"
-              formControlName="senha"
-              placeholder="Senha"
-              class="form-control"
-              [class.is-invalid]="loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched"
-              style="width: 380px; height: 53.3px;"
-            />
-          </div>
-        </div>
-  
-        <!-- Botão preenchido com texto "Acessar" -->
-        <div class="login_botoes">
-          <button type="submit" class="btn_login" style="width: 120px; height: 53.3px; background-color: #50f1be; color: #151515; font-size: 1.25rem; font-weight: bold; font-family: 'Inter', sans-serif;">
-            Acessar
-          </button>
-  
-          <a href="#" class="text-center text-[#50f1be] text-lg font-bold font-['Inter'] underline">
-            Esqueci minha senha
-          </a>
-          <!-- Botão secundário com texto "Criar conta" -->
-          <button type="button" class="btn btn-secondary" routerLink="/cadastro" style="width: 120px; height: 53.3px; background-color: transparent; color: #151515; font-size: 1.25rem; font-weight: bold; font-family: 'Inter', sans-serif;">
-            Criar Conta
-          </button>
-        </div>
-      </form>
-    </div>
+<div class="login_container">
+  <!-- Esquerda -->
+  <div class="login_lado_esquerdo">
+      <img src="assets/logo 512x120.png" alt="Logo do NULL BANK" class="login_logo" />
+      <p class="login_slogan">Onde o impossível encontra valor.</p>
   </div>
+  <!-- Direita -->
+  <div class="login_lado_direito">
+      <h1 class="login_titulo">Entrar</h1>
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="login_formulario">
+          <div class="login_grupo_inputs">
+              <div class="login_input_grupo">
+                  <p>Agência<p>
+                  <input
+                      id="agencia"
+                      type="text"
+                      formControlName="agencia"
+                      class="login_input"
+                      [class.is-invalid]="loginForm.get('agencia')?.invalid && loginForm.get('agencia')?.touched"
+                  />
+              </div>
+              
+              <div class="login_input_grupo">
+                <p>Conta<p>
+                  <input
+                      id="conta"
+                      type="text"
+                      formControlName="conta"
+                      class="login_input"
+                      [class.is-invalid]="loginForm.get('conta')?.invalid && loginForm.get('conta')?.touched"
+                  />
+              </div>
+          </div>
+
+          <div class="login_input_grupo">
+              <p>Senha<p>
+              <input
+                  id="senha"
+                  type="password"
+                  formControlName="senha"
+                  class="login_input"
+                  [class.is-invalid]="loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched"
+              />
+          </div>
+
+          <!-- Botão preenchido com texto "Acessar" -->
+          <div class="login_botoes">
+              <button type="submit" class="login_botao_primario" [disabled]="loginForm.invalid">
+                  Acessar
+              </button>
+
+              <!-- Botão secundário com texto "Criar conta" -->
+              <button type="button" class="login_botao_secundario" routerLink="/cadastro">
+                  Criar Conta
+              </button>
+          </div>
+      </form>
+  </div>
+</div>

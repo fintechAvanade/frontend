@@ -11,18 +11,6 @@ import { JwtDecodeService } from '../../services/jwtDecode.service';
   templateUrl: './cliente.component.html',
   styleUrl: './cliente.component.css'
 })
-export class ClienteComponent implements OnInit{
-  usuario: Usuario = new Usuario();
-
-  constructor(
-    private usuarioService: UsuariosService,
-    private jwtDecodeService: JwtDecodeService
-  ) { }
-
-  ngOnInit(): void {
-    const nomeUsuario = this.jwtDecodeService.getUserNameFromToken();
-    if(nomeUsuario) {
-      this.usuario.nomeUsuario = nomeUsuario;
-    }
-  }
+export class ClienteComponent {
+  
 }
