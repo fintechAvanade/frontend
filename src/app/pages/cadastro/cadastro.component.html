@@ -18,39 +18,29 @@
         <!-- Seção 1: Dados pessoais -->
         <div class="cadastro_container_usuario" *ngIf="exibirSecao == 1">
             <div class="cadastro_conjunto_input">
-                <div><h1 class="cadastro_criar_titulo">Criar conta</h1></div>
 
-                <!-- Nome completo -->
+                <h1 class="cadastro_criar_titulo">Criar conta</h1>
+                
                 <div class="cadastro_input">
                     <p>Nome completo*</p>
                     <input type="text" [(ngModel)]="usuario.nome">
                 </div>
-
-                <!-- CPF -->
                 <div class="cadastro_input">
                     <p>CPF*</p>
                     <input type="text" [(ngModel)]="usuario.cpf">
                 </div>
-
-                <!-- Data de Nascimento -->
                 <div class="cadastro_input">
                     <p>Data de Nascimento*</p>
                     <input type="text" placeholder="dd/mm/yyyy" [(ngModel)]="usuario.dataNascimento">
                 </div>
-
-                <!-- Telefone -->
                 <div class="cadastro_input">
                     <p>Telefone*</p>
                     <input type="text" [(ngModel)]="usuario.telefone">
                 </div>
-
-                <!-- E-mail -->
                 <div class="cadastro_input">
                     <p>E-mail*</p>
                     <input type="text" [(ngModel)]="usuario.email">
                 </div>
-
-                <!-- Nome de usuário -->
                 <div class="cadastro_input">
                     <p>Usuário*</p>
                     <input type="text" [(ngModel)]="usuario.nomeUsuario">
@@ -61,7 +51,7 @@
             </div>
         </div>
 
-        <!-- Seção 2: Endereço -->
+        
         <div class="cadastro_container_usuario" *ngIf="exibirSecao == 2">
             <div class="cadastro_conjunto_input">
                 <!-- CEP -->
@@ -103,7 +93,19 @@
                 <!-- Complemento -->
                 <div class="cadastro_input">
                     <p>Complemento</p>
-                    <input type="text" [(ngModel)]="usuario.complemento">
+                    <input type="text" [(ngModel)]="usuario.complemento"><br>
+                </div>
+                <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
+            </div>
+            
+        </div>
+        
+        <div class="cadastro_container_usuario" *ngIf="exibirSecao == 3">
+            <div class="cadastro_conjunto_input">
+                <div class="cadastro_input">
+                    <p>Senha*</p>
+                    <input type="password" [(ngModel)]="usuario.senha">
+>>>>>>> Stashed changes
                 </div>
 
                 <!-- Botão para avançar -->
@@ -123,11 +125,9 @@
                 <!-- Confirmar Senha -->
                 <div class="cadastro_input">
                     <p>Confirmar senha*</p>
-                    <input type="password" [(ngModel)]="usuario.senha">
+                    <input type="password"><br>
                 </div>
-
-                <!-- Botão para finalizar cadastro -->
-                <app-primary-button (click)="incluir(usuario)">Cadastrar</app-primary-button>
+                <app-primary-button class="cadastro_botao_continuar" (click)="incluir(usuario)">Cadastrar</app-primary-button>
             </div>
         </div>
     </main>

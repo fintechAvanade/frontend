@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
+import { PrimaryButtonComponent } from '../../shared/primary-button/primary-button.component';
 
 @Component({
   selector: 'app-landing-page',
-  standalone: true, // Define o componente como standalone
-  imports: [ReactiveFormsModule, CommonModule], // Importa ReactiveFormsModule diretamente no componente standalone
+  imports: [ReactiveFormsModule, CommonModule, RouterLink, PrimaryButtonComponent], // Importa ReactiveFormsModule diretamente no componente standalone
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })
@@ -43,11 +44,4 @@ export class LandingPageComponent implements OnInit {
     { icon: 'icon11', title: 'Conta Especial', description: 'Conta Especial - benefícios...' }
   ];
 
-  openAccount() {
-    if (this.accountForm.valid) {
-      console.log(`CPF informado: ${this.accountForm.value.cpf}`);
-    } else {
-      console.log('Por favor, informe um CPF válido.');
-    }
-  }
 }

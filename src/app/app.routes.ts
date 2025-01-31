@@ -21,10 +21,12 @@ import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuar
 import { InvestimentosComponent } from './components/investimentos/investimentos.component';
 import { NgModule } from '@angular/core';
 import { AuthGuardService } from './services/authGuard.service';
+import { LoginAdminComponent } from './pages/login-admin/login-admin.component';
 
 export const routes: Routes = [
     {path: '', component: LandingPageComponent},
     {path: 'login', component: LoginComponent},
+    {path: 'loginAdmin', component: LoginAdminComponent},
     {path: 'cadastro', component: CadastroComponent},
     {path: 'esqueciSenha', component: EsquecisenhaComponent},
     {

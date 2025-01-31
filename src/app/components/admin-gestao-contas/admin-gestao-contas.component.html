@@ -39,7 +39,8 @@
                             {{ c.ativo ? 'Ativo' : 'Inativo' }}
                         </p>
                     </td>
-                    <td><i  routerLink="/admin/editarConta/{{c.id}}" class="ph ph-pencil-simple-line lapis"></i>  <i class="ph ph-trash-simple lixo"></i></td>
+                    <td><i  routerLink="/admin/editarConta/{{c.id}}" class="ph ph-pencil-simple-line lapis"></i>  
+                        <i (click)="desativarConta(c)" class="ph ph-trash-simple lixo"></i></td>
                 </tr>
             </tbody>
         </table>

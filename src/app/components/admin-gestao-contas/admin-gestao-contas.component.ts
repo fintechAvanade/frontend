@@ -5,10 +5,12 @@ import { GestaoContas } from '../../classes/responses/gestao-contas';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { FiltroPipe } from '../../pipes/filtro.pipe';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog'
+import { DesativarComponent } from './desativar/desativar.component';
 
 @Component({
   selector: 'app-admin-gestao-contas',
-  imports: [CommonModule, FormsModule, RouterLink, FiltroPipe],
+  imports: [CommonModule, FormsModule, RouterLink, FiltroPipe, MatDialogModule],
   templateUrl: './admin-gestao-contas.component.html',
   styleUrl: './admin-gestao-contas.component.css'
 })
@@ -18,7 +20,8 @@ export class AdminGestaoContasComponent implements OnInit{
   
   
   constructor( 
-    private adminService: AdminService
+    private adminService: AdminService,
+    private dialog: MatDialog
   ) { }
   
   
@@ -58,5 +61,9 @@ export class AdminGestaoContasComponent implements OnInit{
       this.fim -= this._clientesPorPagina
       this.paginaAtual --
     }
+  }
+
+  desativarConta(cliente: GestaoContas){
+    this.dialog.open(DesativarComponent, {data: cliente})
   }
 }
