@@ -33,14 +33,32 @@ export class ExtratoComponent implements OnInit {
     } else {
       console.log('Erro ao recuperar movimentações');
     }
-    if(contaId) {
+    if (contaId) {
       this.contaService.getSaldo(contaId).subscribe({
         next: (response) => {
           this.saldoAtual = response.valor;
         }
       });
-    }else{
+    } else {
       console.log('Erro ao recuperar saldo da conta');
+    }
+    if (contaId) {
+      this.contaService.getEntradas(contaId).subscribe({
+        next: (response) => {
+          this.entradasMes = response.valor;
+        }
+      });
+    } else {
+      console.log('Erro ao recuperar entradas do mês');
+    }
+    if (contaId) {
+      this.contaService.getSaidas(contaId).subscribe({
+        next: (response) => {
+          this.saidasMes = response.valor;
+        }
+      });
+    } else {
+      console.log('Erro ao recuperar saídas do mês');
     }
   }
 }

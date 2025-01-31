@@ -6,6 +6,8 @@ import { CartaoService } from '../../services/cartoes.service';
 import { Usuario } from '../../classes/responses/usuario';
 
 import { RouterLink } from '@angular/router';
+import { SaldoComponent } from "../../shared/saldo/saldo.component";
+import { UsuariosService } from '../../services/usuarios.service';
 
 
 @Component({
@@ -19,6 +21,8 @@ export class ClienteHomeComponent implements OnInit {
   valor: number = 0;
   cartao: any = {};
   usuario: Usuario = new Usuario();
+  conta: string = '';
+  agencia: string = '';
 
   constructor(
     private jwtDecodedService: JwtDecodeService,
@@ -56,6 +60,15 @@ export class ClienteHomeComponent implements OnInit {
     const nomeUsuario = this.jwtDecodedService.getUserNameFromToken();
     if(nomeUsuario) {
       this.usuario.nomeUsuario = nomeUsuario;
+    }
+    if(contaId) {
+      this.contaService.getConta(contaId).subscribe({
+        next: (response) => {
+          this.agencia = response.agencia;
+          this.conta = response.numeroConta;
+        },
+        error: (error) => console.error('Erro ao recuperar conta', error),
+      });
     }
   }
 }

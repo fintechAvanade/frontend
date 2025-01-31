@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -11,7 +11,7 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'], 
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
   loginForm: FormGroup;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
@@ -21,8 +21,11 @@ export class LoginComponent {
       senha: ['', Validators.required],
     });
   }
-
+ngOnInit(): void {
+  localStorage.removeItem('accessToken');
+}
   login() {
+
     if (this.loginForm.valid) {
       const { agencia, conta, senha } = this.loginForm.value;
 
