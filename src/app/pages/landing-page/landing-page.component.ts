@@ -1,25 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Title } from '@angular/platform-browser';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
-  standalone: true, // Define o componente como standalone
-  imports: [ReactiveFormsModule], // Importa ReactiveFormsModule diretamente no componente standalone
+  imports: [RouterLink],
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-  accountForm!: FormGroup; // Inicia a propriedade com '!' para indicar que será inicializada no ngOnInit
+  
+  accountForm!: FormGroup; 
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
+
+    // Inicializar o formulário de conta
     this.accountForm = this.fb.group({
       cpf: ['', [Validators.required, Validators.pattern(/^\d{11}$/)]]
     });
+
+    // Log para verificar os benefícios
     console.log(this.benefits);
-    //tentando verificar se a lista de benef[icios tá carregando - segue dando erro]
   }
 
   benefits = [
