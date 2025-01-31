@@ -5,7 +5,49 @@
         </p>
     </header>
     
+    
     <!--Saldo-->
     <section class="saldo_contend">
        <app-saldo></app-saldo>
     </section>
+
+    <body>
+        <div class= "boleto_body">
+            <p> Digite o código do Boleto</p>
+        </div>
+
+        <div class= "boleto_input">
+            <label for="codigo-boleto">Código do barras:</label>
+        <input 
+            id="codigo-boleto" 
+            type="string" 
+            placeholder="Digite o código de barras" 
+            />
+        </div>
+
+        <div class= "descricao_input">
+            <label for="descricao">Descrição:</label>
+        <input 
+            id="descricao" 
+            type="string" 
+            placeholder="Digite a descrição"
+            />
+        </div>
+
+        <div class= "valor_input">
+            <label for="valor">Valor do Boleto:</label>
+        <input 
+            id="valor" 
+            type="number" 
+            placeholder="Digite o valor do boleto"
+            [(ngModel)]="valorBoleto"
+            />
+        </div>
+
+        <div class="botao_pagar">
+            <button (click)="confirmarPagamento()">Pagar</button>
+        </div>
+        
+
+
+    </body>

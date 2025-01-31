@@ -38,19 +38,6 @@
     margin-top: 20px;
 }
 
-  .botao_depositar {
-    width: 638.182px; 
-    height: 65px; 
-    flex-shrink: 0; 
-    background-color: var(--primary-color); /* Cor de fundo utilizando a variável */
-    border: none; 
-    border-radius: 8px; 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito de transição */
-  }
   
   .deposito_botoes {
     display: flex; 

@@ -1,7 +1,4 @@
-.boleto_contend{
-    margin-top: 15px;
-  }
-  
+
   
   .boleto_container {
     position: relative; /* Mantém o fluxo do layout */
@@ -27,3 +24,137 @@
       margin-top: 15px;
       line-height: 1.3;
     }
+ .saldo_contend{
+      margin-top: 15px;
+    }
+  .boleto_body p{
+    color: var(--black); 
+      font-family: 'Montserrat' sans-serif ; 
+      font-size: 15px; 
+      font-style: normal;
+      font-weight: 700; 
+      line-height: 1.2; 
+      margin-bottom: 0px;
+      margin-top: 40px;
+
+  }
+  .boleto_input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    gap: 8px;
+}
+
+.boleto_input input {
+    width: 100%;
+    max-width: 400px;
+    height: 65px;
+    padding: 0 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    background-color: #F2F2F2;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: var(--secondary-color);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boleto_input label {
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.descricao_input {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  gap: 8px;
+}
+
+.descricao_input input {
+  width: 100%;
+  max-width: 400px;
+  height: 65px;
+  padding: 0 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black);
+  background-color: #F2F2F2;
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: var(--secondary-color);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.descricao_input label {
+  font-size: 10px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.valor_input {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  gap: 8px;
+}
+
+.valor_input input {
+  width: 100%;
+  max-width: 400px;
+  height: 65px;
+  padding: 0 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black);
+  background-color: #F2F2F2;
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: var(--secondary-color);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valor_input label {
+  font-size: 10px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.botao_pagar {
+  width: 100%; 
+  max-width: 400px; 
+  height: 65px; 
+  flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
+  background-color: var(--primary-color); 
+  color: var(--black); 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 16px; 
+  font-weight: 700; 
+  border: none; 
+  border-radius: 20px; 
+  cursor: pointer; 
+  text-align: center; 
+  line-height: 65px; 
+  margin-left: 10px; 
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+.botao_pagar:hover {
+  background-color: var(--primary-hover);
+}  
