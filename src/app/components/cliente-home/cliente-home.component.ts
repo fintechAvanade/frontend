@@ -22,7 +22,7 @@ export class ClienteHomeComponent implements OnInit {
 
   constructor(
     private jwtDecodedService: JwtDecodeService,
-    private contaSerivce: ContaService,
+    private contaService: ContaService,
     private cartaoService: CartaoService
   ) { }
 
@@ -31,7 +31,7 @@ export class ClienteHomeComponent implements OnInit {
     const contaId = this.jwtDecodedService.getIdContaFromToken();
     if (contaId) {
       // Busca o saldo da conta
-      this.contaSerivce.getSaldoApi(contaId).subscribe({
+      this.contaService.getSaldo(contaId).subscribe({
         next: (response) => this.valor = response.valor,
         error: (error) => console.log(error),
       });

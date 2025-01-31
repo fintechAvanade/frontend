@@ -16,11 +16,15 @@ export class MovimentacoesService {
         return this.http.get<any[]>(`${this.baseUrl}/${contaId}`);
 
     }
+<<<<<<< Updated upstream
     sacar(contaId:number,request: ValorRequest): Observable<ValorResponse>{
         return this.http.post<ValorResponse>(`${this.baseUrl}/sacar/${contaId}`,
             request
         );
     } 
    
+=======
+
+>>>>>>> Stashed changes
 }
 

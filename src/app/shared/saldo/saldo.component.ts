@@ -14,7 +14,7 @@ export class SaldoComponent implements OnInit {
   constructor(private contaService: ContaService) { }
   
   ngOnInit(): void {
-    this.contaService.getSaldoApi(1)
+    this.contaService.getSaldo(1)
       .subscribe(saldo => this.saldo = saldo.valor);
   }
 }

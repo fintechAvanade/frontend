@@ -11,7 +11,7 @@ export class ContaService {
 
   constructor(private http: HttpClient) { }
 
-  public getSaldoApi(idConta: number): Observable<any>{
+  public getSaldo(idConta: number): Observable<any>{
     const uri = `/${idConta}/saldo`
     return this.http.get<any>(`${this.baseUrl}${uri}`)
   }

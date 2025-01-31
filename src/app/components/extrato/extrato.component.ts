@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { JwtDecodeService } from '../../services/jwtDecode.service';
 import { MovimentacoesService } from '../../services/movimentacoes.service';
 import { CommonModule } from '@angular/common';
+import { ContaService } from '../../services/conta.service';
 
 @Component({
   selector: 'app-extrato',
@@ -18,6 +19,7 @@ export class ExtratoComponent implements OnInit {
   constructor(
     private JwtDecodeService: JwtDecodeService,
     private movimentacoesService: MovimentacoesService,
+    private contaService: ContaService
   ) { }
 
   ngOnInit(): void {
@@ -31,17 +33,14 @@ export class ExtratoComponent implements OnInit {
     } else {
       console.log('Erro ao recuperar movimentações');
     }
+    if(contaId) {
+      this.contaService.getSaldo(contaId).subscribe({
+        next: (response) => {
+          this.saldoAtual = response.valor;
+        }
+      });
+    }else{
+      console.log('Erro ao recuperar saldo da conta');
+    }
   }
-  calcularTotais(movimentacoes: any[]): void {
-    this.entradasMes = movimentacoes
-    .filter((mov) => mov.tipo === 'DEBITO')
-    .reduce((total, mov) => total + mov.valor, 0);
-
-    this.saidasMes = movimentacoes
-    .filter((mov) => mov.tipo === 'CREDITO')
-    .reduce((total, mov) => total + mov.valor, 0);
-
-  }
-
-
 }
