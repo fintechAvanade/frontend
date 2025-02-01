@@ -1,0 +1,19 @@
+<div class="registrar-chave_container">
+    <i class="ph-bold ph-x" (click)="fecharModal()"></i>
+    <h1>Registrar chave PIX</h1>
+    <div class="registrar-chave_content">
+        <select #lista class="admin-gestao_select" [(ngModel)]="tipoChave">
+            <option value="cpf">CPF</option>
+            <option value="celular">Celular</option>
+            <option value="email">E-mail</option>
+            <option value="chaveAleatória">Chave aleatória</option>
+        </select>
+        <div class="confirmacoes">
+            <p *ngIf="tipoChave" class="informativo">Outros usuarios poderão te fazer transferencias PIX por {{tipoChave.toUpperCase()}}</p>
+            <p *ngIf="tipoChave" class="exibir-chave"><strong>{{tipoChave == 'chaveAleatória' ? 'CHAVE ALEATÓRIA' : tipoChave.toUpperCase()}}:</strong> 111.111.111-11</p>
+            <div>
+                <button class="botao-confirmar" (click)="registrarChave()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>

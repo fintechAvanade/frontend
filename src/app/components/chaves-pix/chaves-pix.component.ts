@@ -5,10 +5,13 @@ import { CommonModule } from '@angular/common';
 import { UsuariosService } from '../../services/usuarios.service';
 import { Usuario } from '../../classes/responses/usuario';
 import { JwtDecodeService } from '../../services/jwtDecode.service';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog'
+import { RegistrarComponent } from './registrar/registrar.component';
+
 
 @Component({
   selector: 'app-chaves-pix',
-  imports: [CommonModule],
+  imports: [CommonModule, MatDialogModule],
   templateUrl: './chaves-pix.component.html',
   styleUrl: './chaves-pix.component.css'
 })
@@ -19,7 +22,8 @@ export class ChavesPixComponent implements OnInit {
   constructor(
     private chavePixService: ClienteChavesPixService,
     private usuarioService: UsuariosService,
-    private JwtDecodeService: JwtDecodeService
+    private JwtDecodeService: JwtDecodeService,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -31,5 +35,9 @@ export class ChavesPixComponent implements OnInit {
         error: (error) => console.log(error)
       });
     }
+  }
+
+  registrarChave() {
+        this.dialog.open(RegistrarComponent)
   }
 }

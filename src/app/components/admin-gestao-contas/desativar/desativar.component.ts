@@ -20,7 +20,6 @@ export class DesativarComponent {
   }
 
   confirmarDesativacao(): void {
-    console.log('Conta desativada:', this.cliente.id);
     this.dialogRef.close();
   }
 }

@@ -1,10 +1,16 @@
-<p>{{cliente.agencia}}</p>
-<p>desativar works!</p>
-<p>desativar works!</p>
-<p>desativar works!</p>
-<p>desativar works!</p>
-<p>desativar works!</p>
-<p>desativar works!</p>
-<p>desativar works!</p>
-<p>desativar works!</p>
-<p>desativar works!</p>
+<div class="faixa-vermelha"></div>
+<div class="desativar_container">
+    
+    <i class="ph-bold ph-exclamation-mark"></i>
+    <h2>Tem certeza que deseja desativar a conta:</h2>
+    <div class="desativar_infos-conta">
+        <p>Agencia: <strong>{{cliente.agencia}}</strong></p>
+        <p>Conta: <strong>{{cliente.numeroConta}}</strong></p>
+        <p>Proprietário: <strong>{{cliente.nome}}</strong></p>
+        <p>Cpf: <strong>{{cliente.cpf}}</strong></p>
+    </div>
+    <div class="desativar_botoes">
+        <button class="desativar_botao botao-voltar" (click)="fecharModal()">Voltar</button>
+        <button class="desativar_botao botao-desativar" (click)="confirmarDesativacao()">Desativar</button>
+    </div>
+</div>

@@ -3,12 +3,12 @@
     <div class="cabecalho">
         <h1>Minhas chaves pix</h1>
         <p class="descricao">Gerencie suas chaves para receber transferências pelo pix</p>
-        <button class="btn-secundary">
+        <button class="btn-secundary" (click)="registrarChave()">
             <i class="ph-bold ph-plus"></i>
             <p>Registrar chaves pix</p>
         </button>
     </div>
-    <div class="tabela">
+    <div class="tabela" *ngIf="chaves.length != 0">
         <div class="tabela-cabecalho">
             <h2>Chaves cadastradas</h2>
             <p class="quantidade-chaves">{{chaves.length}} de 5 chaves</p>
