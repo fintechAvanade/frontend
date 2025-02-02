@@ -71,21 +71,21 @@
     }
 
     .botao_sacar {
-      width: 100%; /* Ajuste para largura 100%, vai se ajustar ao tamanho do container */
-      max-width: 400px; /* Tamanho máximo para a largura */
-      height: 65px; /* Altura do botão */
-      flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
-      background-color: var(--primary-color); /* Cor de fundo com variável */
+      width: 100%; 
+      max-width: 400px; 
+      height: 65px; 
+      flex-shrink: 0; 
+      background-color: var(--primary-color); 
       color: var(--black); /* Cor do texto */
-      font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
-      font-size: 16px; /* Tamanho da fonte */
-      font-weight: 700; /* Peso da fonte (negrito) */
-      border: none; /* Remove borda */
-      border-radius: 20px; /* Arredondamento das bordas */
-      cursor: pointer; /* Cursor para indicar que é clicável */
-      text-align: center; /* Centraliza o texto */
-      line-height: 65px; /* Centraliza o texto verticalmente */
-      margin-left: 10px; /* Afasta o botão da margem esquerda */
+      font-family: 'Montserrat', sans-serif; 
+      font-size: 16px; 
+      font-weight: 700; 
+      border: none; 
+      border-radius: 20px; 
+      cursor: pointer; 
+      text-align: center; 
+      line-height: 65px; 
+      margin-left: 10px; 
       transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transições suaves */
   }
     .botao_sacar:hover {

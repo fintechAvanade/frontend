@@ -24,7 +24,11 @@ export class MovimentacoesService {
         );
     }
 
-    transferencia(contaId: number ,transferencia: Transferencia): Observable<number>{
+    transferir(contaId: number ,transferencia: Transferencia): Observable<number>{
         return this.http.post<number>(`${this.baseUrl}/transferir/${contaId}`, transferencia)
+    }
+
+    depositar(contaId: number, request: ValorRequest): Observable<ValorResponse>{
+        return this.http.post<ValorResponse>(`${this.baseUrl}/depositar/${contaId}`, request);
     }
 }

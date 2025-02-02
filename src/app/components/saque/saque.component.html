@@ -1,47 +1,48 @@
 <div class="saque_container">
     <header class="saque_header">
-        <h1>Saque</h1>
-        <p>NULLbank torna o saque rápido, sem taxas e sem complicação.</p>
+      <h1>Saque</h1>
+      <p>NULLbank torna o saque rápido, sem taxas e sem complicação.</p>
     </header>
-    <!--Saldo-->
+  
+    <!-- Saldo -->
     <section class="saldo_contend">
-       <app-saldo></app-saldo>
+      <app-saldo></app-saldo>
     </section>
-    <!--Corpo do saque-->
-    <div class="saque_body"> 
-        <p>Valor do Saque:</p>
-    <!--botoes do valor pré-definido-->
+  
+    <!-- Corpo do saque -->
+    <div class="saque_body">
+      <p>Valor do Saque:</p>
     </div>
-        <div class="saque_botoes">
-            <div  class="botao">
-                <button (click)="adicionarValor(5)">R$ 5,00 </button>
-            </div>
-            <div class="botao">
-                <button (click)="adicionarValor(10)">R$ 10,00 </button>
-            </div>
-            <div  class="botao">
-                <button (click)="adicionarValor(50)">R$ 50,00 </button>
-            </div>
-            <div  class="botao">
-                <button (click)="adicionarValor(100)">R$ 100,00 </button>
-            </div>
-        </div>
-    <!-- Campo do valor personalizado-->  
-        
+  
+    <!-- Botões de valor pré-definido -->
+    <div class="saque_botoes">
+      <div class="botao">
+        <button (click)="adicionarValor(5)">R$ 5,00</button>
+      </div>
+      <div class="botao">
+        <button (click)="adicionarValor(10)">R$ 10,00</button>
+      </div>
+      <div class="botao">
+        <button (click)="adicionarValor(50)">R$ 50,00</button>
+      </div>
+      <div class="botao">
+        <button (click)="adicionarValor(100)">R$ 100,00</button>
+      </div>
+    </div>
+  
+    <!-- Campo de valor personalizado -->
     <div class="input_valor">
-        <label for="valor-saque">Outro Valor:</label>
-        <input 
-            id="valor-saque" 
-            type="number" 
-            placeholder="Digite o valor (R$)" 
-            [(ngModel)]="valorInput" 
-        />
+      <label for="valor-saque">Outro Valor:</label>
+      <input
+        id="valor-saque"
+        type="number"
+        placeholder="Digite o valor (R$)"
+        [(ngModel)]="valorInput"
+      />
     </div>
-         <!--ver a aula sobre isso-->
-        
-    <!--Botao de confirmacao do saque-->
-    <!--volta para tela de transação e colocar que foi efetuada a transação, mas ela ainda nao existe <-->
+  
+    <!-- Botão de confirmação do saque -->
     <div class="botao_sacar">
-        <button (click)="confirmarSaque()">Sacar</button>
+      <button (click)="sacar()">Sacar</button>
     </div>
-</div>
+  </div>

@@ -15,16 +15,16 @@ import { EnderecoService } from '../../services/endereco.service';
   styleUrl: './cadastro.component.css'
 })
 export class CadastroComponent {
-  constructor(
-    private router: Router,
-    private adminService: AdminService,
-    private enderecoService: EnderecoService
-  ) { }
 
   usuario: CriacaoUsuario = new CriacaoUsuario(); // Objeto para armazenar os dados do usuário
   resposta: any = {}; // Armazena a resposta da API
   exibirSecao: number = 1; // Controla a seção atual do formulário
 
+  constructor(
+    private router: Router,
+    private adminService: AdminService,
+    private enderecoService: EnderecoService
+  ) { }
 
   // Função para pegar o cep
   getEndereco() {

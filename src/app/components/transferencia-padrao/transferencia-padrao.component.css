@@ -8,3 +8,26 @@
   flex-shrink: 0; /* Garante que não encolha */
   margin: 40px;
 }
+
+
+.botao_realizar_transferencia {
+  width: 100%; 
+  max-width: 350px; 
+  height: 65px; 
+  flex-shrink: 0; 
+  background-color: var(--primary-color); 
+  color: var(--black); /* Cor do texto */
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 16px; 
+  font-weight: 700; 
+  border: none; 
+  border-radius: 20px; 
+  cursor: pointer; 
+  text-align: center; 
+  line-height: 65px; 
+  margin-top: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+.botao_realizar_transferencia:hover {
+  background-color: var(--primary-hover);
+} 
