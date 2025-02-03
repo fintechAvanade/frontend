@@ -25,23 +25,23 @@ export class LandingPageComponent implements OnInit {
   }
 
   benefits = [
-    { icon: 'icon1', title: 'Controle seu dinheiro separando em cofrinhos', description: 'Benefício 1 descrição...' },
-    { icon: 'icon2', title: 'Seguro de Vida facilitado', description: 'Benefício 2 descrição...' },
-    { icon: 'icon3', title: 'Muita segurança com seus dados e seu dinheiro', description: 'Benefício 3 descrição...' },
-    { icon: 'icon4', title: 'Cashback em compras', description: 'Benefício 4 descrição...' }
+    { icon: 'icon1', title: 'Controle seu dinheiro de facilmente', description: 'Veja de forma rápida e fácil as movimentações do seu dinheiro' },
+    { icon: 'icon2', title: 'Transações no Pix', description: 'Controle suas chaves, faça transferências e acompanhe tudo' },
+    { icon: 'icon3', title: 'Muita segurança com seus dados e seu dinheiro', description: 'Temos autenticação para garantir altos padrões de segurança' },
+    { icon: 'icon4', title: 'Crie sua conta em segundos', description: 'Sabemos que ninguém tem tempo a perder' }
   ];
 
   studentBenefits = [
-    { icon: 'icon5', title: 'Serviços personalizados', description: 'Benefício estudante 1...' },
-    { icon: 'icon6', title: 'Assessoria financeira para estudantes', description: 'Benefício estudante 2...' },
-    { icon: 'icon7', title: 'Empréstimos estudantis facilitados', description: 'Benefício estudante 3...' },
-    { icon: 'icon8', title: 'Taxa zero', description: 'Benefício estudante 4...' },
-    { icon: 'icon9', title: 'Crédito facilitado', description: 'Benefício estudante 5...' }
+    { icon: 'icon5', title: 'Serviços personalizados', description: '' },
+    { icon: 'icon6', title: 'Assessoria financeira para estudantes', description: '' },
+    { icon: 'icon7', title: 'Empréstimos estudantis facilitados', description: '' },
+    { icon: 'icon8', title: 'Taxa zero', description: '' },
+    { icon: 'icon9', title: 'Crédito facilitado', description: '' }
   ];
 
   accountTypes = [
-    { icon: 'icon10', title: 'Conta Simples', description: 'Conta Simples - benefícios...' },
-    { icon: 'icon11', title: 'Conta Especial', description: 'Conta Especial - benefícios...' }
+    { icon: 'icon10', title: 'Conta Simples', description: 'Aquele básico que é bem feito' },
+    { icon: 'icon11', title: 'Conta Especial', description: 'Se você quer sonhar alto, a gente te ajuda' }
   ];
 
 }
