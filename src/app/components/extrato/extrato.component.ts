@@ -3,7 +3,7 @@ import { JwtDecodeService } from '../../services/jwtDecode.service';
 import { MovimentacoesService } from '../../services/movimentacoes.service';
 import { CommonModule } from '@angular/common';
 import { ContaService } from '../../services/conta.service';
-
+ 
 @Component({
   selector: 'app-extrato',
   imports: [CommonModule],
@@ -15,13 +15,14 @@ export class ExtratoComponent implements OnInit {
   saldoAtual: number = 0;
   entradasMes: number = 0;
   saidasMes: number = 0;
-
+  mostraFiltro: boolean = true;
+ 
   constructor(
     private JwtDecodeService: JwtDecodeService,
     private movimentacoesService: MovimentacoesService,
     private contaService: ContaService
   ) { }
-
+ 
   ngOnInit(): void {
     const contaId = this.JwtDecodeService.getIdContaFromToken();
     if (contaId) {
@@ -61,4 +62,9 @@ export class ExtratoComponent implements OnInit {
       console.log('Erro ao recuperar saídas do mês');
     }
   }
+ 
+  mostrarFiltro(): void{
+    this.mostraFiltro = !this.mostraFiltro
+  }
+ 
 }

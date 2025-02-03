@@ -1,7 +1,7 @@
 .extrato_container{
     margin: 40px 0 0 40px;
 }
-
+ 
 .extrato_container h1{
     color: var(--fintech_black, #151515);
     /* Titulos-H3-40-Bold */
@@ -11,11 +11,11 @@
     line-height: 135%; /* 54px */
     margin-bottom: 30px;
 }
-
+ 
 .extrato_content{
     display: flex;
 }
-
+ 
 .extrato_box{
     width: 250px;
     height: 120px;
@@ -24,18 +24,18 @@
     padding: 20px 40px;
     margin: 20px 80px 20px 0;
 }
-
+ 
 .extrato_box h2{
     font-size: 15px;
 }
-
+ 
 .extrato_box p{
     font-weight: bold;
     font-size: 30px;
 }
-
-
-
+ 
+ 
+ 
 .tabela {
     border-radius: 20px;
     border: 1px solid var(--secondary-color);
@@ -45,58 +45,70 @@
     flex-direction: column;
     gap: 10px;
 }
-
+ 
 .saldo{
     background-color: #151515;
     color: aliceblue;
 }
-
+ 
 .entradas{
     background-color: var(--primary-color);
 }
-
+ 
 .btn-icon p {
     align-items: end;
 }
-
+ 
 .saidas{
     background-color: #f36c6c;
 }
-
+ 
 .tabela-cabecalho h2{
     color: var(--black);
     font-size: 20px;
     line-height: 135%;
 }
-
+ 
 .tabela-cabecalho{
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
-
+ 
 .tabela-cabecalho i{
     font-size: 25px;
 }
-
+ 
+.extrato_filtro-data{
+    position: absolute;
+    top: -130px;
+    right: 10px;
+    background-color: #c2bebe;
+    width: 200px;
+    height: 100px;
+}
+ 
 .chaves_overflow{
     overflow-y: auto;
     height: 250px;
 }
-
+ 
 .tabela_categorias{
     display: flex;
 }
-
+ 
 .tabela_categorias li{
     margin: 5px 20px 20px 0;
 }
-
+ 
 .quantidade-chaves {
     color: var(--fintech_gray);
     font-size: 14px;
 }
-
-input{
+ 
+ 
+ 
+.tabela input{
     margin: 20px 12px 0 0px;
     padding: 2px 15px;
     border: 1px solid var(--fintech_gray);
@@ -104,7 +116,13 @@ input{
     background-color: transparent;
     outline: none;
 }
-
+ 
+.tabela input{
+    margin: 0;
+    padding: 0
+ 
+}
+ 
 .info-chave {
     justify-content: space-between;
     width: 380px;
@@ -115,38 +133,38 @@ input{
     padding: 20px 0;
     justify-content: space-between;
 }
-
+ 
 .icone {
     border-radius: 100px;
     background-color: var(--secondary-color);
-
+ 
     width: 45px;
     height: 45px;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
 }
-
+ 
 .btn-icon {
     font-size: 20px;
 }
-
+ 
 .btn-icon :hover {
     color: var(--red);
 }
-
+ 
 .tipo-chave {
     color: var(--black);
     font-size: 14px;
 }
-
+ 
 .valor-chave {
     color: var(--fintech_gray);
     font-size: 12px;
 }
-
+ 
 .chave-pix_tipo-valor{
     padding: 0 0 0 10px;
     width: 200px;

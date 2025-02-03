@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
+    padding-left: 15px;
+    padding-top: 15px;
     max-width: 100%; 
 }
 
@@ -22,6 +22,7 @@
 }
 
 .cadastro_container_usuario{
+    font-family: Inter, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +64,6 @@
 
 .cadastro_input p{
     color: var(--fintech_black);
-    font-family: Inter;
     font-size: 18px;
     font-weight: 700;
     line-height: 150%;
@@ -83,7 +83,6 @@
 }
 
 .cadastro_cabecalho_input{
-    font-family: Inter;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -98,4 +97,8 @@
 
 .cadastro_input.menor input{
     width: 220px;
+}
+
+.cadastro_botao_continuar{
+    font-family: Inter, sans-serif;
 }
