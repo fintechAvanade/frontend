@@ -23,7 +23,7 @@
 /* Body-text-18-bold */
     font-size: 12px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .admin-home_content{
@@ -90,7 +90,7 @@ table tr:last-child td {
 }
 
 .acoes{
-    background-color: var(--primary-color);
+    background-color: #6DDEE5;
     font-size: 40px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -100,7 +100,7 @@ table tr:last-child td {
 
 .acoes:hover{
     cursor: pointer;
-    background-color: #1cecab;
+    background-color: #0288b1 ;
 }
 
 .admin-home_select{

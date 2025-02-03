@@ -52,7 +52,7 @@
     /* Body-text-18-bold */
     font-size: 12px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .login-home_card-saldo, .login-home_card-cartao{
@@ -68,7 +68,7 @@
 
 
 .icone{
-    background-color: var(--secondary-color);
+    background-color: ;
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 8px;
