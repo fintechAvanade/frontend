@@ -87,6 +87,7 @@
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transições suaves */
 }
 
+<<<<<<< Updated upstream
   .botao:hover {
     transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
   }
@@ -126,3 +127,29 @@
   }
   
   
+=======
+.input_valor input {
+    width: 100%;
+    max-width: 400px;
+    height: 53.3px;
+    padding: 0 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    background-color: #F2F2F2;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: var(--secondary-color);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input_valor label {
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+>>>>>>> Stashed changes

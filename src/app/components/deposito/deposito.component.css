@@ -117,7 +117,11 @@
 .input_valor input {
     width: 100%;
     max-width: 400px;
+<<<<<<< Updated upstream
     height: 45px;
+=======
+    height: 53.3px;
+>>>>>>> Stashed changes
     padding: 0 16px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -125,7 +129,7 @@
     color: var(--black);
     background-color: #F2F2F2;
     border: 1px solid;
-    border-radius: 20px;
+    border-radius: 10px;
     border-color: var(--secondary-color);
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
