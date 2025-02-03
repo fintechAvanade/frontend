@@ -3,10 +3,14 @@
         <h1>Area Pix</h1>
         <p>Envie e receba Pix a qualquer momento, sem taxas, com Nullbank.</p>
     </header>
+    <!-- Saldo -->
+    <section class="saldo_contend">
+        <app-saldo></app-saldo>
+    </section>
     <div class="pix_content">
         <h2>Ações</h2>
         <div class="pix_botoes">
-            <div routerLink="/admin/gestaoContas" class="pix_botao">
+            <div class="pix_botao" (click)="copiaECola()">
                 <i class="ph-bold ph-barcode acoes"></i>
                 <p>Pix Copia e Cola</p>
             </div>

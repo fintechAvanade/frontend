@@ -1,4 +1,4 @@
-export class pagarBoleto {
+export class PagarComCodigo {
     codigo: string
     valor: number
     descricao: string
@@ -8,6 +8,6 @@ export class pagarBoleto {
         this.codigo = ''
         this.valor = 0
         this.descricao = ''
-        this.tipoMovimentacao = 'PAGAMENTO_BOLETO'
+        this.tipoMovimentacao = ''
     }
 }

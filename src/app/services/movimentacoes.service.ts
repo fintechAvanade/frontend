@@ -4,37 +4,37 @@ import { Observable } from "rxjs";
 import { ValorResponse } from "../classes/responses/valor-response";
 import { ValorRequest } from "../classes/requests/valor-request";
 import { Transferencia } from "../classes/requests/transferencia";
-import { pagarBoleto } from "../classes/requests/pagar-boleto";
 import { PagarPix } from "../classes/requests/pagar-pix";
- 
-@Injectable ({
+import { PagarComCodigo } from "../classes/requests/pagar-com-codigo";
+
+@Injectable({
     providedIn: 'root'
 })
 export class MovimentacoesService {
     private baseUrl = 'http://localhost:8080/movimentacoes';
- 
-    constructor(private http: HttpClient){}
- 
-    getMovimentacoes(contaId: number): Observable<any[]>{
+
+    constructor(private http: HttpClient) { }
+
+    getMovimentacoes(contaId: number): Observable<any[]> {
         return this.http.get<any[]>(`${this.baseUrl}/${contaId}`);
- 
+
     }
- 
-    sacar(contaId:number,request: ValorRequest): Observable<ValorResponse>{
+
+    sacar(contaId: number, request: ValorRequest): Observable<ValorResponse> {
         return this.http.post<ValorResponse>(`${this.baseUrl}/sacar/${contaId}`,
             request
         );
     }
- 
-    transferir(contaId: number ,transferencia: Transferencia): Observable<number>{
+
+    transferir(contaId: number, transferencia: Transferencia): Observable<number> {
         return this.http.post<number>(`${this.baseUrl}/transferir/${contaId}`, transferencia)
     }
- 
-    depositar(contaId: number, request: ValorRequest): Observable<ValorResponse>{
+
+    depositar(contaId: number, request: ValorRequest): Observable<ValorResponse> {
         return this.http.post<ValorResponse>(`${this.baseUrl}/depositar/${contaId}`, request);
     }
-    
-    pagarBoleto(contaId: number, pagamento: pagarBoleto): Observable<ValorResponse>{
+
+    pagarComCodigo(contaId: number, pagamento: PagarComCodigo): Observable<ValorResponse> {
         return this.http.post<ValorResponse>(`${this.baseUrl}/pagar-codigo/${contaId}`, pagamento);
     }
 

@@ -1,0 +1,31 @@
+<i class="ph-bold ph-x" (click)="fecharModal()"></i>
+<div class="pix_container">
+    <header class="pix_header">
+        <h1>Pix copia e cola</h1>
+    </header>
+
+    <body>
+        <div class="pix_body">
+            <p>Cole o código pix</p>
+        </div>
+
+        <div class="pix_input">
+            <label for="codigo-pix">Código Pix:</label>
+            <input id="codigo-pix" type="text" placeholder="Cole o código pix" [(ngModel)]="codigoPix" />
+        </div>
+
+        <div class="descricao_input">
+            <label for="descricao">Descrição:</label>
+            <input id="descricao" type="text" placeholder="Digite a descrição" [(ngModel)]="descricaoPix" />
+        </div>
+
+        <div class="valor_input">
+            <label for="valor">Valor do Pagamento:</label>
+            <input id="valor" type="number" placeholder="Digite o valor do pagamento" [(ngModel)]="valorPix" />
+        </div>
+
+        <div class="botao_pagar">
+            <button (click)="confirmarPagamento()">Pagar</button>
+        </div>
+    </body>
+</div>

@@ -1,36 +1,26 @@
+<i class="ph-bold ph-x" (click)="fecharModal()"></i>
 <div class="transferencia_container">
     <section class="transferencia_content">
-       <div class="transferencia_forms">
-        <div class="transferir_container">
-            <h2>Informe os dados de destino</h2>
-            <div class="input_valor">
-                <label for="valor-saque">Chave: </label>
-                <input
-                    id="valor-saque"
-                    type="text"
-                    placeholder="Digite a chave pix"
-                    [(ngModel)]="pagarPix.chave"/> 
+        <div class="transferencia_forms">
+            <div class="transferir_container">
+                <h2>Informe os dados de destino</h2>
+                <div class="input_valor">
+                    <label for="valor-saque">Chave: </label>
+                    <input id="valor-saque" type="text" placeholder="Digite a chave pix" [(ngModel)]="pagarPix.chave" />
+                </div>
+                <div class="input_valor">
+                    <label for="valor-saque">Valor: </label>
+                    <input id="valor-saque" type="text" placeholder="Digite o valor" [(ngModel)]="pagarPix.valor" />
+                </div>
+                <div class="input_valor">
+                    <label for="valor-saque">Descrição: </label>
+                    <input id="valor-saque" type="text" placeholder="Digite a descrição"
+                        [(ngModel)]="pagarPix.descricao" />
+                </div>
             </div>
-            <div class="input_valor">
-                <label for="valor-saque">Valor: </label>
-                <input
-                    id="valor-saque"
-                    type="text"
-                    placeholder="Digite o valor"
-                    [(ngModel)]="pagarPix.valor"/> 
-            </div>
-            <div class="input_valor">
-                <label for="valor-saque">Descrição: </label>
-                <input
-                    id="valor-saque"
-                    type="text"
-                    placeholder="Digite a descrição"
-                    [(ngModel)]="pagarPix.descricao"/>
-            </div>
+            <button class="botao_realizar_transferencia" (click)="transferirPix(pagarPix)">
+                Realizar Transferência
+            </button>
         </div>
-        <button class="botao_realizar_transferencia" (click)="transferirPix(pagarPix)">
-            Realizar Transferência
-        </button>
-       </div>
     </section>
 </div>
