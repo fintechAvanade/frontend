@@ -15,8 +15,8 @@ export class ExtratoComponent implements OnInit {
   saldoAtual: number = 0;
   entradasMes: number = 0;
   saidasMes: number = 0;
-  mostraFiltro: boolean = true;
- 
+  mostraFiltro: boolean = false;
+
   constructor(
     private JwtDecodeService: JwtDecodeService,
     private movimentacoesService: MovimentacoesService,
@@ -62,9 +62,9 @@ export class ExtratoComponent implements OnInit {
       console.log('Erro ao recuperar saídas do mês');
     }
   }
- 
+
   mostrarFiltro(): void{
     this.mostraFiltro = !this.mostraFiltro
   }
- 
+  
 }

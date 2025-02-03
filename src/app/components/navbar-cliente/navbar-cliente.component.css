@@ -39,6 +39,10 @@
     transition: 0.2s;
 }
 
+.navbar_item li{
+    margin-left: 10px ;
+}
+
 .navbar_item:hover, .navbar_dropdown_item:hover{
     background-color:#354d45;
     border-left: 2px solid #ffffff;
@@ -55,7 +59,6 @@
     font-size: 13px;
     font-weight: 700;
     border-radius: 7px;
-    padding-right: 10px;
     margin: 20px 10px 0 0px;
 }
 
@@ -77,7 +80,7 @@
 }
 
 li{
-    margin: 0 0 0 10px;
+    margin: 0 0 0 0px;
     width: 100%;
     
 }

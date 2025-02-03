@@ -35,7 +35,6 @@
 }
  
  
- 
 .tabela {
     border-radius: 20px;
     border: 1px solid var(--secondary-color);
@@ -78,16 +77,45 @@
 .tabela-cabecalho i{
     font-size: 25px;
 }
- 
+
 .extrato_filtro-data{
+    justify-content: space-between;
     position: absolute;
-    top: -130px;
-    right: 10px;
-    background-color: #c2bebe;
-    width: 200px;
-    height: 100px;
+    bottom: -145px;
+    right: -150px;
+    background-color: #f7f4f4;
+    width: 145px;
+    height: 150px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid black;
 }
- 
+
+.input-filtro{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-filtro label{
+    font-size: 12px;
+}
+
+.input-filtro input{
+    height: 20px;
+    font-size: 10px;
+    padding: 0 10px;
+}
+
+.extrato_filtro-data button{
+    height: fit-content;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--primary-color);
+    padding: 1px 10px;
+    margin-top: 5px;
+}
+
 .chaves_overflow{
     overflow-y: auto;
     height: 250px;
@@ -105,9 +133,9 @@
     color: var(--fintech_gray);
     font-size: 14px;
 }
- 
- 
- 
+
+
+
 .tabela input{
     margin: 20px 12px 0 0px;
     padding: 2px 15px;
@@ -116,13 +144,13 @@
     background-color: transparent;
     outline: none;
 }
- 
+
 .tabela input{
     margin: 0;
     padding: 0
- 
+
 }
- 
+
 .info-chave {
     justify-content: space-between;
     width: 380px;

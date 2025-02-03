@@ -1,127 +1,128 @@
-.saldo_contend{
+  .saldo_contend{
+    margin-top: 15px;
+  }
+  
+  
+  .saque_container {
+    position: relative; /* Mantém o fluxo do layout */
+    flex-shrink: 0; /* Garante que não encolha */
+    margin: 40px 0 0 40px;
+  }
+  .saque_header {
+      color: var(--black); 
+      font-family: 'Montserrat' sans-serif ; 
+      font-size: 25px; 
+      font-style: normal;
+      font-weight: 700; 
+      line-height: 1.2; 
+      margin-bottom: 0px;
+  }
+  .saque_header p{
+    color: var(--fintech_gray);
+    /* Body-text-18-bold */
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        margin-top: 15px;
+        line-height: 1.3;
+  
+  }
+  .saque_body{
+      color: var(--black);
+      font-family: Montserrat, sans-serif ;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 135%; 
+      margin-left: 10px;
+      margin-top: 20px;
+  }
+
+.saque_botoes {
+  display: flex; 
+  gap: 10px; 
   margin-top: 15px;
 }
+  
 
-
-.saque_container {
-  position: relative; /* Mantém o fluxo do layout */
-  flex-shrink: 0; /* Garante que não encolha */
-  margin: 40px 0 0 40px;
-}
-.saque_header {
-    color: var(--black); 
-    font-family: 'Montserrat' sans-serif ; 
-    font-size: 25px; 
-    font-style: normal;
-    font-weight: 700; 
-    line-height: 1.2; 
-    margin-bottom: 0px;
-}
-.saque_header p{
-  color: var(--fintech_gray);
-  /* Body-text-18-bold */
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      margin-top: 15px;
-      line-height: 1.3;
-
-}
-.saque_body{
-    color: var(--black);
-    font-family: Montserrat, sans-serif ;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 135%; 
+.botao {
+    width: 85px; /* Largura do botão */
+    height: 65px; /* Altura do botão */
+    flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
+    background-color: var(--primary-color); /* Cor de fundo usando variável */
+    color: var(--black, #000); /* Cor do texto */
+    font-family: 'Montserrat', sans-serif; /* Fonte */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte (negrito) */
+    border: none; /* Remove bordas padrão */
+    border-radius: 20px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de clique */
+    text-align: center; /* Centraliza o texto */
+    line-height: 65px; /* Centraliza verticalmente o texto */
+    padding: 0; /* Remove padding padrão */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total do botão */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
     margin-left: 10px;
-    margin-top: 20px;
-}
-  
-  .saque_botoes {
-    display: flex; 
-    gap: 10px; 
-    margin-top: 15px;
-}
 
-  
-  .botao {
-      width: 85px; /* Largura do botão */
-      height: 65px; /* Altura do botão */
-      flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
-      background-color: var(--secondary-color); /* Cor de fundo usando variável */
-      color: var(--black, #000); /* Cor do texto */
-      font-family: 'Montserrat', sans-serif; /* Fonte */
-      font-size: 16px; /* Tamanho da fonte */
-      font-weight: 700; /* Peso da fonte (negrito) */
-      border: none; /* Remove bordas padrão */
-      border-radius: 20px; /* Bordas arredondadas */
-      cursor: pointer; /* Cursor de clique */
-      text-align: center; /* Centraliza o texto */
-      line-height: 65px; /* Centraliza verticalmente o texto */
-      padding: 0; /* Remove padding padrão */
-      box-sizing: border-box; /* Inclui padding e borda no tamanho total do botão */
-      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
-      margin-left: 10px;
-  
-    }
-    .botao:hover {
-      transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
-      background-color: var(--secundary-hover); /* Mudança de cor ao passar o mouse */
-    }
-
-    .botao_sacar {
-      width: 100%; 
-      max-width: 400px; 
-      height: 65px; 
-      flex-shrink: 0; 
-      background-color: var(--primary-color); 
-      color: var(--black); /* Cor do texto */
-      font-family: 'Montserrat', sans-serif; 
-      font-size: 16px; 
-      font-weight: 700; 
-      border: none; 
-      border-radius: 20px; 
-      cursor: pointer; 
-      text-align: center; 
-      line-height: 65px; 
-      margin-left: 10px; 
-      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transições suaves */
   }
-    .botao_sacar:hover {
-      background-color: var(--primary-hover);
-  }  
-    
 
-  .input_valor {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    gap: 8px;
+  .botao_sacar:hover{
+    background-color: rgb(90, 183, 211);
+  }
+
+  .botao_sacar {
+    width: 100%; /* Ajuste para largura 100%, vai se ajustar ao tamanho do container */
+    max-width: 400px; /* Tamanho máximo para a largura */
+    height: 45px; /* Altura do botão */
+    background-color: var(--secondary-color); /* Cor de fundo com variável */
+    color: var(--black); /* Cor do texto */
+    font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte (negrito) */
+    border: none; /* Remove borda */
+    border-radius: 20px; /* Arredondamento das bordas */
+    cursor: pointer; /* Cursor para indicar que é clicável */
+    text-align: center; /* Centraliza o texto */
+    margin-left: 10px; /* Afasta o botão da margem esquerda */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transições suaves */
 }
 
-.input_valor input {
-    width: 100%;
-    max-width: 400px;
-    height: 65px;
-    padding: 0 16px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--black);
-    background-color: #F2F2F2;
-    border: 1px solid;
-    border-radius: 20px;
-    border-color: var(--secondary-color);
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.input_valor label {
-    font-size: 10px;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 0px;
-    margin-top: 20px;
-}
+  .botao:hover {
+    transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+  }
+      
+  
+    .input_valor {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      gap: 8px;
+  }
+  
+  .input_valor input {
+      width: 100%;
+      max-width: 400px;
+      height: 45px;
+      padding: 0 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--black);
+      background-color: #F2F2F2;
+      border: 1px solid;
+      border-radius: 20px;
+      border-color: var(--secondary-color);
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input_valor label {
+      font-size: 10px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 0px;
+      margin-top: 20px;
+  }
+  
+  

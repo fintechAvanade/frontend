@@ -20,15 +20,17 @@
                 <h2>Histórico de movimentações</h2>
                 <i class="ph-bold ph-funnel" (click)="mostrarFiltro()"></i>
                 <div class="extrato_filtro-data" *ngIf="mostraFiltro">
-                    <div class="input-filtro">
-                        <label for="">Data inicio</label>
-                        <input type="text">
+                    <div>
+                        <div class="input-filtro">
+                            <label for="">Data inicio</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-filtro">
+                            <label for="">Data fim</label>
+                            <input type="text">
+                        </div>
                     </div>
-                    <div class="input-filtro">
-                        <label for="">Data fim</label>
-                        <input type="text">
-                    </div>
-                    <button>Aplicar filtro</button>
+                    <button>Aplicar</button>
                 </div>
             </div>
             <input type="text">

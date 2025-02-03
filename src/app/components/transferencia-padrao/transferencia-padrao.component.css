@@ -1,5 +1,25 @@
-.transferencia_contend{
+.transferencia_content{
   margin-top: 15px;
+}
+
+h1{
+  color: var(--black); 
+  font-family: 'Montserrat' sans-serif ; 
+  font-size: 25px; 
+  font-style: normal;
+  font-weight: 700; 
+  line-height: 1.2; 
+  margin-bottom: 0px;
+}
+
+p{
+  color: var(--fintech_gray);
+  /* Body-text-18-bold */
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      margin-top: 15px;
+      line-height: 1.3;
 }
 
 
