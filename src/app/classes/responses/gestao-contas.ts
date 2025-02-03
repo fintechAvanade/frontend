@@ -9,5 +9,4 @@ export class GestaoContas {
         public ultimoAcesso: string = '',
         public ativo: boolean = false
     ) {}
-
 }

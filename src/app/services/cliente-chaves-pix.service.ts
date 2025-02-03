@@ -13,7 +13,7 @@ export class ClienteChavesPixService {
   baseUrl: string = "http://localhost:8080/chavePix";
 
   public getChavesPix(idConta: number): Observable<ChavePix[]> {
-    const endpoint: string = "lista/conta";
+    const endpoint: string = "listar";
     return this.http.get<ChavePix[]>(`${this.baseUrl}/${endpoint}/${idConta}`);
   }
 

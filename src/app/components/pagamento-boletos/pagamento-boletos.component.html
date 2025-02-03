@@ -1,53 +1,51 @@
 <div class="boleto_container">
     <header class="boleto_header">
         <h1>Pagamento de Boletos</h1>
-        <p>Os números deverão estar próximos ao código de barras.
-        </p>
+        <p>Os números deverão estar próximos ao código de barras.</p>
     </header>
-    
-    
-    <!--Saldo-->
+
+    <!-- Saldo -->
     <section class="saldo_contend">
        <app-saldo></app-saldo>
     </section>
 
     <body>
-        <div class= "boleto_body">
-            <p> Digite o código do Boleto</p>
+        <div class="boleto_body">
+            <p>Digite o código do Boleto</p>
         </div>
 
-        <div class= "boleto_input">
-            <label for="codigo-boleto">Código do barras:</label>
-        <input 
-            id="codigo-boleto" 
-            type="string" 
-            placeholder="Digite o código de barras" 
+        <div class="boleto_input">
+            <label for="codigo-boleto">Código de barras:</label>
+            <input
+                id="codigo-boleto"
+                type="text"
+                placeholder="Digite o código de barras"
+                [(ngModel)]="codigoBoleto"
             />
         </div>
 
-        <div class= "descricao_input">
+        <div class="descricao_input">
             <label for="descricao">Descrição:</label>
-        <input 
-            id="descricao" 
-            type="string" 
-            placeholder="Digite a descrição"
+            <input
+                id="descricao"
+                type="text"
+                placeholder="Digite a descrição"
+                [(ngModel)]="descricaoBoleto"
             />
         </div>
 
-        <div class= "valor_input">
+        <div class="valor_input">
             <label for="valor">Valor do Boleto:</label>
-        <input 
-            id="valor" 
-            type="number" 
-            placeholder="Digite o valor do boleto"
-            [(ngModel)]="valorBoleto"
+            <input
+                id="valor"
+                type="number"
+                placeholder="Digite o valor do boleto"
+                [(ngModel)]="valorBoleto"
             />
         </div>
 
         <div class="botao_pagar">
             <button (click)="confirmarPagamento()">Pagar</button>
         </div>
-        
-
-
     </body>
+</div>

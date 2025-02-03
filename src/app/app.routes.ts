@@ -13,7 +13,7 @@ import { AdminGestaoContasComponent } from './components/admin-gestao-contas/adm
 import { ChavesPixComponent } from './components/chaves-pix/chaves-pix.component';
 import { DepositoComponent } from './components/deposito/deposito.component';
 import { ExtratoComponent } from './components/extrato/extrato.component';
-import { PagamentoBoletosComponent } from './components/pagamento-boletos/pagamento-boletos.component';
+import { PagamentoBoletoComponent } from './components/pagamento-boletos/pagamento-boletos.component';
 import { PixComponent } from './components/pix/pix.component';
 import { SaqueComponent } from './components/saque/saque.component';
 import { TransferenciaPadraoComponent } from './components/transferencia-padrao/transferencia-padrao.component';
@@ -40,7 +40,7 @@ export const routes: Routes = [
             { path: 'editarUsuario', component: EditarUsuarioComponent },
             { path: 'extrato', component: ExtratoComponent },
             { path: 'investimentos', component: InvestimentosComponent },
-            { path: 'boleto', component: PagamentoBoletosComponent },
+            { path: 'boleto', component: PagamentoBoletoComponent },
             { path: 'pix', component: PixComponent },
             { path: 'saque', component: SaqueComponent },
             { path: 'transferencia', component: TransferenciaPadraoComponent },

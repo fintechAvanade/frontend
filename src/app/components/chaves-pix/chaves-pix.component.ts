@@ -27,9 +27,9 @@ export class ChavesPixComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const userId = this.JwtDecodeService.getUserIdFromToken();
-    if(userId){
-    this.chavePixService.getChavesPix(userId)
+    const contaId = this.JwtDecodeService.getIdContaFromToken();
+    if(contaId){
+    this.chavePixService.getChavesPix(contaId)
       .subscribe({
         next: (response) => (this.chaves = response),
         error: (error) => console.log(error)
