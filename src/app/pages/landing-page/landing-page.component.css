@@ -110,7 +110,10 @@ img {
 
 .header_botao {
   align-self: baseline;
-  margin: 0 0 30px 30px;
+  margin: 0 0 40px 120px;
+  padding: 10px;
+
+
 }
 
 .cta form {
@@ -193,17 +196,15 @@ footer p {
 }
 
 .meio {
-  font-size: 22px;
   background-position: center;
-  color: #000b07;
-  margin: 10px;
-  padding: 700px ;
+  background-color: #000b07;
+  margin: auto;
+  padding: 50px ;
   
 }
 
 .meio img {
   background-position: center;
   border-radius: 8px;
-  width: 250px;
-
+  width: auto;
 }
