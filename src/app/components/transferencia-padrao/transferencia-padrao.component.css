@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 .transferencia_content{
   margin-top: 15px;
 }
@@ -23,13 +22,6 @@ p{
       line-height: 1.3;
 }
 
-=======
-
-.transferencia_content{
-  margin-top: 20px;
-
-}
->>>>>>> Stashed changes
 
 .transferencia_container {
   position: relative; /* Mantém o fluxo do layout */
