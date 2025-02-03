@@ -4,7 +4,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, LandingPageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
