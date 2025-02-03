@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { UsuariosService } from '../../services/usuarios.service';
 import { Usuario } from '../../classes/responses/usuario';
 import { JwtDecodeService } from '../../services/jwtDecode.service';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog'
+import { MatDialog, MatDialogModule } from '@angular/material/dialog'
 import { RegistrarComponent } from './registrar/registrar.component';
 
 
@@ -28,16 +28,23 @@ export class ChavesPixComponent implements OnInit {
 
   ngOnInit(): void {
     const contaId = this.JwtDecodeService.getIdContaFromToken();
-    if(contaId){
-    this.chavePixService.getChavesPix(contaId)
-      .subscribe({
-        next: (response) => (this.chaves = response),
-        error: (error) => console.log(error)
-      });
+    if (contaId) {
+      this.chavePixService.getChavesPix(contaId)
+        .subscribe({
+          next: (response) => (this.chaves = response),
+          error: (error) => console.log(error)
+        });
     }
   }
 
   registrarChave() {
-        this.dialog.open(RegistrarComponent)
+    this.dialog.open(RegistrarComponent)
+  }
+
+  desativarChave(chave: ChavePix) {
+    this.chavePixService.putDesativarChave(chave.id).subscribe({
+      next: (response) => alert("Chave desativada com sucesso"),
+      error: (error) => console.log(error),
+    })
   }
 }
