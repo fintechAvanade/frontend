@@ -46,7 +46,7 @@ body {
   right: 0;
   top: 100%;
   background-color: rgb(15, 15, 15);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 }
 
@@ -61,7 +61,7 @@ body {
   background-color: #50F1BE;
   color: rgb(238, 230, 230);
   border-radius: 8px;
-  border: 1px solid var(--fintech_gray,#3eed96);
+  border: 1px solid var(--fintech_gray, #3eed96);
   background: var(--fintech_black, #151515);
   background: rgba(80, 241, 190, 0.25);
 }
@@ -150,13 +150,17 @@ img {
   font-weight: bolder;
 }
 
-.benefits, .student-benefits, .accounts {
+.benefits,
+.student-benefits,
+.accounts {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.benefit-item, .student-benefit-item, .account-item {
+.benefit-item,
+.student-benefit-item,
+.account-item {
   flex: 1 1 30%;
   margin: 15px;
   text-align: center;
@@ -166,12 +170,16 @@ img {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.benefit-item h3, .student-benefit-item h3, .account-item h3 {
+.benefit-item h3,
+.student-benefit-item h3,
+.account-item h3 {
   font-size: 22px;
   margin: 10px 0;
 }
 
-.benefit-item p, .student-benefit-item p, .account-item p {
+.benefit-item p,
+.student-benefit-item p,
+.account-item p {
   font-size: 18px;
   color: #555;
 }
@@ -196,15 +204,17 @@ footer p {
 }
 
 .meio {
+  font-size: 22px;
   background-position: center;
-  background-color: #000b07;
-  margin: auto;
-  padding: 50px ;
-  
+  color: #000b07;
+  margin: 10px;
+  padding: 700px;
+
 }
 
 .meio img {
   background-position: center;
   border-radius: 8px;
-  width: auto;
+  width: 250px;
+
 }
