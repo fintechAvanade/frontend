@@ -16,9 +16,9 @@
 
 .admin-criar-conta_input p{
     color: var(--fintech_black);
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
     line-height: 150%;
 }
 
@@ -111,12 +111,15 @@ h2{
     font-size: 12px;
     border-radius: 5px;
     margin: 0 5px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .admin-criar-conta_botao-criar{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
+
+
+
 
 .admin-criar-conta_botao-voltar{
     background-color: #f36c6c;
