@@ -83,26 +83,26 @@ td p{
     background-color: #f36c6c;
 }
 
-.lapis, .lixo{
+.inativo, .ativo, .lapis{
     font-size: 18px;
     padding: 5px 10px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.lapis{
+.ativo, .lapis{
     color: #42e4f0;
 }
 
-.lixo{
+.inativo{
     color: #f36c6c;
 }
 
-.lapis:hover{
+.ativo:hover, .lapis:hover{
     color: #04929c;
 }
 
-.lixo:hover{
+.inativo:hover{
     color: #d62424;
 }
 

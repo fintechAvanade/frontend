@@ -66,4 +66,15 @@ export class AdminGestaoContasComponent implements OnInit{
   desativarConta(cliente: GestaoContas){
     this.dialog.open(DesativarComponent, {data: cliente})
   }
+
+  ativarConta(idConta: number){
+    this.adminService.putAtivarUsuario(idConta)
+    .subscribe({
+      complete: () => {
+        window.location.reload()
+        window.alert("Conta ativada")
+      },
+      error: e => window.alert(e)
+    })
+  }
 }

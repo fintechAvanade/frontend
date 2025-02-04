@@ -40,7 +40,8 @@
                         </p>
                     </td>
                     <td><i  routerLink="/admin/editarConta/{{c.id}}" class="ph ph-pencil-simple-line lapis"></i>  
-                        <i (click)="desativarConta(c)" class="ph ph-trash-simple lixo"></i></td>
+                        <i *ngIf="c.ativo" (click)="desativarConta(c)" class="ph ph-power inativo"></i>
+                        <i *ngIf="!c.ativo" (click)="ativarConta(c.id)" class="ph ph-power ativo"></i></td>
                 </tr>
             </tbody>
         </table>

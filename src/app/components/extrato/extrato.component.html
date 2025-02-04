@@ -41,16 +41,16 @@
                 </ul>
             <div class="chaves_overflow">
                 <div class="info-chave" *ngFor="let mov of movimentacoes">
-                    <div class="icone">
-                        <i class="ph-bold ph-key"></i>
+                    <div class="icone-descricao">
+                        <div class="icone">
+                            <i class="ph-bold ph-key"></i>
+                        </div>
+                        <div class="chave-pix_tipo-valor">
+                            <p class="tipo-chave">{{ mov.tipoMovimentacao }}</p>
+                            <p class="valor-chave">{{mov.dataMovimentacao | date: 'dd/MM/yy HH:mm'}}</p>
+                        </div>
                     </div>
-                    <div class="chave-pix_tipo-valor">
-                        <p class="tipo-chave">{{ mov.tipoMovimentacao }}</p>
-                        <p class="valor-chave">{{mov.dataMovimentacao | date: 'dd/MM/yy HH:mm'}}</p>
-                    </div>
-                    <P class="valor_mov">
-                        <p>{{ mov.direcao === 'DEBITO' ? '+' : '-' }} R$ {{mov.valor | number: '1.2-2'}}</p>
-                    <p>
+                    <p class="valor_mov">{{ mov.direcao === 'DEBITO' ? '+' : '-' }} R$ {{mov.valor | number: '1.2-2'}}</p>
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ export class UsuariosService {
   constructor(private http: HttpClient) { }
 
   public getUsuarioApi(id: number): Observable<Usuario> {
-    return this.http.get<Usuario>(`${this.baseUrl}/chavesPix/lista/conta/${id}`)
+    return this.http.get<Usuario>(`${this.baseUrl}chavesPix/lista/conta/${id}`)
   }
 
   
