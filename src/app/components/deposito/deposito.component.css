@@ -38,19 +38,26 @@
     margin-top: 20px;
 }
 
-  .botao_depositar {
-    width: 638.182px; 
-    height: 65px; 
-    flex-shrink: 0; 
-    background-color: var(--primary-color); /* Cor de fundo utilizando a variável */
-    border: none; 
-    border-radius: 8px; 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito de transição */
-  }
+.botao_depositar {
+  width: 400px; 
+  height: 45px; 
+  flex-shrink: 0; 
+  background-color: var(--secondary-color); 
+  color: var(--black); 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 16px; 
+  font-weight: 700; 
+  border: none; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  text-align: center; 
+  margin-left: 10px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
   
   .deposito_botoes {
     display: flex; 
@@ -60,49 +67,33 @@
 
   
   .botao {
-      width: 85px; /* Largura do botão */
-      height: 65px; /* Altura do botão */
-      flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
-      background-color: var(--primary-color); /* Cor de fundo usando variável */
-      color: var(--black, #000); /* Cor do texto */
-      font-family: 'Montserrat', sans-serif; /* Fonte */
-      font-size: 16px; /* Tamanho da fonte */
-      font-weight: 700; /* Peso da fonte (negrito) */
-      border: none; /* Remove bordas padrão */
-      border-radius: 20px; /* Bordas arredondadas */
-      cursor: pointer; /* Cursor de clique */
-      text-align: center; /* Centraliza o texto */
-      line-height: 65px; /* Centraliza verticalmente o texto */
-      padding: 0; /* Remove padding padrão */
-      box-sizing: border-box; /* Inclui padding e borda no tamanho total do botão */
-      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
+      width: 85px; 
+      height: 65px;
+      flex-shrink: 0; 
+      background-color: var(--primary-color); 
+      color: var(--black, #000); 
+      font-family: 'Montserrat', sans-serif; 
+      font-size: 16px; 
+      font-weight: 700; 
+      border: none; 
+      border-radius: 10px; 
+      cursor: pointer; 
+      text-align: center; 
+      line-height: 65px; 
+      padding: 0; 
+      box-sizing: border-box;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
       margin-left: 10px;
   
     }
     .botao:hover {
-      transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
-      background-color: var(--primary-color); /* Mudança de cor ao passar o mouse */
+      transform: scale(1.1); 
+      background-color: var(--primary-color); 
     }
 
-    .botao_depositar {
-      width: 100%; /* Ajuste para largura 100%, vai se ajustar ao tamanho do container */
-      max-width: 400px; /* Tamanho máximo para a largura */
-      height: 45px; /* Altura do botão */
-      flex-shrink: 0; /* Impede o botão de reduzir em layouts flexíveis */
-      background-color: var(--secondary-color); /* Cor de fundo com variável */
-      color: var(--black); /* Cor do texto */
-      font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
-      font-size: 16px; /* Tamanho da fonte */
-      font-weight: 700; /* Peso da fonte (negrito) */
-      border: none; /* Remove borda */
-      border-radius: 20px; /* Arredondamento das bordas */
-      cursor: pointer; /* Cursor para indicar que é clicável */
-      text-align: center; /* Centraliza o texto */
-      margin-left: 10px; /* Afasta o botão da margem esquerda */
-      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transições suaves */
-  }
+    
     .botao_depositar:hover {
-      background-color: rgb(90, 183, 211);/* Altera a cor de fundo no hover */
+      background-color: rgb(90, 183, 211);
   }  
     
 
@@ -125,7 +116,7 @@
     color: var(--black);
     background-color: #F2F2F2;
     border: 1px solid;
-    border-radius: 20px;
+    border-radius: 10px;
     border-color: var(--secondary-color);
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;

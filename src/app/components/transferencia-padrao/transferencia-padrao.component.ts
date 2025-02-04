@@ -28,6 +28,8 @@ export class TransferenciaPadraoComponent {
       .subscribe({
         next: response => this.valor = response,
         complete: () => {
+          alert("Transferencia realizada com sucesso!")
+          window.location.reload();
         },
         error: error => console.error(error)
       })

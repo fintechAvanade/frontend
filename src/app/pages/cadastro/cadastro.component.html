@@ -99,19 +99,6 @@
             </div>
 
         </div>
-
-        <div class="cadastro_container_usuario" *ngIf="exibirSecao == 3">
-            <div class="cadastro_conjunto_input">
-                <div class="cadastro_input">
-                    <p>Senha*</p>
-                    <input type="password" [(ngModel)]="usuario.senha">
-                </div>
-
-                <!-- Botão para avançar -->
-                <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
-            </div>
-        </div>
-
         <!-- Seção 3: Senha -->
         <div class="cadastro_container_usuario" *ngIf="exibirSecao == 3">
             <div class="cadastro_conjunto_input">

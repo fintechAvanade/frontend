@@ -36,6 +36,7 @@ ngOnInit(): void {
           this.router.navigate(['/cliente']);
         },
         error: (error: any) => {
+          alert("Credenciais inválidas!")
           console.error('Erro no login:', error);
         },
       });

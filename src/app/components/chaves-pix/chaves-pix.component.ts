@@ -31,7 +31,8 @@ export class ChavesPixComponent implements OnInit {
     if (contaId) {
       this.chavePixService.getChavesPix(contaId)
         .subscribe({
-          next: (response) => (this.chaves = response),
+          next: (response) => 
+            (this.chaves = response),
           error: (error) => console.log(error)
         });
     }
@@ -43,7 +44,10 @@ export class ChavesPixComponent implements OnInit {
 
   desativarChave(chave: ChavePix) {
     this.chavePixService.putDesativarChave(chave.id).subscribe({
-      next: (response) => alert("Chave desativada com sucesso"),
+      next: (response) => {
+        alert("Chave desativada com sucesso");
+        window.location.reload();
+        },
       error: (error) => console.log(error),
     })
   }

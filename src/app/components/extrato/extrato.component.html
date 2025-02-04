@@ -7,11 +7,11 @@
                 <p>R$ {{saldoAtual | number:'1.2-2'}}</p>
             </div>
             <div class="extrato_box entradas">
-                <h2>Entradas do mês</h2>
+                <h2>Entradas do mês atual</h2>
                 <p>R$ {{ entradasMes | number:'1.2-2'}}</p>
             </div>
             <div class="extrato_box saidas">
-                <h2>Saídas do mês</h2>
+                <h2>Saídas do mês atual</h2>
                 <p>R$ {{ saidasMes | number:'1.2-2'}}</p>
             </div>
         </div>
@@ -37,7 +37,7 @@
                 <ul class="tabela_categorias">
                     <li>Todas</li>
                     <li>Entradas</li>
-                    <li>Saidas</li>
+                    <li>Saídas</li>
                 </ul>
             <div class="chaves_overflow">
                 <div class="info-chave" *ngFor="let mov of movimentacoes">

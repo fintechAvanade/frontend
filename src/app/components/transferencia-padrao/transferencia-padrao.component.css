@@ -1,5 +1,7 @@
 .transferencia_content{
-  margin-top: 15px;
+  
+  display: flex;
+  margin-top: 30px;
 }
 
 h1{
@@ -56,40 +58,36 @@ p{
   font-style: normal;
   font-weight: 700;
   line-height: 135%; 
-  margin-left: 10px;
-  margin-top: 20px;
+
   margin-bottom: 20px;
 
 }
   
-
-
 .botao_realizar_transferencia {
   width: 100%; 
   max-width: 350px; 
-  height: 65px; 
+  height: 45px; 
   flex-shrink: 0; 
-  background-color: var(--primary-color); 
+  background-color: var(--secondary-color); 
   color: var(--black); /* Cor do texto */
   font-family: 'Montserrat', sans-serif; 
   font-size: 16px; 
   font-weight: 700; 
   border: none; 
-  border-radius: 20px; 
+  border-radius: 10px; 
   cursor: pointer; 
   text-align: center; 
-  line-height: 65px;
-  margin-top: 20px;
+  margin-top: 10px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transições suaves */
 }
 .botao_realizar_transferencia:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--secundary-hover);
 }
 
 
 .input_valor {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .input_valor label {
@@ -103,7 +101,7 @@ p{
 
 .input_valor input {
   width: 350px;
-  height: 53.3px;
+  height: 45px;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 10px;
@@ -114,5 +112,6 @@ p{
   background-color: #F2F2F2;
 }
 
-
-
+.transferencia_forms{
+  margin-left: 60px;
+}

@@ -63,7 +63,10 @@ export class RegistrarComponent implements OnInit {
   registrarChave(): void {
     let idConta = this.jwtService.getIdContaFromToken()!;
     this.chavePixService.postNovaChavePix(idConta, new CriarChavePix(this.tipoChave)).subscribe({
-      next: (response) => this.dialogRef.close(),
+      next: (response) => {
+        this.dialogRef.close();
+        window.location.reload();
+      },
       error: (error) => alert("Ocorreu um erro ao cadastrar a chave, favor tente novamente mais tarde"),
     });
   }

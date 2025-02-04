@@ -25,11 +25,9 @@
   font-weight: 500;
   margin-top: 15px;
   line-height: 1.3;
+  margin-bottom: 20px;
 }
 
-.saldo_contend {
-  margin-top: 15px;
-}
 
 .boleto_body p {
   color: var(--black);
@@ -39,7 +37,6 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0px;
-  margin-top: 40px;
 
 }
 
@@ -47,14 +44,11 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
-  gap: 8px;
 }
 
 .boleto_input input {
-  width: 100%;
-  max-width: 350px;
-  height: 53.3px;
+  width: 350px;
+  height: 45px;
   padding: 0 16px;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -72,7 +66,7 @@
   font-size: 10px;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
   margin-top: 20px;
 }
 
@@ -146,25 +140,32 @@
 .botao_pagar {
   width: 100%;
   max-width: 350px;
-  height: 65px;
+  height: 45px;
   flex-shrink: 0;
   /* Impede o botão de reduzir em layouts flexíveis */
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--black);
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
   text-align: center;
-  line-height: 65px;
-  margin-left: 10px;
-  margin-top: 30px;
+  line-height: 45px;
+  margin-top: 40px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
   /* Transições suaves */
 }
 
 .botao_pagar:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--secundary-hover);
+}
+
+.boleto_content{
+  display: flex;
+}
+
+.boleto_dados_content{
+  margin-left: 60px;
 }

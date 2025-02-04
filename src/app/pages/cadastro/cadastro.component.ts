@@ -6,8 +6,8 @@ import { PrimaryButtonComponent } from '../../shared/primary-button/primary-butt
 import { CriacaoUsuario } from '../../classes/requests/criacao-usuario';
 import { AdminService } from '../../services/admin.service';
 import { EnderecoService } from '../../services/endereco.service';
-
-
+ 
+ 
 @Component({
   selector: 'app-cadastro',
   imports: [CommonModule, NgOptimizedImage, FormsModule, PrimaryButtonComponent],
@@ -15,21 +15,21 @@ import { EnderecoService } from '../../services/endereco.service';
   styleUrl: './cadastro.component.css'
 })
 export class CadastroComponent {
-
+ 
   usuario: CriacaoUsuario = new CriacaoUsuario(); // Objeto para armazenar os dados do usuário
   resposta: any = {}; // Armazena a resposta da API
   exibirSecao: number = 1; // Controla a seção atual do formulário
-
+ 
   constructor(
     private router: Router,
     private adminService: AdminService,
     private enderecoService: EnderecoService
   ) { }
-
+ 
   // Função para pegar o cep
   getEndereco() {
     let cep = this.usuario.cep;
-
+ 
     this.enderecoService.buscarEndereco(cep).subscribe({
       next: (response) => {
         this.usuario.cidade = response.localidade;
@@ -38,39 +38,39 @@ export class CadastroComponent {
         this.usuario.logradouro = response.logradouro;
       }
     })
-
+ 
   }
-
+ 
   // Função para converter o formato da data de dd/mm/yyyy para yyyy-mm-dd
   convertDateFormat(dateString: string | undefined): string {
     if (!dateString) {
       console.error("Data de nascimento está indefinida.");
       return "";
     }
-
+ 
     // Se a data já estiver no formato yyyy-mm-dd, retorna sem converter
     const isoFormatRegex = /^\d{4}-\d{2}-\d{2}$/;
     if (isoFormatRegex.test(dateString)) {
       return dateString;
     }
-
+ 
     // Se estiver no formato dd/mm/yyyy, converte
     const regex = /^\d{2}\/\d{2}\/\d{4}$/;
     if (!regex.test(dateString)) {
       console.error("Formato de data inválido:", dateString);
       return "";
     }
-
+ 
     const [day, month, year] = dateString.split('/');
     return `${year}-${month}-${day}`;
   }
-
+ 
   // Valida o formato da data
   validarData(data: string): boolean {
     const regex = /^\d{2}\/\d{2}\/\d{4}$/;
     return regex.test(data);
   }
-
+ 
   // Avança para a próxima seção do formulário
   avancar(): void {
     if (this.exibirSecao === 1 && this.usuario.dataNascimento) {
@@ -82,17 +82,17 @@ export class CadastroComponent {
     }
     this.exibirSecao++;
   }
-
+ 
   // Volta para a seção anterior do formulário
   voltar(): void {
     this.exibirSecao--;
   }
-
+ 
   // Navega para a página de login
   navegarParaLogin(): void {
     this.router.navigate(['/login']);
   }
-
+ 
   // Envia os dados do usuário para o back-end
   incluir(usuario: CriacaoUsuario): void {
     if (usuario.dataNascimento) {
@@ -102,7 +102,7 @@ export class CadastroComponent {
         return;
       }
     }
-
+ 
     this.adminService.postUsuarioApi(usuario).subscribe({
       next: (res) => {
         this.resposta = res;
