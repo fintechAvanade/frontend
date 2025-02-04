@@ -1,6 +1,11 @@
 .login-home_card-saldo{
+<<<<<<< Updated upstream
   width: 300px;
   height: 150px;
+=======
+  width: 350px;
+  height: 200px;
+>>>>>>> Stashed changes
   border-radius: 10px;
 }
 

@@ -14,33 +14,15 @@ import { EnderecoService } from '../../services/endereco.service';
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })
-export class CadastroComponent {
+export class CadastroComponent implements OnInit {
+  constructor(private router: Router, private adminService: AdminService) { }
 
-  usuario: CriacaoUsuario = new CriacaoUsuario(); // Objeto para armazenar os dados do usuário
-  resposta: any = {}; // Armazena a resposta da API
-  exibirSecao: number = 1; // Controla a seção atual do formulário
-
-  constructor(
-    private router: Router,
-    private adminService: AdminService,
-    private enderecoService: EnderecoService
-  ) { }
-
-  // Função para pegar o cep
-  getEndereco() {
-    let cep = this.usuario.cep;
-
-    this.enderecoService.buscarEndereco(cep).subscribe({
-      next: (response) => {
-        this.usuario.cidade = response.localidade;
-        this.usuario.bairro = response.bairro;
-        this.usuario.estado = response.uf;
-        this.usuario.logradouro = response.logradouro;
-      }
-    })
-
+  usuario: CriacaoUsuario = new CriacaoUsuario(); 
+  resposta: any = {}; 
+  exibirSecao: number = 1; 
+  ngOnInit(): void {
+    localStorage.removeItem('accessToken');
   }
-
   // Função para converter o formato da data de dd/mm/yyyy para yyyy-mm-dd
   convertDateFormat(dateString: string | undefined): string {
     if (!dateString) {
