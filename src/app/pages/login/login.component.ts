@@ -9,9 +9,9 @@ import { Router, RouterLink } from '@angular/router';
   selector: 'app-login',
   imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'], 
+  styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit{
       senha: ['', Validators.required],
     });
   }
-ngOnInit(): void {
-  localStorage.removeItem('accessToken');
-}
+  ngOnInit(): void {
+    localStorage.removeItem('accessToken');
+  }
   login() {
 
     if (this.loginForm.valid) {
@@ -41,5 +41,9 @@ ngOnInit(): void {
         },
       });
     }
+  }
+
+  sair() {
+    this.router.navigate(['/']);
   }
 }

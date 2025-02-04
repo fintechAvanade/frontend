@@ -7,11 +7,11 @@
                 <p>R$ {{saldoAtual | number:'1.2-2'}}</p>
             </div>
             <div class="extrato_box entradas">
-                <h2>Entradas do mês atual</h2>
+                <h2>Entradas do mês</h2>
                 <p>R$ {{ entradasMes | number:'1.2-2'}}</p>
             </div>
             <div class="extrato_box saidas">
-                <h2>Saídas do mês atual</h2>
+                <h2>Saídas do mês</h2>
                 <p>R$ {{ saidasMes | number:'1.2-2'}}</p>
             </div>
         </div>
@@ -22,25 +22,25 @@
                 <div class="extrato_filtro-data" *ngIf="mostraFiltro">
                     <div>
                         <div class="input-filtro">
-                            <label for="">Data inicio</label>
-                            <input type="text">
+                            <label for="">Data início:</label>
+                            <input type="date" [(ngModel)]="dataInicio">
                         </div>
                         <div class="input-filtro">
-                            <label for="">Data fim</label>
-                            <input type="text">
+                            <label for="">Data fim:</label>
+                            <input type="date" [(ngModel)]="dataFim">
                         </div>
                     </div>
                     <button>Aplicar</button>
                 </div>
             </div>
             <input type="text">
-                <ul class="tabela_categorias">
-                    <li>Todas</li>
-                    <li>Entradas</li>
-                    <li>Saídas</li>
-                </ul>
+            <ul class="tabela_categorias">
+                <li>Todas</li>
+                <li>Entradas</li>
+                <li>Saídas</li>
+            </ul>
             <div class="chaves_overflow">
-                <div class="info-chave" *ngFor="let mov of movimentacoes">
+                <div class="info-chave" *ngFor="let mov of (movimentacoes | extrato:dataInicio:dataFim)">
                     <div class="icone-descricao">
                         <div class="icone">
                             <i class="ph-bold ph-key"></i>
@@ -50,7 +50,8 @@
                             <p class="valor-chave">{{mov.dataMovimentacao | date: 'dd/MM/yy HH:mm'}}</p>
                         </div>
                     </div>
-                    <p class="valor_mov">{{ mov.direcao === 'DEBITO' ? '+' : '-' }} R$ {{mov.valor | number: '1.2-2'}}</p>
+                    <p class="valor_mov">{{ mov.direcao === 'DEBITO' ? '+' : '-' }} R$ {{mov.valor | number: '1.2-2'}}
+                    </p>
                 </div>
             </div>
         </div>

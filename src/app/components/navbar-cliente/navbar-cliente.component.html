@@ -1,6 +1,6 @@
 <div class="navbar_container">
     <div class="navbar_itens_primarios">
-        <img class="navbar_imagem" src="assets/logo 512x120.png" alt="Logo do NULL BANK"/>
+        <img class="navbar_imagem" src="assets/logo 512x120.png" alt="Logo do NULL BANK" />
         <ul class="navbar_itens">
             <div class="navbar_item" routerLink="/cliente">
                 <i class="ph ph-house"></i>
@@ -8,16 +8,16 @@
             </div>
             <div class="navbar_item" routerLink="/cliente/extrato">
                 <i class="ph ph-scroll"></i>
-                <li >Extrato</li>
-            </div> 
+                <li>Extrato</li>
+            </div>
             <ul>
-                <div class="navbar_item">
+                <div class="navbar_item" (click)="mostrarOpcoes()">
                     <i class=" ph ph-arrows-left-right"></i>
                     <li>Transações</li>
-                    <i *ngIf="false" class="ph ph-caret-up"></i>
-                    <i class="ph ph-caret-down"></i>
+                    <i *ngIf="!mostrar" class="ph ph-caret-up"></i>
+                    <i *ngIf="mostrar" class="ph ph-caret-down"></i>
                 </div>
-                <div class="navbar_dropdown_itens">
+                <div class="navbar_dropdown_itens" *ngIf="mostrar">
                     <li class="navbar_dropdown_item" routerLink="/cliente/deposito">Depósito</li>
                     <li class="navbar_dropdown_item" routerLink="/cliente/saque">Saque</li>
                     <li class="navbar_dropdown_item" routerLink="/cliente/transferencia">Transferência</li>
@@ -29,9 +29,9 @@
     </div>
     <div class="navbar_itens_finais">
         <ul>
-            <div class="navbar_item" routerLink="/login">
+            <div class="navbar_item" (click)="sair()">
                 <i class="ph ph-sign-out"></i>
-                <li >Sair</li>
+                <li>Sair</li>
             </div>
         </ul>
     </div>

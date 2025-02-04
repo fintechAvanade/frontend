@@ -3,10 +3,12 @@ import { JwtDecodeService } from '../../services/jwtDecode.service';
 import { MovimentacoesService } from '../../services/movimentacoes.service';
 import { CommonModule } from '@angular/common';
 import { ContaService } from '../../services/conta.service';
- 
+import { FormsModule } from '@angular/forms';
+import { ExtratoPipe } from '../../pipes/extrato.pipe';
+
 @Component({
   selector: 'app-extrato',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, ExtratoPipe],
   templateUrl: './extrato.component.html',
   styleUrl: './extrato.component.css'
 })
@@ -16,13 +18,16 @@ export class ExtratoComponent implements OnInit {
   entradasMes: number = 0;
   saidasMes: number = 0;
   mostraFiltro: boolean = false;
+  dataFim: string = ''
+  dataInicio: string = ''
+
 
   constructor(
     private JwtDecodeService: JwtDecodeService,
     private movimentacoesService: MovimentacoesService,
     private contaService: ContaService
   ) { }
- 
+
   ngOnInit(): void {
     const contaId = this.JwtDecodeService.getIdContaFromToken();
     if (contaId) {
@@ -63,8 +68,14 @@ export class ExtratoComponent implements OnInit {
     }
   }
 
-  mostrarFiltro(): void{
-    this.mostraFiltro = !this.mostraFiltro
+  mostrarFiltro(): void {
+    this.mostraFiltro = !this.mostraFiltro;
+    this.limparFiltro();
   }
-  
+
+  limparFiltro(): void {
+    this.dataInicio = "";
+    this.dataFim = "";
+  }
+
 }

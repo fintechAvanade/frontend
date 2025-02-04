@@ -1,4 +1,4 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -6,7 +6,7 @@ import { PrimaryButtonComponent } from '../../shared/primary-button/primary-butt
 
 @Component({
   selector: 'app-landing-page',
-  imports: [ReactiveFormsModule, CommonModule, RouterLink, PrimaryButtonComponent, NgOptimizedImage],
+  imports: [ReactiveFormsModule, CommonModule, RouterLink, PrimaryButtonComponent],
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })

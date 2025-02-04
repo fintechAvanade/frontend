@@ -1,22 +1,23 @@
-.extrato_container{
+.extrato_container {
     margin: 40px 0 0 40px;
 }
- 
-.extrato_container h1{
+
+.extrato_container h1 {
     color: var(--fintech_black, #151515);
     /* Titulos-H3-40-Bold */
     font-size: 25px;
     font-style: normal;
     font-weight: 700;
-    line-height: 135%; /* 54px */
+    line-height: 135%;
+    /* 54px */
     margin-bottom: 30px;
 }
- 
-.extrato_content{
+
+.extrato_content {
     display: flex;
 }
- 
-.extrato_box{
+
+.extrato_box {
     width: 250px;
     height: 120px;
     background-color: aqua;
@@ -24,66 +25,66 @@
     padding: 20px 40px;
     margin: 20px 80px 20px 0;
 }
- 
-.extrato_box h2{
+
+.extrato_box h2 {
     font-size: 15px;
 }
- 
-.extrato_box p{
+
+.extrato_box p {
     font-weight: bold;
     font-size: 25px;
 }
- 
- 
+
+
 .tabela {
     border-radius: 20px;
     border: 1px solid var(--secondary-color);
-    width: fit-content;
+    width: 600px;
     padding: 30px 80px 0px 80px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
- 
-.saldo{
+
+.saldo {
     background-color: #151515;
     color: aliceblue;
 }
- 
-.entradas{
+
+.entradas {
     background-color: var(--primary-color);
 }
- 
+
 .btn-icon p {
     align-items: end;
 }
 
-.icone-descricao{
+.icone-descricao {
     display: flex;
     align-items: center;
 }
- 
-.saidas{
+
+.saidas {
     background-color: #f36c6c;
 }
- 
-.tabela-cabecalho h2{
+
+.tabela-cabecalho h2 {
     color: var(--black);
     font-size: 20px;
     line-height: 135%;
 }
- 
-.tabela-cabecalho{
+
+.tabela-cabecalho {
     position: relative;
     display: flex;
     justify-content: space-between;
 }
- 
-.tabela-cabecalho i{
+
+.tabela-cabecalho i {
     font-size: 25px;
 }
 
-.extrato_filtro-data{
+.extrato_filtro-data {
     justify-content: space-between;
     position: absolute;
     bottom: -145px;
@@ -96,23 +97,23 @@
     border: 1px solid black;
 }
 
-.input-filtro{
+.input-filtro {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
 
-.input-filtro label{
+.input-filtro label {
     font-size: 12px;
 }
 
-.input-filtro input{
+.input-filtro input {
     height: 20px;
     font-size: 10px;
     padding: 0 10px;
 }
 
-.extrato_filtro-data button{
+.extrato_filtro-data button {
     height: fit-content;
     border-radius: 8px;
     font-size: 14px;
@@ -121,19 +122,19 @@
     margin-top: 5px;
 }
 
-.chaves_overflow{
+.chaves_overflow {
     overflow-y: auto;
     height: 250px;
 }
- 
-.tabela_categorias{
+
+.tabela_categorias {
     display: flex;
 }
- 
-.tabela_categorias li{
+
+.tabela_categorias li {
     margin: 5px 20px 20px 0;
 }
- 
+
 .quantidade-chaves {
     color: var(--fintech_gray);
     font-size: 14px;
@@ -141,7 +142,7 @@
 
 
 
-.tabela input{
+.tabela input {
     margin: 20px 12px 0 0px;
     padding: 2px 15px;
     border: 1px solid var(--fintech_gray);
@@ -150,10 +151,9 @@
     outline: none;
 }
 
-.tabela input{
+.tabela input {
     margin: 0;
     padding: 0
-
 }
 
 .info-chave {
@@ -166,42 +166,43 @@
     padding: 20px 0;
     justify-content: space-between;
 }
- 
+
 .icone {
     border-radius: 100px;
     background-color: var(--secondary-color);
- 
+
     width: 45px;
     height: 45px;
- 
+
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
 }
- 
+
 .btn-icon {
     font-size: 20px;
 }
- 
+
 .btn-icon :hover {
     color: var(--red);
 }
- 
+
 .tipo-chave {
     color: var(--black);
     font-size: 14px;
 }
- 
+
 .valor-chave {
     color: var(--fintech_gray);
     font-size: 12px;
 }
- 
-.chave-pix_tipo-valor{
+
+.chave-pix_tipo-valor {
     padding: 0 0 0 10px;
     width: 200px;
 }
-.valor_mov{
+
+.valor_mov {
     text-align: end;
 }

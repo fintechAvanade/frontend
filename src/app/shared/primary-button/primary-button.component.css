@@ -1,19 +1,19 @@
-button{
+button {
     background-color: var(--primary-color);
     color: var(--fintech_black);
 
     margin-top: auto;
-    
+
     width: 250px;
     height: 60px;
     border-radius: 8px;
 
-    font-family: Inter;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 700;
     transition: background-color 0.3s;
 }
 
-button:hover{
+button:hover {
     background-color: #18eca9;
 }

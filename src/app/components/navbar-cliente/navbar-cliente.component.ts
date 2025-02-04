@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-cliente',
@@ -10,7 +10,19 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar-cliente.component.css'
 })
 export class NavbarClienteComponent {
+  mostrar: boolean = false;
 
-  collapsed = false;
-  
+  constructor(
+    private router: Router
+  ) { }
+
+  mostrarOpcoes() {
+    this.mostrar = !this.mostrar;
+  }
+
+  sair() {
+    localStorage.removeItem('accessToken');
+    this.router.navigate(['/']);
+  }
+
 }

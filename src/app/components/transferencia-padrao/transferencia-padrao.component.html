@@ -1,49 +1,37 @@
 <div class="transferencia_container">
     <header class="transferencia_header">
         <h1>Transferência</h1>
-        <p>NULLbank: sua transferência sem burocracia. Preencha os campos necessários e conclua o envio.
+        <p>NULLbank: Sua transferência sem burocracia. Preencha os campos necessários e conclua o envio.
         </p>
     </header>
     <section class="transferencia_content">
-       <app-saldo></app-saldo>
-       <div class="transferencia_forms">
-        <div class="transferir_container">
-            <h2>Informe os dados de destino</h2>
-            <div class="input_valor">
-                <label for="valor-transferencia">Agência: </label>
-                <input
-                    id="valor-transferencia"
-                    type="text"
-                    placeholder="Digite a agencia"
-                    [(ngModel)]="transferencia.agencia"/>
+        <app-saldo></app-saldo>
+        <div class="transferencia_forms">
+            <div class="transferir_container">
+                <h2>Informe os dados de destino</h2>
+                <div class="input_valor">
+                    <label for="valor-transferencia">Agência: </label>
+                    <input id="valor-transferencia" type="text" placeholder="Digite a agência"
+                        [(ngModel)]="transferencia.agencia" />
+                </div>
+                <div class="input_valor">
+                    <label for="valor-transferencia">Conta: </label>
+                    <input id="valor-transferencia" type="text" placeholder="Digite a conta"
+                        [(ngModel)]="transferencia.conta" />
+                </div>
+                <div class="input_valor">
+                    <label for="valor-transferencia">Descrição: </label>
+                    <input id="valor-saque" type="text" placeholder="Digite a descrição"
+                        [(ngModel)]="transferencia.descricao" />
+                </div>
+                <div class="input_valor">
+                    <label for="valor-transferencia">Valor: </label>
+                    <input id="valor-saque" type="number" placeholder="Digite o valor"
+                        [(ngModel)]="transferencia.valor" />
+                </div>
             </div>
-            <div class="input_valor">
-                <label for="valor-transferencia">Conta: </label>
-                <input
-                    id="valor-transferencia"
-                    type="text"
-                    placeholder="Digite a conta"
-                    [(ngModel)]="transferencia.conta"/>
-            </div>
-            <div class="input_valor">
-                <label for="valor-transferencia">Descrição: </label>
-                <input
-                    id="valor-saque"
-                    type="text"
-                    placeholder="Digite a descrição"
-                    [(ngModel)]="transferencia.descricao"/>
-            </div>
-            <div class="input_valor">
-                <label for="valor-transferencia">Valor: </label>
-                <input
-                    id="valor-saque"
-                    type="number"
-                    placeholder="Digite o valor"
-                    [(ngModel)]="transferencia.valor"/>
-            </div>
+            <button class="botao_realizar_transferencia" (click)="transferir(transferencia)">
+                Realizar Transferência
+            </button>
         </div>
-        <button class="botao_realizar_transferencia" (click)="transferir(transferencia)">
-            Realizar Transferência
-        </button>
-       </div>
     </section>
