@@ -13,29 +13,29 @@
             </div>
             <div class="admin-criar-conta_input">
                 <p>Data de Nascimento*</p>
-                <input type="text" placeholder="yyyy-mm-dd"[(ngModel)]="usuario.dataNascimento">
+                <input type="text" placeholder="yyyy-mm-dd" [(ngModel)]="usuario.dataNascimento">
             </div>
-        
+
             <div class="admin-criar-conta_input">
                 <p>Telefone*</p>
                 <input type="text" [(ngModel)]="usuario.telefone">
             </div>
-        
+
             <div class="admin-criar-conta_input">
                 <p>E-mail*</p>
                 <input type="text" [(ngModel)]="usuario.email">
             </div>
-        
+
             <div class="admin-criar-conta_input">
                 <p>Usuario*</p>
                 <input type="text" [(ngModel)]="usuario.nomeUsuario"><br>
-            </div>    
+            </div>
         </div>
         <div class="admin-criar-conta_endereco">
             <h2>Endereço</h2>
             <div class="admin-criar-conta_input">
                 <p>CEP*</p>
-                <input type="text" [(ngModel)]="usuario.cep">
+                <input type="text" [(ngModel)]="usuario.cep" (ngModelChange)="getEndereco()">
             </div>
             <div class="admin-criar-conta_inputs_flex">
                 <div class="admin-criar-conta_input">
@@ -44,7 +44,7 @@
                 </div>
                 <div class="admin-criar-conta_input estado">
                     <p>Estado*</p>
-                    <select [(ngModel)]="usuario.estado" name="" id="" >
+                    <select [(ngModel)]="usuario.estado" name="" id="">
                         <option value=''></option>
                         <option *ngFor="let e of estadosBrasileiros" value=>{{e}}</option>
                     </select>
@@ -66,18 +66,18 @@
             </div>
             <div class="admin-criar-conta_input">
                 <p>Complemento</p>
-                <input type="text" [(ngModel)]="usuario.complemento">    
+                <input type="text" [(ngModel)]="usuario.complemento">
             </div>
         </div>
         <div class="admin-criar-conta_senha">
             <div class="admin-criar-conta_senha-conteudo">
                 <h2>Senha de Acesso</h2>
-        
+
                 <div class="admin-criar-conta_input">
                     <p>Senha*</p>
                     <input type="text" [(ngModel)]="usuario.senha">
                 </div>
-        
+
                 <div class="admin-criar-conta_input">
                     <p>Confirmar senha*</p>
                     <input type="text">
@@ -85,7 +85,8 @@
             </div>
             <div class="admin-criar-conta_botoes">
                 <button routerLink="/admin" class="admin-criar-conta_botao-voltar">Cancelar</button>
-                <button routerLink="/admin" class="admin-criar-conta_botao-criar" (click)="incluir(usuario)">Criar conta</button>
+                <button routerLink="/admin" class="admin-criar-conta_botao-criar" (click)="incluir(usuario)">Criar
+                    conta</button>
             </div>
         </div>
     </div>

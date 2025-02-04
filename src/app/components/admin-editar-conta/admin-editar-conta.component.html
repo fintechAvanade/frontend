@@ -13,23 +13,24 @@
             </div>
             <div class="admin-editar-conta_input">
                 <p>Data de Nascimento*</p>
-                <input type="text" placeholder="yyyy-mm-dd"[(ngModel)]="usuarioResponse.dataNascimento" [ngModel]="usuarioResponse.dataNascimento | date: 'yyyy-MM-dd'" readonly>
+                <input type="text" placeholder="yyyy-mm-dd" [(ngModel)]="usuarioResponse.dataNascimento"
+                    [ngModel]="usuarioResponse.dataNascimento | date: 'yyyy-MM-dd'" readonly>
             </div>
-        
+
             <div class="admin-editar-conta_input">
                 <p>Telefone*</p>
                 <input type="text" [(ngModel)]="usuarioResponse.telefone">
             </div>
-        
+
             <div class="admin-editar-conta_input">
                 <p>E-mail*</p>
                 <input type="text" [(ngModel)]="usuarioResponse.email">
             </div>
-        
+
             <div class="admin-editar-conta_input">
-                <p>Usuario*</p>
+                <p>Usuário*</p>
                 <input type="text" [(ngModel)]="usuarioResponse.nomeUsuario"><br>
-            </div>    
+            </div>
         </div>
         <div class="admin-editar-conta_endereco">
             <h2>Endereço</h2>
@@ -44,7 +45,7 @@
                 </div>
                 <div class="admin-editar-conta_input estado">
                     <p>Estado*</p>
-                    <select [(ngModel)]="usuarioResponse.estado" name="estado" >
+                    <select [(ngModel)]="usuarioResponse.estado" name="estado">
                         <option value=''></option>
                         <option *ngFor="let e of estadosBrasileiros" [value]="e">{{e}}</option>
                     </select>
@@ -66,26 +67,27 @@
             </div>
             <div class="admin-editar-conta_input">
                 <p>Complemento</p>
-                <input type="text" [(ngModel)]="usuarioResponse.complemento">    
+                <input type="text" [(ngModel)]="usuarioResponse.complemento">
             </div>
         </div>
-        <div class="admin-editar-conta_senha">                
+        <div class="admin-editar-conta_senha">
             <div class="admin-editar-conta_tipo-conta">
                 <h2>Tipo de conta</h2>
                 <div class="admin-editar-conta_checkboxes">
                     <div class="admin-editar-conta_checkbox">
-                        <p>Simples</p>
                         <input type="radio" value="SIMPLES" [(ngModel)]="usuarioResponse.tipoConta">
+                        <p>Simples</p>
                     </div>
                     <div class="admin-editar-conta_checkbox">
-                        <p>Especial</p>
                         <input type="radio" value="ESPECIAL" [(ngModel)]="usuarioResponse.tipoConta">
+                        <p>Especial</p>
                     </div>
                 </div>
             </div>
             <div class="admin-editar-conta_botoes">
                 <button routerLink="/admin" class="admin-editar-conta_botao-voltar">Cancelar</button>
-                <button routerLink="/admin" class="admin-editar-conta_botao-editar" (click)="editarConta(usuarioResponse)">Editar conta</button>
+                <button routerLink="/admin" class="admin-editar-conta_botao-editar"
+                    (click)="editarConta(usuarioResponse)">Salvar</button>
             </div>
         </div>
     </div>

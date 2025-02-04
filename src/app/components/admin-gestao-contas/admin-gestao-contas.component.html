@@ -8,21 +8,21 @@
                 <option value=""></option>
                 <option value="nome">Nome do cliente</option>
                 <option value="cpf">CPF</option>
-                <option value="numeroConta">Numero da conta</option>
+                <option value="numeroConta">Número da conta</option>
             </select>
             <input #filtro type="text" placeholder="Pesquisar" (keyup)="0">
             <i class="ph ph-magnifying-glass pesquisar"></i>
         </div>
     </div>
-    <div class="admin-gestao_tabela" >
+    <div class="admin-gestao_tabela">
         <table>
             <thead>
                 <tr>
-                    <th>Agencia</th>
+                    <th>Agência</th>
                     <th>Conta</th>
                     <th>Nome Cliente</th>
-                    <th>Ultima Movimentacao</th>
-                    <th>Ultimo acesso</th>
+                    <th>Última Movimentação</th>
+                    <th>Último acesso</th>
                     <th>Status</th>
                     <th></th>
                 </tr>
@@ -39,9 +39,10 @@
                             {{ c.ativo ? 'Ativo' : 'Inativo' }}
                         </p>
                     </td>
-                    <td><i  routerLink="/admin/editarConta/{{c.id}}" class="ph ph-pencil-simple-line lapis"></i>  
+                    <td><i routerLink="/admin/editarConta/{{c.id}}" class="ph ph-pencil-simple-line lapis"></i>
                         <i *ngIf="c.ativo" (click)="desativarConta(c)" class="ph ph-power inativo"></i>
-                        <i *ngIf="!c.ativo" (click)="ativarConta(c.id)" class="ph ph-power ativo"></i></td>
+                        <i *ngIf="!c.ativo" (click)="ativarConta(c.id)" class="ph ph-power ativo"></i>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -52,4 +53,4 @@
                 <i (click)="avancarPagina()" class="ph ph-caret-right seta"></i>
             </div>
         </div>
-</div>
+    </div>

@@ -29,14 +29,13 @@ body {
 .navbar .menu button {
   background-color: #50F1BE;
   color: white;
-  border: none;
+  border: 1px solid #50F1BE;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 8px;
-  border: 1px solid var(--fintech_green, #50F1BE);
-  background: var(--fintech_black, #151515);
+  background: #151515;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -46,11 +45,7 @@ body {
   right: 0;
   top: 100%;
   background-color: rgb(15, 15, 15);
-<<<<<<< Updated upstream
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-=======
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
->>>>>>> Stashed changes
   border-radius: 8px;
 }
 
@@ -65,12 +60,7 @@ body {
   background-color: #50F1BE;
   color: rgb(238, 230, 230);
   border-radius: 8px;
-<<<<<<< Updated upstream
-  border: 1px solid var(--fintech_gray, #3eed96);
-=======
-  border: 1px solid var(--fintech_gray,#3eed96);
->>>>>>> Stashed changes
-  background: var(--fintech_black, #151515);
+  border: 1px solid #3eed96;
   background: rgba(80, 241, 190, 0.25);
 }
 
@@ -96,7 +86,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 0 0 30px;
+  margin-left: 30px;
   color: #151515;
 }
 
@@ -120,8 +110,6 @@ img {
   align-self: baseline;
   margin: 0 0 40px 120px;
   padding: 10px;
-
-
 }
 
 .cta form {
@@ -150,15 +138,6 @@ img {
   padding: 40px 20px;
   text-align: center;
   background-color: #c0b9b9;
-  font-family: 'Montserrat', sans-serif;
-<<<<<<< Updated upstream
-=======
-}
-
-.section h2 {
-  font-size: 30px;
-  font-weight: bolder;
->>>>>>> Stashed changes
 }
 
 .section h2 {
@@ -224,18 +203,11 @@ footer p {
   background-position: center;
   color: #000b07;
   margin: 10px;
-<<<<<<< Updated upstream
-  padding: 700px;
-
-=======
-  padding: 700px ;
-  
->>>>>>> Stashed changes
 }
 
 .meio img {
   background-position: center;
   border-radius: 8px;
-  width: 250px;
-
+  height: 50%;
+  width: 100%;
 }

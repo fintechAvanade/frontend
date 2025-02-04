@@ -6,6 +6,7 @@ import { PrimaryButtonComponent } from '../../shared/primary-button/primary-butt
 import { Router, RouterLink } from '@angular/router';
 import { UsuariosService } from '../../services/usuarios.service';
 import { AdminService } from '../../services/admin.service';
+import { EnderecoService } from '../../services/endereco.service';
 
 @Component({
   selector: 'app-admin-criar-conta',
@@ -16,13 +17,28 @@ import { AdminService } from '../../services/admin.service';
 export class AdminCriarContaComponent {
 
   constructor(
-      private router: Router,
-      private adminService: AdminService
+    private router: Router,
+    private enderecoService: EnderecoService,
+    private adminService: AdminService
   ) { }
 
   estadosBrasileiros: string[] = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"];
   usuario: CriacaoUsuario = new CriacaoUsuario();
   resposta: any = {}
+
+  getEndereco() {
+    let cep = this.usuario.cep;
+
+    this.enderecoService.buscarEndereco(cep).subscribe({
+      next: (response) => {
+        this.usuario.cidade = response.localidade;
+        this.usuario.bairro = response.bairro;
+        this.usuario.estado = response.uf;
+        this.usuario.logradouro = response.logradouro;
+      }
+    })
+
+  }
 
   incluir(usuario: CriacaoUsuario): void {
     this.adminService.postUsuarioApi(usuario)

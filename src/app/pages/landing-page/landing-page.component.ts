@@ -1,20 +1,19 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { PrimaryButtonComponent } from '../../shared/primary-button/primary-button.component';
 
 @Component({
   selector: 'app-landing-page',
-  imports: [ReactiveFormsModule, CommonModule, RouterLink, PrimaryButtonComponent], // Importa ReactiveFormsModule diretamente no componente standalone
+  imports: [ReactiveFormsModule, CommonModule, RouterLink, PrimaryButtonComponent, NgOptimizedImage],
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
   accountForm!: FormGroup; // Inicia a propriedade com '!' para indicar que será inicializada no ngOnInit
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.accountForm = this.fb.group({
