@@ -47,7 +47,7 @@
                 </div>
 
                 <!-- Botão para avançar -->
-                <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
+                <button class="cadastro_botao_continuar" (click)="avancar()">Continuar</button>
             </div>
         </div>
 
@@ -95,7 +95,7 @@
                     <p>Complemento</p>
                     <input type="text" [(ngModel)]="usuario.complemento"><br>
                 </div>
-                <app-primary-button class="cadastro_botao_continuar" (click)="avancar()">Continuar</app-primary-button>
+                <button class="cadastro_botao_continuar" (click)="avancar()">Continuar</button>
             </div>
 
         </div>
@@ -113,8 +113,7 @@
                     <p>Confirmar senha*</p>
                     <input type="password"><br>
                 </div>
-                <app-primary-button class="cadastro_botao_continuar"
-                    (click)="incluir(usuario)">Cadastrar</app-primary-button>
+                <button class="cadastro_botao_continuar" (click)="incluir(usuario)">Cadastrar</button>
             </div>
         </div>
     </main>

@@ -31,8 +31,11 @@ export class TransferenciaPadraoComponent {
           alert("Transferencia realizada com sucesso!")
           window.location.reload();
         },
-        error: error => console.error(error)
-      })
+        error: error => {
+          console.error(error)
+          alert("Preencha os dados corretamente!")
+        }
+      });
   }
 }
 
