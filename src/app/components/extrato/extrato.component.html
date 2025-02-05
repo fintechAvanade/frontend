@@ -20,27 +20,27 @@
                 <h2>Histórico de movimentações</h2>
                 <i class="ph-bold ph-funnel" (click)="mostrarFiltro()"></i>
                 <div class="extrato_filtro-data" *ngIf="mostraFiltro">
+                    <i class="ph ph-x" (click)="mostrarFiltro()"></i>
                     <div>
                         <div class="input-filtro">
                             <label for="">Data início:</label>
-                            <input type="date" [(ngModel)]="dataInicio">
+                            <input class="input-data" type="date" [(ngModel)]="dataInicio">
                         </div>
                         <div class="input-filtro">
                             <label for="">Data fim:</label>
-                            <input type="date" [(ngModel)]="dataFim">
+                            <input class="input-data" type="date" [(ngModel)]="dataFim">
                         </div>
                     </div>
-                    <button>Aplicar</button>
                 </div>
             </div>
-            <input type="text">
+            <input #tipoMovimentacao class="tipo-movimentacao" name="tipo-movimentacao" type="text" (keyup)="0">
             <ul class="tabela_categorias">
-                <li>Todas</li>
-                <li>Entradas</li>
-                <li>Saídas</li>
+                <li [ngClass]="todasAtivo ? 'categoria-ativa' : '' " (click)="movimentacoesTodas()">Todas</li>
+                <li [ngClass]="entradasAtivo ? 'categoria-ativa' : '' " (click)="movimentacoesEntrada()">Entradas</li>
+                <li [ngClass]="saidasAtivo ? 'categoria-ativa' : '' " (click)="movimentacoesSaida()">Saídas</li>
             </ul>
             <div class="chaves_overflow">
-                <div class="info-chave" *ngFor="let mov of (movimentacoes | extrato:dataInicio:dataFim)">
+                <div class="info-chave" *ngFor="let mov of (movimentacoesSelecionadas | extrato:dataInicio:dataFim | tipoMov:tipoMovimentacao.value)">
                     <div class="icone-descricao">
                         <div class="icone">
                             <i class="ph-bold ph-key"></i>

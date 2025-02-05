@@ -17,8 +17,14 @@ export class MovimentacoesService {
 
     getMovimentacoes(contaId: number): Observable<any[]> {
         return this.http.get<any[]>(`${this.baseUrl}/${contaId}`);
-
     }
+    getMovimentacoesEntradas(contaId: number): Observable<any[]> {
+        return this.http.get<any[]>(`${this.baseUrl}/saidas/${contaId}`);
+    }
+    getMovimentacoesSaidas(contaId: number): Observable<any[]> {
+        return this.http.get<any[]>(`${this.baseUrl}/entradas/${contaId}`);
+    }
+    
 
     sacar(contaId: number, request: ValorRequest): Observable<ValorResponse> {
         return this.http.post<ValorResponse>(`${this.baseUrl}/sacar/${contaId}`,
